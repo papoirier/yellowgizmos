@@ -1,0 +1,19 @@
+/*
+Theme Name: YELLOW GIZMOS
+Theme URI: http://wordpress.org/themes/deepweb
+Author: Pierre-Alexandre Poirier
+Author URI: http://papoirier.org/
+Description: Theme for Yieldmo, built with Bootstrap
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: yieldmo, bootstrap
+Text Domain: yieldmo
+
+*/
+
+/* @import url("css/styles.css"); */
+
+#wpadminbar {
+	bottom:0px;
+}
