@@ -68,7 +68,6 @@ function my_wpcf7_dropdown_form($html) {
 }
 
 // SCRIPTS -----------------------------------------------------
-
 add_action( 'wp_enqueue_scripts', 'bootstrap_script' );
 function bootstrap_script() {
 	wp_enqueue_script( 
@@ -79,9 +78,19 @@ function bootstrap_script() {
 		true 
 	);
 }
+add_action( 'wp_enqueue_scripts', 'my_scripts' );
+function my_scripts() {
+  wp_enqueue_script( 
+    'scripts', 
+    get_stylesheet_directory_uri() . '/js/scripts.js', 
+    array('jquery'), 
+    '', 
+    true 
+  );
+} 
 
 
 // ------------------------------------------------------------------
 // CAROUSEL PLUGIN --------------------------------------------------
 // ------------------------------------------------------------------
-//require_once ( get_template_directory() . '/functions/cpt-bootstrap-carousel.php' );
+require_once ( get_template_directory() . '/functions/cpt-bootstrap-carousel.php' );

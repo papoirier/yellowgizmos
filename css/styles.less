@@ -1,0 +1,338 @@
+// COLORS // ----------------------------------
+
+@black:		rgb(38,38,38);
+@gray:		rgb(71,71,71);
+@white:		rgb(237,237,237);
+@blue:		rgb(23,134,185);
+@green:		rgb(48,173,99);
+@yellow: 	rgb(253,209,71);
+@pink:		rgb(242, 127, 138);
+@purple:	rgb(162, 92, 186);
+@orange:	rgb(250, 169, 56);
+
+@navy:				rgb(16, 101, 138);
+
+@chelsea-green:			rgb(35, 130, 74);
+
+
+
+@deadbeef-black-alpha: 	rgba(38,38,38, 0.25);
+@deadbeef-black-beta: 	rgba(38,38,38, 0.7);
+@venture-white-alpha:	rgba(237,237,237,0.7);
+@tucker-yellow-alpha:	rgba(253,209,71, 0.7);
+@hella-gray:			rgb(153,153,153);
+@fafafa-gray:			rgb(250, 250, 250);
+
+
+// TEMP // -----------------------------------
+#publishers {
+	background-color: @yellow;
+}
+#advertisers {
+	background-color: @pink;
+}
+#readers {
+	background-color: @orange;
+}
+#team {
+	background-color: @blue;
+}
+#contact {
+	background-color: @yellow;
+}
+
+// NAVBAR // ------------------------------
+.made-in-nyc {
+	display: block;
+	float: left;
+	clear: both;
+}
+.made-in-nyc img {
+	width: 62px;
+	height: 62px;
+}
+.navbar-header {
+    float: none;
+}
+.navbar-left,
+.navbar-right {
+    float: none !important;
+}
+.navbar-toggle {
+    display: block;
+}
+.navbar-collapse {
+    border-top: 1px solid transparent;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+}
+.navbar-fixed-top {
+	top: 0;
+	border-width: 0 0 1px;
+}
+.navbar-collapse.collapse {
+    display: none !important;
+}
+.navbar-nav {
+    float: none !important;
+	margin-top: 7.5px;
+}
+.navbar-nav>li {
+    float: none;
+}
+.navbar-nav>li>a {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.collapse.in{
+		display:block !important;
+}
+          .side-collapse-container{
+              width:100%;
+              position:relative;
+              left:0;
+              transition:left .4s;
+          }
+          .side-collapse-container.out{
+              left:200px;
+          }
+          .side-collapse {
+              top:50px;
+              bottom:0;
+              left:0;
+              width:200px;
+              position:fixed;
+              overflow:hidden;
+              transition:width .4s;
+          }
+          .side-collapse.in {
+              width:0;
+          }
+
+// TYPOGRAPHY // ------------------------------
+@font-face { 
+	font-family:"Apercu Regular", "Helvetica Neue", Helvetica, Arial, sans-serif; 
+	font-weight:normal; 
+	font-style:normal;  
+	font-stretch: normal;
+} 
+@font-face { 
+	font-family:"Apercu Italic", "Helvetica Neue", Helvetica, Arial, sans-serif; 
+	font-weight:normal; 
+	font-style:italic; 
+	font-stretch: normal;
+}
+@font-face { 
+	font-family:"Apercu Bold", "Helvetica Neue", Helvetica, Arial, sans-serif; 
+	font-weight:bold; 
+	font-style:normal; 
+	font-stretch: normal;
+}
+@font-face { 
+	font-family:"Apercu Medium", "Helvetica Neue", Helvetica, Arial, sans-serif; 
+	font-weight:600; 
+	font-style:normal; 
+	font-stretch: normal;
+}
+
+@font-family-sans-serif: "Apercu Regular", "Helvetica Neue", Helvetica, Arial, sans-serif;
+@font-family-serif: "Georgia", "Times New Roman", serif;
+@font-size-base: 16px;
+@font-size-h1: floor((@font-size-base * 2.6));
+@font-size-h2: floor((@font-size-base * 1.90)); 
+@font-size-h3: ceil((@font-size-base * 1.7)); 
+@font-size-h4: ceil((@font-size-base * 1.25)); 
+@font-size-h5: @font-size-base;
+@font-size-h6: ceil((@font-size-base * 1)); 
+@font-size-nav: 14px;
+
+body {
+	font-family: @font-family-sans-serif;
+	font-size: @font-size-base;
+	color: @black;
+	//line-height: 1.5em;
+}
+p {
+	line-height: 1.5em;
+	//font-family: @font-family-serif;
+}
+h1 {
+	font-size: @font-size-h1;
+	font-weight: bold;
+	// line-height: 1.2em;
+}
+h2 {
+	font-size: @font-size-h2;
+	font-weight: bold;
+}
+h3 {
+	font-size: @font-size-h3;
+	font-weight: bold;
+}
+h4 {
+	font-size: @font-size-h4;
+	font-weight: bold;
+}
+h5 {
+	font-size: @font-size-h5;
+	font-weight: bold;
+}
+h6 {
+	font-size: @font-size-h6;
+	font-weight: bold;
+	
+}
+strong {
+	font-weight: bold;
+}
+a {
+	color: @blue;
+}
+a:hover {
+	text-decoration: none;
+}
+ul {
+	text-decoration: none;
+	list-style-type: none;
+	padding-left: 0;
+	font-size: normal;
+}
+
+
+.text-white {
+	color: #FFF;
+}
+
+// TWITTER // ----------------------------------
+.twitter-timeline {
+	display: block !important;
+  	margin-left: auto !important;
+  	margin-right: auto !important;
+}
+.twitter-timeline {
+	width: 80% !important;
+}
+#twitter .logo-twitter {
+	width: 40px;
+	margin: 2em auto; 
+}
+
+// FOOTER // -----------------------------------
+footer {
+	background-color: @black;
+	color: #FFF;
+	padding: 2em 0em;
+}
+footer a {
+	color: #FFF;
+}
+footer a:hover {
+	color: #FFF;
+	text-decoration: underline;
+}
+.social-logos img {
+	max-width: 40px;
+	margin-right: 0.5em;
+	display: inline-block;
+	float: left;
+}
+#copyright {
+	margin-top: 4em;
+	font-size: 70%;
+}
+#copyright p {
+	margin: 0;
+	padding: 0;
+}
+
+// CAROUSEL // ---------------------------------
+.carousel-caption {
+	pointer-events: none;
+	top: 34%;
+	left: 0;
+	right: 0;
+	text-shadow: none;
+	text-align: left;
+	color: @black;
+}
+.carousel-caption h1 {
+	line-height: 1.3em;
+}
+.my-carousel .carousel-control {
+	display: block !important;
+}
+.carousel-control {
+  width: 5%;
+  text-shadow: none;
+  filter: alpha(opacity=50);
+  opacity: .5;
+}
+.carousel-control.left {
+  background-image: none;
+  background-repeat: no-repeat;
+}
+.carousel-control.right {
+  background-image: none;
+  background-repeat: no-repeat;
+}
+.carousel-control:hover,
+.carousel-control:focus {
+  filter: alpha(opacity=90);
+  outline: 0;
+  opacity: .9;
+}	
+.carousel-inner > .item > img {
+  min-width:100%;
+  height:auto;
+}
+.carousel-control .glyphicon-chevron-left {
+	margin-left: -24px !important;
+}
+.carousel-control .glyphicon-chevron-right {
+	margin-right: -24px !important;
+}
+.glyphicon-chevron-left, 
+.glyphicon-chevron-right {
+	width: 55px !important;
+  	height: 100px !important;	
+}
+.glyphicon-chevron-left:before, 
+.glyphicon-chevron-right:before {
+	content: "";
+}
+.glyphicon-chevron-left {
+	background-image: url("../img/intro-slides/arrow-prev.png");
+  	background-repeat: no-repeat;
+  	background-position: left;
+}
+.glyphicon-chevron-right {
+  	background-image: url("../img/intro-slides/arrow-next.png");
+  	background-repeat: no-repeat;
+  	background-position: right;
+}
+.carousel-control .glyphicon-chevron-left, 
+.carousel-control .glyphicon-chevron-right {
+	margin-top: -69px;
+}
+.glyphicon {
+  font-family: monospace;
+  width: 55px;
+  height: 200px;
+}
+@dot: 6px;
+.carousel-indicators li, .carousel-indicators li.active {
+	border: none !important;
+	background-color: @black;
+	width: @dot;
+	height: @dot;
+	max-width: @dot;
+	max-height: @dot;
+	margin: 5px !important;
+}
+.carousel-indicators .active {
+	opacity: 1;
+	width: @dot;
+	height: @dot;
+}
+.carousel-indicators li {
+	background-color: @deadbeef-black-alpha;
+}

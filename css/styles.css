@@ -1,0 +1,283 @@
+#publishers {
+  background-color: #fdd147;
+}
+#advertisers {
+  background-color: #f27f8a;
+}
+#readers {
+  background-color: #faa938;
+}
+#team {
+  background-color: #1786b9;
+}
+#contact {
+  background-color: #fdd147;
+}
+.made-in-nyc {
+  display: block;
+  float: left;
+  clear: both;
+}
+.made-in-nyc img {
+  width: 62px;
+  height: 62px;
+}
+.navbar-header {
+  float: none;
+}
+.navbar-left,
+.navbar-right {
+  float: none !important;
+}
+.navbar-toggle {
+  display: block;
+}
+.navbar-collapse {
+  border-top: 1px solid transparent;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+.navbar-fixed-top {
+  top: 0;
+  border-width: 0 0 1px;
+}
+.navbar-collapse.collapse {
+  display: none !important;
+}
+.navbar-nav {
+  float: none !important;
+  margin-top: 7.5px;
+}
+.navbar-nav > li {
+  float: none;
+}
+.navbar-nav > li > a {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.collapse.in {
+  display: block !important;
+}
+.side-collapse-container {
+  width: 100%;
+  position: relative;
+  left: 0;
+  transition: left .4s;
+}
+.side-collapse-container.out {
+  left: 200px;
+}
+.side-collapse {
+  top: 50px;
+  bottom: 0;
+  left: 0;
+  width: 200px;
+  position: fixed;
+  overflow: hidden;
+  transition: width .4s;
+}
+.side-collapse.in {
+  width: 0;
+}
+@font-face {
+  font-family: "Apercu Regular", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+}
+@font-face {
+  font-family: "Apercu Italic", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  font-style: italic;
+  font-stretch: normal;
+}
+@font-face {
+  font-family: "Apercu Bold", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+}
+@font-face {
+  font-family: "Apercu Medium", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+}
+body {
+  font-family: "Apercu Regular", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  color: #262626;
+}
+p {
+  line-height: 1.5em;
+}
+h1 {
+  font-size: 41px;
+  font-weight: bold;
+}
+h2 {
+  font-size: 30px;
+  font-weight: bold;
+}
+h3 {
+  font-size: 28px;
+  font-weight: bold;
+}
+h4 {
+  font-size: 20px;
+  font-weight: bold;
+}
+h5 {
+  font-size: 16px;
+  font-weight: bold;
+}
+h6 {
+  font-size: 16px;
+  font-weight: bold;
+}
+strong {
+  font-weight: bold;
+}
+a {
+  color: #1786b9;
+}
+a:hover {
+  text-decoration: none;
+}
+ul {
+  text-decoration: none;
+  list-style-type: none;
+  padding-left: 0;
+  font-size: normal;
+}
+.text-white {
+  color: #FFF;
+}
+.twitter-timeline {
+  display: block !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+.twitter-timeline {
+  width: 80% !important;
+}
+#twitter .logo-twitter {
+  width: 40px;
+  margin: 2em auto;
+}
+footer {
+  background-color: #262626;
+  color: #FFF;
+  padding: 2em 0em;
+}
+footer a {
+  color: #FFF;
+}
+footer a:hover {
+  color: #FFF;
+  text-decoration: underline;
+}
+.social-logos img {
+  max-width: 40px;
+  margin-right: 0.5em;
+  display: inline-block;
+  float: left;
+}
+#copyright {
+  margin-top: 4em;
+  font-size: 70%;
+}
+#copyright p {
+  margin: 0;
+  padding: 0;
+}
+.carousel-caption {
+  pointer-events: none;
+  top: 34%;
+  left: 0;
+  right: 0;
+  text-shadow: none;
+  text-align: left;
+  color: #262626;
+}
+.carousel-caption h1 {
+  line-height: 1.3em;
+}
+.my-carousel .carousel-control {
+  display: block !important;
+}
+.carousel-control {
+  width: 5%;
+  text-shadow: none;
+  filter: alpha(opacity=50);
+  opacity: .5;
+}
+.carousel-control.left {
+  background-image: none;
+  background-repeat: no-repeat;
+}
+.carousel-control.right {
+  background-image: none;
+  background-repeat: no-repeat;
+}
+.carousel-control:hover,
+.carousel-control:focus {
+  filter: alpha(opacity=90);
+  outline: 0;
+  opacity: .9;
+}
+.carousel-inner > .item > img {
+  min-width: 100%;
+  height: auto;
+}
+.carousel-control .glyphicon-chevron-left {
+  margin-left: -24px !important;
+}
+.carousel-control .glyphicon-chevron-right {
+  margin-right: -24px !important;
+}
+.glyphicon-chevron-left,
+.glyphicon-chevron-right {
+  width: 55px !important;
+  height: 100px !important;
+}
+.glyphicon-chevron-left:before,
+.glyphicon-chevron-right:before {
+  content: "";
+}
+.glyphicon-chevron-left {
+  background-image: url("../img/intro-slides/arrow-prev.png");
+  background-repeat: no-repeat;
+  background-position: left;
+}
+.glyphicon-chevron-right {
+  background-image: url("../img/intro-slides/arrow-next.png");
+  background-repeat: no-repeat;
+  background-position: right;
+}
+.carousel-control .glyphicon-chevron-left,
+.carousel-control .glyphicon-chevron-right {
+  margin-top: -69px;
+}
+.glyphicon {
+  font-family: monospace;
+  width: 55px;
+  height: 200px;
+}
+.carousel-indicators li,
+.carousel-indicators li.active {
+  border: none !important;
+  background-color: #262626;
+  width: 6px;
+  height: 6px;
+  max-width: 6px;
+  max-height: 6px;
+  margin: 5px !important;
+}
+.carousel-indicators .active {
+  opacity: 1;
+  width: 6px;
+  height: 6px;
+}
+.carousel-indicators li {
+  background-color: rgba(38, 38, 38, 0.25);
+}

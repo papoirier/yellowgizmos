@@ -7,7 +7,6 @@
 		<meta name="description" content="Yieldmo is saving the world from bad mobile ads. We think ads should look great and work great. We combine the best of design and data to invent new formats, ruthlessly optimize them, and deliver unprecedented results.">
 		<meta name="keywords" content="ad format lab, mobile ad format lab, unique mobile ads, custom mobile ads, customized mobile ads, unique ad formats, custom ad formats, customized ad formats, unique iphone ads, custom iphone ads, customized iphone ads">
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-		<meta name="twitter:widgets:csp" content="on">
 		<link href="<?php echo get_stylesheet_directory_uri() ?>/favicon.ico" rel="shortcut icon">
 		<link rel="apple-touch-icon-precomposed" href="<?php echo get_stylesheet_directory_uri() ?>/apple-touch-icon-152x152-precomposed.png">
 		<title><?php bloginfo('name');?> &mdash; <?php echo get_bloginfo ( 'description' );  ?></title>
@@ -24,13 +23,4 @@
 		<![endif]-->
 		<?php wp_head(); ?>
 	</head>
-	<?php if (is_page("93")) { ?>
-	<body data-spy="scroll" data-target="#navcolor" data-offset="0" class="contact-page">
-	<?php }
-	if (is_page("408") || is_404()) { ?>
-	<body data-spy="scroll" data-target="#navcolor" data-offset="0" class="about-page">
-	<?php } 
-	else { ?>
-	<body data-spy="scroll" data-target="#navcolor" data-offset="0">
-	<?php } ?>
 		<?php include_once "navigation.php"; ?>
