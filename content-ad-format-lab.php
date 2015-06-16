@@ -1,7 +1,4 @@
 <?php while ($my_query->have_posts()) : $my_query->the_post(); ?>
-<div>
-	<img src="<?php echo get_stylesheet_directory_uri() ?>/img/afl.png" class="img-responsive">
-</div>
 <div class="container">
 	<div class="row">
     	<div class="col-md-6">

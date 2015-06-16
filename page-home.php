@@ -8,7 +8,8 @@
  * publishers 		-> 17
  * advertisers 		-> 18
  * readers 			-> 19
- * 
+ *
+ * dedicated ads 	-> 91
  * ad format lab 	-> 41
  *
  * team 			-> 57
@@ -62,6 +63,16 @@
 		endif; ?>
 	</div> <!-- /#readers -->
 </section> <!-- /#about -->
+
+<!-- DEDICATED AD PLACEMENTS - - - - - - - - - - - - - -  -->
+<section id="dedicated"> 
+	<?php $my_query = new WP_Query( 'page_id=91' ); ?>
+    <?php if ( $my_query->have_posts() ) : ?>
+    <?php 
+    	require(locate_template('content-dedicated.php'));
+    	wp_reset_postdata();
+	endif; ?>
+</section> <!-- /#dedicated -->
 
 <!-- AD FORMAT LAB - - - - - - - - - - - - - -  -->
 <section id="ad-format-lab"> 

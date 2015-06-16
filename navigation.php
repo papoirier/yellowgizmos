@@ -7,24 +7,27 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="home"><img src="<?php echo get_stylesheet_directory_uri() ?>/img/yieldmo-logo.png" title="logo" alt="Yieldmo logo" class="img-responsive"></a>
+            <a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="home"><img src="<?php echo get_stylesheet_directory_uri() ?>/img/yieldmo-logo.svg" title="logo" alt="Yieldmo logo" class="brand-logo img-responsive"></a>
+            <p class="navbar-text navbar-right text-right"><a href="#contact">Contact</a></p>
         </div>
+            
+        
         <div class="side-collapse in">
             <ul>
                 <?php if (is_front_page()) { ?>
-                <li class="home"><a href="#home">Home</a></li>
-                <li class="about"><a href="#about">About</a></li>
-                <li class="team"><a href="#team">Team</a></li>
-                <li class="blog"><a href="#blog">Blog</a></li>
-                <li class="contact"><a href="#contact">Contact</a></li>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#team">Team</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#contact">Contact</a></li>
                 <?php } ?>
             </ul>
             <ul>
                 <?php if (is_front_page()) { ?>
-                <li class="careers"><a href="#careers">Careers</a></li>
-                <li class="terms"><a href="#terms">Terms of Service</a></li>
-                <li class="press"><a href="#press">Press &amp; Media</a></li>
-                <li class="privacy"><a href="#privacy">Privacy Policy</a></li>
+                <li><a href="#careers">Careers</a></li>
+                <li><a href="#terms">Terms of Service</a></li>
+                <li><a href="#press">Press &amp; Media</a></li>
+                <li><a href="#privacy">Privacy Policy</a></li>
               <?php } ?>
             </ul>
             <ul class="social-logos">

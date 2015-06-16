@@ -14,6 +14,7 @@ remove_action('wp_head', 'wp_generator');
 remove_action('wp_head', 'feed_links', 2 ); 
 remove_action('wp_head', 'feed_links_extra', 3 );
 remove_action('wp_head', 'rel_canonical');
+remove_action( 'begin_fetch_post_thumbnail_html', '_wp_post_thumbnail_class_filter_add' );
 
 
 // PAGES -------------------------------------------------------
@@ -27,6 +28,19 @@ function page_excerpt() {
 @ini_set( 'upload_max_size' , '64M' );
 @ini_set( 'post_max_size', '64M');
 @ini_set( 'max_execution_time', '300' );
+
+// print page slug
+function print_the_slug() {
+  if (get_the_ID() == 17) {
+    return "publishers";
+  }
+  if (get_the_ID() == 18) {
+    return "advertisers";
+  }
+  if (get_the_ID() == 19) {
+    return "readers";
+  }
+}
 
 
 // THUMBNAILS --------------------------------------------------

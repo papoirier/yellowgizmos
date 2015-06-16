@@ -8,10 +8,22 @@
   background-color: #faa938;
 }
 #team {
-  background-color: #1786b9;
+  background-color: #fdd147;
 }
 #contact {
   background-color: #fdd147;
+}
+.brand-logo {
+  width: 120px;
+}
+.side-collapse ul li,
+.side-collapse .social-logos {
+  width: 240px;
+}
+.social-logos img {
+  max-width: 40px;
+  margin-right: 0.5em;
+  float: left;
 }
 .made-in-nyc {
   display: block;
@@ -64,13 +76,13 @@
   transition: left .4s;
 }
 .side-collapse-container.out {
-  left: 200px;
+  left: 240px;
 }
 .side-collapse {
-  top: 50px;
+  top: 60px;
   bottom: 0;
   left: 0;
-  width: 200px;
+  width: 240px;
   position: fixed;
   overflow: hidden;
   transition: width .4s;
@@ -152,6 +164,35 @@ ul {
 .text-white {
   color: #FFF;
 }
+#dedicated {
+  background-color: #fafafa;
+}
+#dedicated-phone {
+  margin-top: 3em;
+  background-image: url('../img/dots-bg.png');
+  background-repeat: repeat-x;
+  background-position: center;
+}
+.phone-carousel {
+  margin: 3em 0;
+  position: relative;
+}
+.phone-contour {
+  display: block;
+  position: absolute;
+  width: 220px;
+  height: 384px;
+  left: calc(50% - 110px);
+  top: 57px;
+}
+#dedicated-details {
+  background-color: #1786b9;
+  padding: 2em 0;
+  margin-top: 2em;
+}
+#team {
+  padding-top: 4em;
+}
 .twitter-timeline {
   display: block !important;
   margin-left: auto !important;
@@ -176,7 +217,7 @@ footer a:hover {
   color: #FFF;
   text-decoration: underline;
 }
-.social-logos img {
+footer .social-logos img {
   max-width: 40px;
   margin-right: 0.5em;
   display: inline-block;
@@ -224,6 +265,11 @@ footer a:hover {
   filter: alpha(opacity=90);
   outline: 0;
   opacity: .9;
+}
+.carousel-inner {
+  height: auto;
+  display: block;
+  padding-bottom: 4em;
 }
 .carousel-inner > .item > img {
   min-width: 100%;
@@ -280,4 +326,24 @@ footer a:hover {
 }
 .carousel-indicators li {
   background-color: rgba(38, 38, 38, 0.25);
+}
+#carousel-publishers .carousel-control,
+#carousel-advertisers .carousel-control,
+#carousel-readers .carousel-control {
+  display: none;
+  visibility: hidden;
+}
+@media (min-width: 768px) {
+  #carousel-publishers .item,
+  #carousel-advertisers .item,
+  #carousel-readers .item {
+    display: block;
+    padding-bottom: 100px;
+  }
+  #carousel-publishers ol.carousel-indicators,
+  #carousel-advertisers ol.carousel-indicators,
+  #carousel-readers ol.carousel-indicators {
+    display: none;
+    visibility: hidden;
+  }
 }
