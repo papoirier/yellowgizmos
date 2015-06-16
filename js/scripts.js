@@ -34,23 +34,12 @@ jQuery(document).ready(function($) {
 
     // twitter styling
     $(window).load(function() {
-        var $font = "Apercu";
-        var $font_weight = "normal";
 
-        $("iframe").contents().find('head').append('<style>.html, body, h1, h2, h3, blockquote, p, ol, ul, li, img, iframe, button, .tweet-box-button{font-family:'+$font+' !important;font-weight:'+$font_weight+' !important;} .p-author, .e-entry-content, p.e-entry-title{text-align:center !important;} li.tweet{padding-left:0 !important;}</style>');
-        
-        $("iframe").contents().find('img.avatar').remove();
         $("iframe").contents().find('div.footer').remove();
-        
-        var $time;
-        $time = $("iframe").contents().find('time');
-        $time.detach();
-        for (var i = 0; i <= $time.length-1; i++) {
-            //console.log($time);
-            //$("iframe").contents().find('div.header:eq(i)').append($time[i]);
-            // var $test = $("iframe").contents().find('div.header:eq(0)');
-            // console.log($test);
-        };
+
+        var $font = "Apercu";
+        var $fontweight = "normal";
+        $("iframe").contents().find('head').append('<style>.html, body, h1, h2, h3, blockquote, p, ol, ul, li, img, iframe, button, .tweet-box-button{font-family:'+$font+' !important;font-weight:'+$fontweight+' !important;} .p-author, .e-entry-content, p.e-entry-title{text-align:center !important;} li.tweet{padding-left:0 !important;} p.e-entry-title{font-size:18px !important; line-height:1.2em !important; margin-bottom: 36px !important;} a.permalink{float:none; text-align:center !important;} .header{text-align:center !important;} .p-author{margin-top:-36px; padding-top:36px; margin-bottom:24px;} .p-author a, .p-name{ color: #0B84BB !important;}</style>');
     });
 
     // about pages carousels

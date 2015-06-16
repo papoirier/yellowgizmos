@@ -4,7 +4,7 @@
     		<a 	class="twitter-timeline" 
 				href="https://twitter.com/Yieldmo" 
 				data-widget-id="607992248706465792"
-				data-tweet-limit="3"
+				data-tweet-limit="1"
 				data-chrome="nofooter noborders noheader noscrollbar transparent"
 				width="900">Tweets by @Yieldmo
 			</a>

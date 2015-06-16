@@ -104,7 +104,7 @@
 }
 @font-face {
   font-family: "Apercu Bold", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: bold;
+  font-weight: normal;
   font-style: normal;
   font-stretch: normal;
 }
@@ -123,20 +123,22 @@ p {
   line-height: 1.5em;
 }
 h1 {
+  font-family: "Apercu Bold";
   font-size: 41px;
-  font-weight: bold;
 }
 h2 {
+  font-family: "Apercu Bold";
   font-size: 30px;
-  font-weight: bold;
+  line-height: 1.1em;
 }
 h3 {
+  font-family: "Apercu Bold";
   font-size: 28px;
-  font-weight: bold;
+  line-height: 1.1em;
 }
 h4 {
+  font-family: "Apercu Bold";
   font-size: 20px;
-  font-weight: bold;
 }
 h5 {
   font-size: 16px;
@@ -163,6 +165,13 @@ ul {
 }
 .text-white {
   color: #FFF;
+}
+#rethinking {
+  background-color: #fdd147;
+  padding: 3em 0;
+}
+.rethinking-img img {
+  max-width: 216px;
 }
 #dedicated {
   background-color: #fafafa;
@@ -193,6 +202,9 @@ ul {
 #team {
   padding-top: 4em;
 }
+iframe#twitter-widget-0 {
+  margin-top: 36px !important;
+}
 .twitter-timeline {
   display: block !important;
   margin-left: auto !important;
@@ -202,8 +214,8 @@ ul {
   width: 80% !important;
 }
 #twitter .logo-twitter {
-  width: 40px;
-  margin: 2em auto;
+  width: 36px;
+  margin: 0em auto 3.6em auto;
 }
 footer {
   background-color: #262626;

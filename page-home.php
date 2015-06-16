@@ -28,6 +28,10 @@
 <!-- INTRO CAROUSEL - - - - - - - - - - - - -  -->
 <?php echo do_shortcode('[image-carousel showcaption="true" interval="5000"]'); ?>
 
+<svg preserveAspectRatio="none" style="width:100%; max-height:140" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="1170" height="140" viewBox="0 0 1170 140" enable-background="new 0 0 1170 140" xml:space="preserve">
+	<polyline id="poly-morpher" fill="orange" points="0,46.666666666666664 234,70 468,93.33333333333333 702,70 936,46.666666666666664 1170,70 1404,93.33333333333333 1170,140 0,140 "></polyline>
+</svg>
+
 <!-- ABOUT - - - - - - - - - - - - - - - - - - - -->
 <section id="about"> 
 	<div id="rethinking">
