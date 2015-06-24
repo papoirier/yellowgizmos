@@ -22,20 +22,38 @@
 
 
 // TEMP // -----------------------------------
-#publishers {
-	background-color: @yellow;
+#shape {
+    z-index: 500 !important;
+    display: block;
+    width: 100%;
+    position: absolute;   
 }
-#advertisers {
-	background-color: @pink;
+svg {
+    width: 100%;
+    display: block;
 }
-#readers {
-	background-color: @orange;
+#bg-sticky {
+    position: relative;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    z-index: 1000 !important;
+}
+#about {
+	background: url("../img/polka-dot.svg");
+    background-repeat: repeat; 
+    background-attachment: fixed;
 }
 #team {
 	background-color: @yellow;
 }
 #contact {
 	background-color: @yellow;
+}
+#publishers,
+#advertisers,
+#readers {
+	//z-index: 2000 !important;
 }
 
 // NAVBAR // ----------------------------------
@@ -164,42 +182,52 @@ body {
 }
 p {
 	line-height: 1.5em;
+	font-style: normal;
 	//font-family: @font-family-serif;
 }
 h1 {
 	font-family: "Apercu Bold";
 	font-size: @font-size-h1;
-	
-	// line-height: 1.2em;
+	font-style: normal;
+	font-weight: bold;
 }
 h2 {
 	font-family: "Apercu Bold";
 	font-size: @font-size-h2;
 	line-height: 1.1em;
+	font-style: normal;
+	font-weight: bold;
 	
 }
 h3 {
 	font-family: "Apercu Bold";
 	font-size: @font-size-h3;
 	line-height: 1.1em;
+	font-style: normal;
+	font-weight: bold;
 	
 }
 h4 {
 	font-family: "Apercu Bold";
 	font-size: @font-size-h4;
+	font-style: normal;
+	font-weight: bold;
 
 }
 h5 {
 	font-size: @font-size-h5;
 	font-weight: bold;
+	font-style: normal;
 }
 h6 {
 	font-size: @font-size-h6;
 	font-weight: bold;
-	
+	font-style: normal;
+	font-weight: bold;
 }
 strong {
 	font-weight: bold;
+	font-style: normal;
 }
 a {
 	color: @blue;
@@ -218,10 +246,17 @@ ul {
 	color: #FFF;
 }
 
+
+// NAV // --------------------------------------
+ul.navbar-yieldmo li {
+	display: inline-block;
+}
+
 // RETHINKING // -------------------------------
 #rethinking {
 	background-color: @yellow;
 	padding: 3em 0;
+	position: relative;
 }
 .rethinking-img img {
 	max-width: 216px;
@@ -266,8 +301,14 @@ ul {
 }
 
 // TWITTER // ----------------------------------
+#twitter {
+	padding-top: 3em;
+}
 iframe#twitter-widget-0 {
-	margin-top: 36px !important;
+	//margin-top: 36px !important;
+	min-height: auto !important;
+	overflow-y: visible;
+	display: block;
 }
 .twitter-timeline {
 	display: block !important;
@@ -280,6 +321,10 @@ iframe#twitter-widget-0 {
 #twitter .logo-twitter {
 	width: 36px;
 	margin: 0em auto 3.6em auto; 
+}
+.twttr {
+	margin-top: 1em;
+	clear: both;
 }
 
 // FOOTER // -----------------------------------

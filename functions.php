@@ -102,6 +102,16 @@ function my_scripts() {
     true 
   );
 } 
+add_action( 'wp_enqueue_scripts', 'sticky_svg' );
+function sticky_svg() {
+  wp_enqueue_script( 
+    'sticky_svg', 
+    get_stylesheet_directory_uri() . '/js/sticky-svg.js', 
+    array('jquery'), 
+    '', 
+    true 
+  );
+} 
 
 
 // ------------------------------------------------------------------

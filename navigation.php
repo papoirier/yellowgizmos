@@ -8,7 +8,10 @@
                 <span class="icon-bar"></span>
             </button>
             <a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="home"><img src="<?php echo get_stylesheet_directory_uri() ?>/img/yieldmo-logo.svg" title="logo" alt="Yieldmo logo" class="brand-logo img-responsive"></a>
-            <p class="navbar-text navbar-right text-right"><a href="#contact">Contact</a></p>
+            <ul class="navbar-yieldmo navbar-text navbar-right text-right">
+                <li><a href="#contact">Contact</a></li>
+                <li class="btn btn-default"><a href="#contact">Login</a></li>
+            </ul>
         </div>
             
         

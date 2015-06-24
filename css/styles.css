@@ -1,11 +1,24 @@
-#publishers {
-  background-color: #fdd147;
+#shape {
+  z-index: 500 !important;
+  display: block;
+  width: 100%;
+  position: absolute;
 }
-#advertisers {
-  background-color: #f27f8a;
+svg {
+  width: 100%;
+  display: block;
 }
-#readers {
-  background-color: #faa938;
+#bg-sticky {
+  position: relative;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  z-index: 1000 !important;
+}
+#about {
+  background: url("../img/polka-dot.svg");
+  background-repeat: repeat;
+  background-attachment: fixed;
 }
 #team {
   background-color: #fdd147;
@@ -121,35 +134,47 @@ body {
 }
 p {
   line-height: 1.5em;
+  font-style: normal;
 }
 h1 {
   font-family: "Apercu Bold";
   font-size: 41px;
+  font-style: normal;
+  font-weight: bold;
 }
 h2 {
   font-family: "Apercu Bold";
   font-size: 30px;
   line-height: 1.1em;
+  font-style: normal;
+  font-weight: bold;
 }
 h3 {
   font-family: "Apercu Bold";
   font-size: 28px;
   line-height: 1.1em;
+  font-style: normal;
+  font-weight: bold;
 }
 h4 {
   font-family: "Apercu Bold";
   font-size: 20px;
+  font-style: normal;
+  font-weight: bold;
 }
 h5 {
   font-size: 16px;
   font-weight: bold;
+  font-style: normal;
 }
 h6 {
   font-size: 16px;
+  font-style: normal;
   font-weight: bold;
 }
 strong {
   font-weight: bold;
+  font-style: normal;
 }
 a {
   color: #1786b9;
@@ -166,9 +191,13 @@ ul {
 .text-white {
   color: #FFF;
 }
+ul.navbar-yieldmo li {
+  display: inline-block;
+}
 #rethinking {
   background-color: #fdd147;
   padding: 3em 0;
+  position: relative;
 }
 .rethinking-img img {
   max-width: 216px;
@@ -202,8 +231,13 @@ ul {
 #team {
   padding-top: 4em;
 }
+#twitter {
+  padding-top: 3em;
+}
 iframe#twitter-widget-0 {
-  margin-top: 36px !important;
+  min-height: auto !important;
+  overflow-y: visible;
+  display: block;
 }
 .twitter-timeline {
   display: block !important;
@@ -216,6 +250,10 @@ iframe#twitter-widget-0 {
 #twitter .logo-twitter {
   width: 36px;
   margin: 0em auto 3.6em auto;
+}
+.twttr {
+  margin-top: 1em;
+  clear: both;
 }
 footer {
   background-color: #262626;

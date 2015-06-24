@@ -10,8 +10,8 @@
 			</a>
         </div>
     </div>
-    <div class="row">
-    	<div class="col-md-12">
+    <div class="row twttr">
+    	<div class="col-md-12 ">
     		<a href="https://twitter.com/yieldmo" title="@yieldmo on Twitter"><img src="<?php echo get_stylesheet_directory_uri() ?>/img/logo-twitter.png" class="logo-twitter center-block img-responsive"></a>
     	</div>
     </div>

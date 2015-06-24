@@ -28,10 +28,6 @@
 <!-- INTRO CAROUSEL - - - - - - - - - - - - -  -->
 <?php echo do_shortcode('[image-carousel showcaption="true" interval="5000"]'); ?>
 
-<svg preserveAspectRatio="none" style="width:100%; max-height:140" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="1170" height="140" viewBox="0 0 1170 140" enable-background="new 0 0 1170 140" xml:space="preserve">
-	<polyline id="poly-morpher" fill="orange" points="0,46.666666666666664 234,70 468,93.33333333333333 702,70 936,46.666666666666664 1170,70 1404,93.33333333333333 1170,140 0,140 "></polyline>
-</svg>
-
 <!-- ABOUT - - - - - - - - - - - - - - - - - - - -->
 <section id="about"> 
 	<div id="rethinking">
@@ -42,30 +38,71 @@
 	    	wp_reset_postdata();
 		endif; ?>
 	</div> <!-- /rethinking -->
-	<div id="publishers">
-		<?php $my_query = new WP_Query( 'page_id=17' ); ?>
-	    <?php if ( $my_query->have_posts() ) : ?>
-	    <?php 
-	    	require(locate_template('content-about.php'));
-	    	wp_reset_postdata();
-		endif; ?>
-	</div> <!-- /#publishers -->
-	<div id="advertisers">
-		<?php $my_query = new WP_Query( 'page_id=18' ); ?>
-	    <?php if ( $my_query->have_posts() ) : ?>
-	    <?php 
-	    	require(locate_template('content-about.php'));
-	    	wp_reset_postdata();
-		endif; ?>
-	</div> <!-- /#advertisers -->
-	<div id="readers">
-		<?php $my_query = new WP_Query( 'page_id=19' ); ?>
-	    <?php if ( $my_query->have_posts() ) : ?>
-	    <?php 
-	    	require(locate_template('content-about.php'));
-	    	wp_reset_postdata();
-		endif; ?>
-	</div> <!-- /#readers -->
+	<div id="shape">
+        <svg width="1170" height="400" viewBox="0 0 1170 400" preserveAspectRatio="none">
+            <path id="polymorpher" fill="rgb(253,209,71)" d="
+                        M0 400 
+                        L0 100 
+                        L1170 0 
+                        L1170 100 
+                        L1170 400 
+                        Z">
+                <animate id="animation-to-publishers" begin="indefinite" fill="freeze" attributeName="d" dur="200ms" to="
+                        M0 400 
+                        L0 100 
+                        L1170 0 
+                        L1170 100 
+                        L1170 400 
+                        Z">
+                </animate>
+                <animate id="animation-to-yellow" begin="indefinite" fill="freeze" attributeName="fill" dur="200ms" to="rgb(253,209,71)"></animate>
+                <animate id="animation-to-advertisers" begin="indefinite" fill="freeze" attributeName="d" dur="200ms" to="
+                        M0 400 
+                        L0 100 
+                        L1170 100 
+                        L1170 100 
+                        L1170 400 
+                        Z">
+                </animate>
+                <animate id="animation-to-pink" begin="indefinite" fill="freeze" attributeName="fill" dur="200ms" to="rgb(242, 127, 138)"></animate>
+                <animate id="animation-to-readers" begin="indefinite" fill="freeze" attributeName="d" dur="200ms" to="
+                        M0 400 
+                        L0 0 
+                        L1170 100 
+                        L1170 400 
+                        L1170 400 
+                        Z">
+                </animate>
+                <animate id="animation-to-orange" begin="indefinite" fill="freeze" attributeName="fill" dur="200ms" to="rgb(250, 169, 56)"></animate>
+            </path>
+        </svg>
+    </div>
+    <div id="bg-sticky">
+		<div id="publishers">
+			<?php $my_query = new WP_Query( 'page_id=17' ); ?>
+		    <?php if ( $my_query->have_posts() ) : ?>
+		    <?php 
+		    	require(locate_template('content-about.php'));
+		    	wp_reset_postdata();
+			endif; ?>
+		</div> <!-- /#publishers -->
+		<div id="advertisers">
+			<?php $my_query = new WP_Query( 'page_id=18' ); ?>
+		    <?php if ( $my_query->have_posts() ) : ?>
+		    <?php 
+		    	require(locate_template('content-about.php'));
+		    	wp_reset_postdata();
+			endif; ?>
+		</div> <!-- /#advertisers -->
+		<div id="readers">
+			<?php $my_query = new WP_Query( 'page_id=19' ); ?>
+		    <?php if ( $my_query->have_posts() ) : ?>
+		    <?php 
+		    	require(locate_template('content-about.php'));
+		    	wp_reset_postdata();
+			endif; ?>
+		</div> <!-- /#readers -->
+	</div>
 </section> <!-- /#about -->
 
 <!-- DEDICATED AD PLACEMENTS - - - - - - - - - - - - - -  -->
