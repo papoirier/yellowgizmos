@@ -14,7 +14,7 @@
 
 
 @deadbeef-black-alpha: 	rgba(38,38,38, 0.25);
-@deadbeef-black-beta: 	rgba(38,38,38, 0.7);
+@black-beta: 	rgba(38,38,38, 0.7);
 @venture-white-alpha:	rgba(237,237,237,0.7);
 @tucker-yellow-alpha:	rgba(253,209,71, 0.7);
 @hella-gray:			rgb(153,153,153);
@@ -58,9 +58,59 @@ svg {
 
 // NAVBAR // ----------------------------------
 @navbar-width: 240px;
-.brand-logo {
-	width: @navbar-width/2;
+
+.navbar-default {
+	border-bottom: none;
+	background-color: #FFF;
+	box-shadow: 0px 0px 3px @black-beta;
 }
+.navbar-default .navbar-toggle .icon-bar {
+	background-color: @black;
+}
+.navbar-default .navbar-toggle:hover .icon-bar {
+	background-color: @gray;
+}
+.navbar-default .navbar-toggle {
+	border-color: transparent;
+	border-radius: 0px;
+}
+.navbar-default .navbar-toggle:hover {
+	background-color: transparent;
+}
+.navbar-toggle .icon-bar {
+	border-radius: 0px;
+}
+
+.brand-logo {
+	width: 100px;
+}
+.navbar-text,
+.navbar-text a,
+.navbar-text li,
+.navbar-text li a, {
+	text-transform: uppercase;
+	font-size: @font-size-nav;
+	letter-spacing: 1px;
+	font-family: "Apercu Bold";
+	font-weight: normal;
+	color: @black;
+}
+.navbar-text.navbar-right li.btn-default {
+	background-color: @black;
+	border-radius: 2px;
+	border-color: transparent;
+	border-width: 0px;
+}
+.navbar-text.navbar-right li.btn-default a {
+	color: #FFF;
+}
+.navbar-text.navbar-right li.btn {
+	padding: 6px 24px;
+	margin-left: 48px;
+	margin-top: -6px;
+	margin-right: 15px;
+}
+
 .side-collapse ul li,
 .side-collapse .social-logos {
 	width: @navbar-width;
@@ -172,7 +222,7 @@ svg {
 @font-size-h4: ceil((@font-size-base * 1.25)); 
 @font-size-h5: @font-size-base;
 @font-size-h6: ceil((@font-size-base * 1)); 
-@font-size-nav: 14px;
+@font-size-nav: 13px;
 
 body {
 	font-family: @font-family-sans-serif;
@@ -459,6 +509,12 @@ footer .social-logos img {
 	visibility: hidden;
 }
 
+@media (max-width: 767px) {
+	#nav-contact {
+		display: none;
+		visibility: hidden;
+	}
+}
 @media (min-width: 768px) {
     #carousel-publishers .item,
     #carousel-advertisers .item,
