@@ -149,8 +149,7 @@
         $latest_blog_posts = new WP_Query( array( 'posts_per_page' => 6, 'orderby' => 'date', 'order' => 'ASC' ) );
 
         if ( $latest_blog_posts->have_posts() ) : while ( $latest_blog_posts->have_posts() ) : $latest_blog_posts->the_post(); ?>
-            
-            
+             
 
                 <div class="col-md-4">
                     <h5><?php the_category(); ?></h5>

@@ -82,16 +82,14 @@ $(function() {
     });
 
     function loadContent(href){
+    	$("#post-container > #contents").html("content loading");
         $mainContent
                 .find("#contents")
                 .fadeOut(200, function() {
+
                     $mainContent.hide().load(href + "#contents", function() {
                     	$mainContent.wrapInner("<div id='contents'>");
-                        $mainContent.fadeIn(200, function() {
-                            $pageWrap.animate({
-                                //height: baseHeight + $mainContent.height() + "px"
-                            });
-                        });
+                        $mainContent.fadeIn(200);
 
                         $("#post-list a").removeClass("current");
                         console.log(href);
@@ -105,7 +103,7 @@ $(function() {
        loadContent(_link);
     });
 
-} // otherwise, history is not supported, so nothing fancy here.
+} 
 
     
 });
