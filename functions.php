@@ -102,7 +102,7 @@ function my_scripts() {
     true 
   );
 } 
-add_action( 'wp_enqueue_scripts', 'sticky_svg' );
+//add_action( 'wp_enqueue_scripts', 'sticky_svg' );
 function sticky_svg() {
   wp_enqueue_script( 
     'sticky_svg', 
@@ -111,7 +111,51 @@ function sticky_svg() {
     '', 
     true 
   );
-} 
+}
+add_action( 'wp_enqueue_scripts', 'modernizr' );
+function modernizr() {
+  wp_enqueue_script( 
+    'modernizr', 
+    'http://modernizr.com/downloads/modernizr-latest.js', 
+    array('jquery'), 
+    '', 
+    true 
+  );
+}
+add_action( 'wp_enqueue_scripts', 'ajax' );
+function ajax() {
+  wp_enqueue_script( 
+    'ajax', 
+    get_stylesheet_directory_uri() . '/js/ajax.js', 
+    array('jquery'), 
+    '', 
+    true 
+  );
+}
+
+
+// AJAX
+// add_action( 'wp_enqueue_scripts', 'ajaxxx' );
+// function ajaxxx() {
+  
+//   wp_enqueue_script( 'ajax-pagination', get_stylesheet_directory_uri() . '/js/ajax.js', array( 'jquery' ), '1.0', true );
+//   //wp_localize_script( 'ajax-pagination', 'ajaxpagination', array('ajaxurl' => admin_url( 'admin-ajax.php' )));
+//   global $wp_query;
+//   wp_localize_script( 'ajax-pagination', 'ajaxpagination', array(
+//   'ajaxurl' => admin_url( 'admin-ajax.php' ),
+//   'query_vars' => json_encode( $wp_query->query )
+//   ));
+// }
+
+// //
+// add_action( 'wp_ajax_nopriv_ajax_pagination', 'my_ajax_pagination' );
+// add_action( 'wp_ajax_ajax_pagination', 'my_ajax_pagination' );
+// function my_ajax_pagination() {
+//   echo get_the_title();
+//   die();
+// }
+
+
 
 
 // ------------------------------------------------------------------

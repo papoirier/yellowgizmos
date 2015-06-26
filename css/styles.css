@@ -26,6 +26,18 @@ svg {
 #contact {
   background-color: #fdd147;
 }
+.container.news {
+  margin-top: 100px;
+}
+#post-cats {
+  background-color: #fafafa;
+}
+.post-title a.current {
+  color: red;
+}
+#contents {
+  background-color: yellow;
+}
 .navbar-default {
   border-bottom: none;
   background-color: #FFF;

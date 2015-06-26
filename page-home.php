@@ -140,6 +140,42 @@
 	<?php include_once('content-twitter.php'); ?>
 </section> <!-- /#twitter -->
 
+<!-- NEWS - - - - - - - - - - - - - - - - - - - - -->
+<section id="news">
+    <div class="container">
+        <div class="row">
+        <?php //include_once('content-news.php'); ?>
+        <?php
+        $latest_blog_posts = new WP_Query( array( 'posts_per_page' => 6, 'orderby' => 'date', 'order' => 'ASC' ) );
+
+        if ( $latest_blog_posts->have_posts() ) : while ( $latest_blog_posts->have_posts() ) : $latest_blog_posts->the_post(); ?>
+            
+            
+
+                <div class="col-md-4">
+                    <h5><?php the_category(); ?></h5>
+                    <h4><?php the_title(); ?></h4>
+                    <p><?php the_excerpt(); ?></p>
+                </div>
+
+                <?php
+                $count++;
+                if ( $count%3 == 0) {
+                    echo "</div><div class=\"row\">";
+                } ?>
+
+
+        <?php endwhile; endif;
+        ?>
+        <div class="row">
+            <div class="col-md-4">
+                <p class="btn btn-default"><a href="blog">All posts</a></p>
+            </div>
+        </div>
+    </div>
+</section> <!-- /#news -->
+
+
 <!-- CONTACT - - - - - - - - - - - - - - - - - - -->
 <section id="contact">
     <?php $my_query = new WP_Query( 'page_id=67' ); ?>
