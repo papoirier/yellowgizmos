@@ -11,11 +11,11 @@
             );
             $query = new WP_Query( $args );
             if ( $query->have_posts() ) : while ( $query->have_posts() ) : $query->the_post(); ?>
-            <div class="col-md-3 col-md-offset-1 img-sticky-bg">
+            <div class="col-md-4 img-sticky-bg">
 
                 <?php if ( has_post_thumbnail() ) {
                     $url = wp_get_attachment_url( get_post_thumbnail_id($query->ID, 'medium') ); ?>
-                    <img src="<?php echo $url; ?>" class="img-responsive img-circle">
+                    <img src="<?php echo $url; ?>" class="img-responsive img-circle center-block">
                 <?php }
                 else { ?>
                     <img src="<?php echo get_stylesheet_directory_uri() ?>/img/fpo.png" class="ing-responsive">
@@ -23,7 +23,7 @@
             </div>
             <div class="col-md-5 col-md-offset-1">
                 <h2><?php the_title(); ?></h2>
-                <h5><?php the_secondary_title(); ?></h5>
+                <h5><?php the_excerpt(); ?></h5>
                 <p class="btn btn-default"><a href="<?php echo the_permalink(); ?>">Read more</a></p>
             </div>
             <?php endwhile; endif; ?>

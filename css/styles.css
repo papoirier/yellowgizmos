@@ -1,3 +1,6 @@
+.center-block p {
+  text-align: center;
+}
 #shape {
   z-index: 500 !important;
   display: block;
@@ -328,6 +331,10 @@ ul.navbar-yieldmo li {
 #ad-format-lab p {
   margin-top: 2em;
 }
+.btn-afl {
+  margin-top: 2em;
+  margin-bottom: 3em;
+}
 #team {
   padding-top: 4em;
   background-color: #f27f8a;
@@ -375,6 +382,11 @@ iframe#twitter-widget-0 {
   background-image: url('../img/sticky-bg.png');
   background-repeat: no-repeat;
   background-position: top right;
+}
+.img-sticky-bg img {
+  width: 80%;
+  margin-top: 2em;
+  margin-bottom: 2em;
 }
 #sticky .btn {
   margin-top: 1em;
@@ -441,6 +453,22 @@ footer .social-logos img {
   margin: 0;
   padding: 0;
   font-size: 70%;
+}
+.spacer {
+  padding-top: 50px;
+}
+.main-title {
+  text-align: center;
+}
+#careers {
+  background-color: #fdd147;
+}
+#careers .main-title h1 {
+  color: #FFF;
+}
+.jobs .item {
+  display: block;
+  min-height: 642px;
 }
 .carousel-caption {
   pointer-events: none;
@@ -551,10 +579,13 @@ ol.carousel-indicators {
 @media (min-width: 768px) {
   #carousel-publishers .item,
   #carousel-advertisers .item,
-  #carousel-readers .item,
-  #carousel-dedicated .item {
+  #carousel-readers .item {
     display: block;
     min-height: 492px;
+  }
+  #carousel-dedicated .item {
+    display: block;
+    min-height: 542px;
   }
   .item p.btn {
     position: absolute;

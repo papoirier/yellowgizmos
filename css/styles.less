@@ -23,6 +23,9 @@
 
 
 // TEMP // -----------------------------------
+.center-block p {
+	text-align: center;
+}
 #shape {
     z-index: 500 !important;
     display: block;
@@ -184,7 +187,6 @@ ul {
 }
 // NAVBAR // ----------------------------------
 @navbar-width: 240px;
-
 .navbar-default {
 	border-bottom: none;
 	background-color: #FFF;
@@ -398,6 +400,10 @@ ul.navbar-yieldmo li {
 #ad-format-lab p { 
 	margin-top: 2em;
 }
+.btn-afl {
+	margin-top: 2em;
+	margin-bottom: 3em;
+}
 
 // TEAM // -------------------------------------
 #team {
@@ -455,6 +461,11 @@ iframe#twitter-widget-0 {
 	background-image: url('../img/sticky-bg.png');
 	background-repeat: no-repeat;
 	background-position: top right;
+}
+.img-sticky-bg img {
+	width: 80%;
+	margin-top: 2em;
+	margin-bottom: 2em;
 }
 #sticky .btn {
 	margin-top: 1em;
@@ -534,6 +545,33 @@ footer .social-logos img {
 #address {
 	//font-size: 12px;
 }
+
+// *********** // ------------------------------
+// *********** // ------------------------------
+
+// OTHER PAGES // ------------------------------
+@spacer: 50px;
+.spacer {
+	padding-top: @spacer;
+}
+.main-title {
+	text-align: center;
+}
+
+// CAREERS // ----------------------------------
+#careers {
+	background-color: @yellow;
+}
+#careers .main-title h1 {
+	color: #FFF;
+}
+.jobs .item { 
+        display:block;
+        min-height: 600px + @btn-height;
+    }
+
+// *********** // ------------------------------
+// *********** // ------------------------------
 
 // CAROUSEL // ---------------------------------
 @carousel-top: 34%;
@@ -672,10 +710,13 @@ ol.carousel-indicators {
 @media (min-width: 768px) {
     #carousel-publishers .item,
     #carousel-advertisers .item,
-    #carousel-readers .item,
-    #carousel-dedicated .item { 
+    #carousel-readers .item { 
         display:block;
         min-height: 450px + @btn-height;
+    }
+    #carousel-dedicated .item { 
+        display:block;
+        min-height: 500px + @btn-height;
     }
 	.item p.btn { 
     	position: absolute;
