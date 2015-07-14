@@ -31,11 +31,25 @@
 </div>
 <div id="dedicated-details">
     <div class="container">
+        
+
         <div class="row">
-    		<div>
-    			<?php require(locate_template('content-dedicated-details.php')); ?>
-    		</div>
+            <div id="carousel-<?php echo print_the_slug(); ?>" class="carousel slide" data-ride="carousel" data-interval="false">
+                <!-- indicators -->
+                <ol class="carousel-indicators">
+                    <li data-target="#carousel-<?php echo print_the_slug(); ?>" data-slide-to="0" class="active"></li>
+                    <li data-target="#carousel-<?php echo print_the_slug(); ?>" data-slide-to="1"></li>
+                    <li data-target="#carousel-<?php echo print_the_slug(); ?>" data-slide-to="2"></li>
+                </ol>
+
+                <!-- wrapper for slides -->
+                <div class="carousel-inner">
+                    <?php require(locate_template('content-dedicated-details.php')); ?>
+                </div> <!-- /.carousel-inner -->
+            </div> <!-- /#carousel-example-generic -->
         </div>
+
+
     </div>
 </div>
 <?php endwhile; ?>

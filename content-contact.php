@@ -1,27 +1,12 @@
-<?php // CONTACT --------------------------------------------- ?>
+<?php $mypages = get_pages( array( 'child_of' => $post->ID, 'sort_column' => 'menu_order', 'order' => 'ASC' ) ); ?>
+<?php
+foreach( $mypages as $page ) {      
+    $content = $page->post_content;
+    $content = apply_filters( 'get_the_content', $content ); ?>
+            <?php $url = wp_get_attachment_url( get_post_thumbnail_id($page->ID, 'medium') ); ?>
+            <img src="<?php echo $url; ?>" title="<?php echo $content; ?>" alt="<?php echo $page->post_title; ?>'s photo" data-toggle="tooltip" data-placement="top" class="img-responsive">
+            <h5><?php echo $page->post_title; ?></h5>
+            <p><?php echo $page->post_content; ?></p>
+            
 
-<div class="container">
-    <?php if (! is_front_page()) { ?>
-	<div class="row">
-    	<div class="col-md-12 main-title">
-    		<h2><?php the_title();?></h2>
-            <h2><?php the_secondary_title();?></h2>
-        </div>
-    </div>
-    <?php } ?>
-    <div class="row">
-        <div class="col-md-7 ">
-            <div class="contact-form">
-                <h4><?php the_title();?></h4>
-            	<h4 class="text-white"><?php the_secondary_title(); ?></h4>
-            	<?php //echo do_shortcode( '[contact-form-7 id="66" title="Contact Yieldmo"]' ); // local ?>
-                <?php echo do_shortcode( '[contact-form-7 id="68" title="Contact Yieldmo"]' ); // server ?>
-            </div>
-        </div>
-        <div class="col-md-3 col-md-offset-1">
-            <div class="address">
-                <?php the_content(); ?>
-            </div>
-        </div>
-    </div>
-</div>
+<?php } ?>

@@ -15,28 +15,128 @@ svg {
   margin: 0;
   z-index: 1000 !important;
 }
-#about {
+#about,
+.polka {
   background: url("../img/polka-dot.svg");
   background-repeat: repeat;
   background-attachment: fixed;
 }
-#team {
-  background-color: #fdd147;
-}
 #contact {
   background-color: #fdd147;
 }
-.container.news {
-  margin-top: 100px;
+.btn-default {
+  background-color: transparent;
+  border-radius: 2px;
+  border-color: #262626;
+  border-width: 2px;
+  color: #262626;
+  font-family: "Apercu Bold";
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 13px;
+  padding: 10px 24px;
 }
-#post-cats {
-  background-color: #fafafa;
+.btn-default:hover {
+  background-color: transparent;
+  border-color: rgba(38, 38, 38, 0.7);
 }
-.post-title a.current {
-  color: red;
+.btn-default a {
+  color: #262626;
 }
-#contents {
-  background-color: yellow;
+.btn-default:hover a {
+  color: rgba(38, 38, 38, 0.7);
+}
+@font-face {
+  font-family: "Apercu Regular", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+}
+@font-face {
+  font-family: "Apercu Italic", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  font-style: italic;
+  font-stretch: normal;
+}
+@font-face {
+  font-family: "Apercu Bold", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+}
+@font-face {
+  font-family: "Apercu Medium", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+}
+body {
+  font-family: "Apercu Regular", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  color: #262626;
+}
+p {
+  line-height: 1.5em;
+  font-style: normal;
+}
+h1 {
+  font-family: "Apercu Bold";
+  font-size: 41px;
+  font-style: normal;
+  font-weight: bold;
+}
+h2 {
+  font-family: "Apercu Bold";
+  font-size: 30px;
+  line-height: 1.1em;
+  font-style: normal;
+  font-weight: bold;
+}
+h3 {
+  font-family: "Apercu Bold";
+  font-size: 28px;
+  line-height: 1.1em;
+  font-style: normal;
+  font-weight: bold;
+}
+h3.regular {
+  font-family: "Apercu Regular";
+  font-weight: normal;
+}
+h4 {
+  font-family: "Apercu Bold";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: bold;
+}
+h5 {
+  font-size: 16px;
+  font-weight: bold;
+  font-style: normal;
+}
+h6 {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: bold;
+}
+strong {
+  font-weight: bold;
+  font-style: normal;
+}
+a {
+  color: #1786b9;
+}
+a:hover {
+  text-decoration: none;
+}
+ul {
+  text-decoration: none;
+  list-style-type: none;
+  padding-left: 0;
+  font-size: normal;
+}
+.text-white {
+  color: #FFF;
 }
 .navbar-default {
   border-bottom: none;
@@ -52,6 +152,8 @@ svg {
 .navbar-default .navbar-toggle {
   border-color: transparent;
   border-radius: 0px;
+  margin: 20px 0 0 30px;
+  padding: 0;
 }
 .navbar-default .navbar-toggle:hover {
   background-color: transparent;
@@ -84,9 +186,8 @@ svg {
 }
 .navbar-text.navbar-right li.btn {
   padding: 6px 24px;
-  margin-left: 48px;
+  margin-left: 36px;
   margin-top: -6px;
-  margin-right: 15px;
 }
 .side-collapse ul li,
 .side-collapse .social-logos {
@@ -162,96 +263,11 @@ svg {
 .side-collapse.in {
   width: 0;
 }
-@font-face {
-  font-family: "Apercu Regular", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: normal;
-  font-style: normal;
-  font-stretch: normal;
-}
-@font-face {
-  font-family: "Apercu Italic", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: normal;
-  font-style: italic;
-  font-stretch: normal;
-}
-@font-face {
-  font-family: "Apercu Bold", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: normal;
-  font-style: normal;
-  font-stretch: normal;
-}
-@font-face {
-  font-family: "Apercu Medium", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: 600;
-  font-style: normal;
-  font-stretch: normal;
-}
-body {
-  font-family: "Apercu Regular", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 16px;
-  color: #262626;
-}
-p {
-  line-height: 1.5em;
-  font-style: normal;
-}
-h1 {
-  font-family: "Apercu Bold";
-  font-size: 41px;
-  font-style: normal;
-  font-weight: bold;
-}
-h2 {
-  font-family: "Apercu Bold";
-  font-size: 30px;
-  line-height: 1.1em;
-  font-style: normal;
-  font-weight: bold;
-}
-h3 {
-  font-family: "Apercu Bold";
-  font-size: 28px;
-  line-height: 1.1em;
-  font-style: normal;
-  font-weight: bold;
-}
-h4 {
-  font-family: "Apercu Bold";
-  font-size: 20px;
-  font-style: normal;
-  font-weight: bold;
-}
-h5 {
-  font-size: 16px;
-  font-weight: bold;
-  font-style: normal;
-}
-h6 {
-  font-size: 16px;
-  font-style: normal;
-  font-weight: bold;
-}
-strong {
-  font-weight: bold;
-  font-style: normal;
-}
-a {
-  color: #1786b9;
-}
-a:hover {
-  text-decoration: none;
-}
-ul {
-  text-decoration: none;
-  list-style-type: none;
-  padding-left: 0;
-  font-size: normal;
-}
-.text-white {
-  color: #FFF;
-}
 ul.navbar-yieldmo li {
   display: inline-block;
+}
+#nav-login {
+  margin-right: 45px;
 }
 #rethinking {
   background-color: #fdd147;
@@ -261,6 +277,12 @@ ul.navbar-yieldmo li {
 .rethinking-img img {
   max-width: 216px;
 }
+#publishers .container,
+#advertisers .container,
+#readers .container {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
 #dedicated {
   background-color: #fafafa;
 }
@@ -269,6 +291,16 @@ ul.navbar-yieldmo li {
   background-image: url('../img/dots-bg.png');
   background-repeat: repeat-x;
   background-position: center;
+}
+#dedicated-phone button.btn-default {
+  border-color: transparent;
+  color: #b2b2b2;
+}
+#dedicated-phone button.btn-default.active {
+  border-color: #262626;
+  color: #262626;
+  background-color: transparent;
+  box-shadow: none;
 }
 .phone-carousel {
   margin: 3em 0;
@@ -283,18 +315,28 @@ ul.navbar-yieldmo li {
   top: 57px;
 }
 #dedicated-details {
-  background-color: #1786b9;
+  background-color: #fdd147;
   padding: 2em 0;
+  margin-top: 2em;
+}
+#ad-format-lab {
+  padding: 4em 0;
+}
+#ad-format-lab h3 {
+  margin: 0;
+}
+#ad-format-lab p {
   margin-top: 2em;
 }
 #team {
   padding-top: 4em;
+  background-color: #f27f8a;
 }
 #twitter {
   padding-top: 3em;
 }
 iframe#twitter-widget-0 {
-  min-height: auto !important;
+  height: auto !important;
   overflow-y: visible;
   display: block;
 }
@@ -303,16 +345,73 @@ iframe#twitter-widget-0 {
   margin-left: auto !important;
   margin-right: auto !important;
 }
-.twitter-timeline {
-  width: 80% !important;
-}
 #twitter .logo-twitter {
   width: 36px;
   margin: 0em auto 3.6em auto;
 }
 .twttr {
+  margin-top: 1.5em;
+  clear: left !important;
+  margin-bottom: 3em;
+}
+#sticky {
+  background-color: #262626;
+}
+#sticky h3,
+#sticky h4,
+#sticky h5,
+#sticky p {
+  color: #FFF;
+}
+#sticky h2 {
+  color: #fdd147;
+  margin-bottom: 1em;
+}
+#sticky .col-md-3 img,
+#sticky .col-md-5 {
+  margin-top: 2em;
+}
+.img-sticky-bg {
+  background-image: url('../img/sticky-bg.png');
+  background-repeat: no-repeat;
+  background-position: top right;
+}
+#sticky .btn {
   margin-top: 1em;
-  clear: both;
+}
+#sticky .btn-default {
+  background-color: transparent;
+  border-radius: 2px;
+  border-color: #FFF;
+  border-width: 2px;
+  color: #FFF;
+  font-family: "Apercu Bold";
+  font-weight: bold;
+  text-transform: uppercase;
+}
+#sticky .btn-default a {
+  color: #FFF;
+}
+#sticky .btn-default:hover {
+  background-color: transparent;
+  border-color: #ededed;
+  color: #ededed;
+}
+.container.news {
+  margin-top: 100px;
+}
+#post-cats {
+  background-color: #fafafa;
+}
+.post-title a.current {
+  color: red;
+}
+#contents {
+  background-color: yellow;
+}
+.all-posts {
+  margin-top: 2em;
+  margin-bottom: 3em;
 }
 footer {
   background-color: #262626;
@@ -332,13 +431,16 @@ footer .social-logos img {
   display: inline-block;
   float: left;
 }
-#copyright {
+.legals a {
+  color: #b2b2b2;
+}
+.colophon {
   margin-top: 4em;
-  font-size: 70%;
 }
 #copyright p {
   margin: 0;
   padding: 0;
+  font-size: 70%;
 }
 .carousel-caption {
   pointer-events: none;
@@ -347,7 +449,10 @@ footer .social-logos img {
   right: 0;
   text-shadow: none;
   text-align: left;
-  color: #262626;
+  color: #FFF;
+  background-color: rgba(38, 38, 38, 0.25);
+  bottom: initial;
+  padding: 3em 0em 3.5em 0em;
 }
 .carousel-caption h1 {
   line-height: 1.3em;
@@ -378,45 +483,39 @@ footer .social-logos img {
 .carousel-inner {
   height: auto;
   display: block;
-  padding-bottom: 4em;
 }
 .carousel-inner > .item > img {
   min-width: 100%;
   height: auto;
 }
-.carousel-control .glyphicon-chevron-left {
-  margin-left: -24px !important;
-}
-.carousel-control .glyphicon-chevron-right {
-  margin-right: -24px !important;
+.glyphicon {
+  background-color: rgba(38, 38, 38, 0.25);
+  top: 34% !important;
 }
 .glyphicon-chevron-left,
 .glyphicon-chevron-right {
-  width: 55px !important;
+  width: 100px !important;
   height: 100px !important;
+  margin-top: 0px !important;
+  border-radius: 50%;
 }
 .glyphicon-chevron-left:before,
 .glyphicon-chevron-right:before {
   content: "";
 }
 .glyphicon-chevron-left {
-  background-image: url("../img/intro-slides/arrow-prev.png");
+  background-image: url("../img/intro-slides/arrow-prev.svg");
   background-repeat: no-repeat;
-  background-position: left;
+  background-position: center;
 }
 .glyphicon-chevron-right {
-  background-image: url("../img/intro-slides/arrow-next.png");
+  background-image: url("../img/intro-slides/arrow-next.svg");
   background-repeat: no-repeat;
-  background-position: right;
+  background-position: center;
 }
-.carousel-control .glyphicon-chevron-left,
-.carousel-control .glyphicon-chevron-right {
-  margin-top: -69px;
-}
-.glyphicon {
-  font-family: monospace;
-  width: 55px;
-  height: 200px;
+ol.carousel-indicators {
+  position: absolute;
+  top: 100px;
 }
 .carousel-indicators li,
 .carousel-indicators li.active {
@@ -434,11 +533,12 @@ footer .social-logos img {
   height: 6px;
 }
 .carousel-indicators li {
-  background-color: rgba(38, 38, 38, 0.25);
+  background-color: #FFF;
 }
 #carousel-publishers .carousel-control,
 #carousel-advertisers .carousel-control,
-#carousel-readers .carousel-control {
+#carousel-readers .carousel-control,
+#carousel-dedicated .carousel-control {
   display: none;
   visibility: hidden;
 }
@@ -451,13 +551,19 @@ footer .social-logos img {
 @media (min-width: 768px) {
   #carousel-publishers .item,
   #carousel-advertisers .item,
-  #carousel-readers .item {
+  #carousel-readers .item,
+  #carousel-dedicated .item {
     display: block;
-    padding-bottom: 100px;
+    min-height: 492px;
+  }
+  .item p.btn {
+    position: absolute;
+    bottom: 0;
   }
   #carousel-publishers ol.carousel-indicators,
   #carousel-advertisers ol.carousel-indicators,
-  #carousel-readers ol.carousel-indicators {
+  #carousel-readers ol.carousel-indicators,
+  #carousel-dedicated ol.carousel-indicators {
     display: none;
     visibility: hidden;
   }

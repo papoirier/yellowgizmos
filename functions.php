@@ -40,6 +40,9 @@ function print_the_slug() {
   if (get_the_ID() == 19) {
     return "readers";
   }
+  if (get_the_ID() == 91) {
+    return "dedicated";
+  }
 }
 
 
@@ -102,15 +105,17 @@ function my_scripts() {
     true 
   );
 } 
-//add_action( 'wp_enqueue_scripts', 'sticky_svg' );
+add_action( 'wp_enqueue_scripts', 'sticky_svg' );
 function sticky_svg() {
-  wp_enqueue_script( 
-    'sticky_svg', 
-    get_stylesheet_directory_uri() . '/js/sticky-svg.js', 
-    array('jquery'), 
-    '', 
-    true 
-  );
+  if(is_front_page()){
+    wp_enqueue_script( 
+      'sticky_svg', 
+      get_stylesheet_directory_uri() . '/js/sticky-svg.js', 
+      array('jquery'), 
+      '', 
+      true 
+    );
+  }
 }
 add_action( 'wp_enqueue_scripts', 'modernizr' );
 function modernizr() {

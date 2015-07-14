@@ -34,6 +34,7 @@ jQuery(document).ready(function($) {
 
 			// DIV HEIGHTS // ------------------------------------------
 			var h = $(window).height();
+			var divPadding = 100;
 
 			var carousel = $("#cptbc_812").height();
 			var rethinkingHeight = $("#rethinking").css({"height":h + "px"});
@@ -45,10 +46,12 @@ jQuery(document).ready(function($) {
 			var pub = $("#publishers").offset().top;
 			var adv = $("#advertisers").offset().top;
 			var rea = $("#readers").offset().top;
+			var ded = $("#dedicated").offset().top;
 
 			var pubHeight = $("#publishers").height();
 			var advHeight = $("#advertisers").height();
-			var reaHeight = $("#readers").height(); 
+			var reaHeight = $("#readers").height();
+			var dedHeight = $("#dedicated").height(); 
 
 			console.log("publishers y: "+pub);
 			console.log("rethinking y: "+reaHeight);
@@ -60,11 +63,11 @@ jQuery(document).ready(function($) {
 			    };
 			    if (y >= pub + pubHeight - h && y <= rea) {
 			    	$("#shape").css({"position":"fixed", "top": h - sha});
-			    };
-			    
+			    };			    
 			    if (y > rea + reaHeight - h) {
 			    	$("#shape").css({"position":"absolute", "top": rea + reaHeight - sha});
 			    };
+
 			    // yellow
 			    if( (y < adv-sha && flagYellow == true) || ((y < adv-sha && flagPink == false)) ) {
 			    	animateYellow();
@@ -79,7 +82,7 @@ jQuery(document).ready(function($) {
 			    	flagPink = false;
 			    	flagOrange = true;
 			    }
-			    // orange
+			    // blue
 			    if( (y >= rea-sha && flagOrange == true) || (y >= rea-sha && flagPink == false)) {
 			    	animateOrange();
 			    	flagYellow = true;

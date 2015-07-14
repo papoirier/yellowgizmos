@@ -723,9 +723,10 @@ function cptbc_frontend($atts){
 						<div class="carousel-caption">
 							<div class="container">
 								<div class="row">
-							    	<div class="col-md-6">
+							    	<div class="col-md-8 col-md-offset-2 text-center">
 										<?php //echo $atts['before_title'].$linkstart.$image['title'].$linkend.$atts['after_title']; ?>
-										<h1><?php echo $image['content']; ?></h1>
+										<h1 class="carousel-title"><?php echo $image['title']; ?></h1>
+										<h4 class="carousel-subtitle"><?php echo $image['content']; ?></h4>
 									</div>
 							    </div>
 							</div>

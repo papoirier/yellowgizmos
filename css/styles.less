@@ -13,12 +13,13 @@
 @navy:		rgb(16, 101, 138);
 
 
-@deadbeef-black-alpha: 	rgba(38,38,38, 0.25);
-@black-beta: 	rgba(38,38,38, 0.7);
+@black-alpha: 			rgba(38,38,38, 0.25);
+@black-beta: 			rgba(38,38,38, 0.7);
 @venture-white-alpha:	rgba(237,237,237,0.7);
 @tucker-yellow-alpha:	rgba(253,209,71, 0.7);
 @hella-gray:			rgb(153,153,153);
 @fafafa-gray:			rgb(250, 250, 250);
+@some-gray:				rgb(178,178,178);
 
 
 // TEMP // -----------------------------------
@@ -39,44 +40,148 @@ svg {
     margin: 0;
     z-index: 1000 !important;
 }
-#about {
+#about,
+.polka {
 	background: url("../img/polka-dot.svg");
     background-repeat: repeat; 
     background-attachment: fixed;
 }
-#team {
-	background-color: @yellow;
-}
 #contact {
 	background-color: @yellow;
 }
-#publishers,
-#advertisers,
-#readers {
-	//z-index: 2000 !important;
+.btn-default {
+	background-color: transparent;
+	border-radius: 2px;
+	border-color: @black;
+	border-width: 2px;
+	color: @black;
+	font-family: "Apercu Bold";
+	font-weight: bold;
+	text-transform: uppercase;
+	font-size: 13px;
+	padding: 10px 24px;
+}
+.btn-default:hover {
+	background-color: transparent;
+	border-color: @black-beta;
+}
+.btn-default a {
+	color: @black;
+}
+.btn-default:hover a {
+	color: @black-beta;
 }
 
-// NEWS // -----------------------------------
-.container.news {
-	margin-top: 100px;
+// TYPOGRAPHY // ------------------------------
+@font-face { 
+	font-family:"Apercu Regular", "Helvetica Neue", Helvetica, Arial, sans-serif; 
+	font-weight:normal; 
+	font-style:normal;  
+	font-stretch: normal;
+} 
+@font-face { 
+	font-family:"Apercu Italic", "Helvetica Neue", Helvetica, Arial, sans-serif; 
+	font-weight:normal; 
+	font-style:italic; 
+	font-stretch: normal;
 }
-#post-cats {
-	background-color: @fafafa-gray;
+@font-face { 
+	font-family:"Apercu Bold", "Helvetica Neue", Helvetica, Arial, sans-serif; 
+	font-weight:normal; 
+	font-style:normal; 
+	font-stretch: normal;
 }
-#post-list {
+@font-face { 
+	font-family:"Apercu Medium", "Helvetica Neue", Helvetica, Arial, sans-serif; 
+	font-weight:600; 
+	font-style:normal; 
+	font-stretch: normal;
+}
+
+@font-family-sans-serif: "Apercu Regular", "Helvetica Neue", Helvetica, Arial, sans-serif;
+@font-family-serif: "Georgia", "Times New Roman", serif;
+@font-size-base: 16px;
+@font-size-h1: floor((@font-size-base * 2.6));
+@font-size-h2: floor((@font-size-base * 1.90)); 
+@font-size-h3: ceil((@font-size-base * 1.7)); 
+@font-size-h4: ceil((@font-size-base * 1.25)); 
+@font-size-h5: @font-size-base;
+@font-size-h6: ceil((@font-size-base * 1)); 
+@font-size-nav: 13px;
+
+body {
+	font-family: @font-family-sans-serif;
+	font-size: @font-size-base;
+	color: @black;
+	//line-height: 1.5em;
+}
+p {
+	line-height: 1.5em;
+	font-style: normal;
+	//font-family: @font-family-serif;
+}
+h1 {
+	font-family: "Apercu Bold";
+	font-size: @font-size-h1;
+	font-style: normal;
+	font-weight: bold;
+}
+h2 {
+	font-family: "Apercu Bold";
+	font-size: @font-size-h2;
+	line-height: 1.1em;
+	font-style: normal;
+	font-weight: bold;
+	
+}
+h3 {
+	font-family: "Apercu Bold";
+	font-size: @font-size-h3;
+	line-height: 1.1em;
+	font-style: normal;
+	font-weight: bold;
+}
+h3.regular {
+	font-family: "Apercu Regular";
+	font-weight: normal;
+}
+h4 {
+	font-family: "Apercu Bold";
+	font-size: @font-size-h4;
+	font-style: normal;
+	font-weight: bold;
 
 }
-#post-container {
-
+h5 {
+	font-size: @font-size-h5;
+	font-weight: bold;
+	font-style: normal;
 }
-.post-title a.current {
-	color: red;
+h6 {
+	font-size: @font-size-h6;
+	font-weight: bold;
+	font-style: normal;
+	font-weight: bold;
 }
-#contents {
-	background-color: yellow;
-	//min-height: 200px;
+strong {
+	font-weight: bold;
+	font-style: normal;
 }
-
+a {
+	color: @blue;
+}
+a:hover {
+	text-decoration: none;
+}
+ul {
+	text-decoration: none;
+	list-style-type: none;
+	padding-left: 0;
+	font-size: normal;
+}
+.text-white {
+	color: #FFF;
+}
 // NAVBAR // ----------------------------------
 @navbar-width: 240px;
 
@@ -94,6 +199,8 @@ svg {
 .navbar-default .navbar-toggle {
 	border-color: transparent;
 	border-radius: 0px;
+	margin: 20px 0 0 30px;
+	padding: 0;
 }
 .navbar-default .navbar-toggle:hover {
 	background-color: transparent;
@@ -127,9 +234,9 @@ svg {
 }
 .navbar-text.navbar-right li.btn {
 	padding: 6px 24px;
-	margin-left: 48px;
+	margin-left: 36px;
 	margin-top: -6px;
-	margin-right: 15px;
+	//margin-right: 15px;
 }
 
 .side-collapse ul li,
@@ -207,121 +314,14 @@ svg {
 .side-collapse.in {
  	width:0;
 }
-
-// TYPOGRAPHY // ------------------------------
-@font-face { 
-	font-family:"Apercu Regular", "Helvetica Neue", Helvetica, Arial, sans-serif; 
-	font-weight:normal; 
-	font-style:normal;  
-	font-stretch: normal;
-} 
-@font-face { 
-	font-family:"Apercu Italic", "Helvetica Neue", Helvetica, Arial, sans-serif; 
-	font-weight:normal; 
-	font-style:italic; 
-	font-stretch: normal;
-}
-@font-face { 
-	font-family:"Apercu Bold", "Helvetica Neue", Helvetica, Arial, sans-serif; 
-	font-weight:normal; 
-	font-style:normal; 
-	font-stretch: normal;
-}
-@font-face { 
-	font-family:"Apercu Medium", "Helvetica Neue", Helvetica, Arial, sans-serif; 
-	font-weight:600; 
-	font-style:normal; 
-	font-stretch: normal;
-}
-
-@font-family-sans-serif: "Apercu Regular", "Helvetica Neue", Helvetica, Arial, sans-serif;
-@font-family-serif: "Georgia", "Times New Roman", serif;
-@font-size-base: 16px;
-@font-size-h1: floor((@font-size-base * 2.6));
-@font-size-h2: floor((@font-size-base * 1.90)); 
-@font-size-h3: ceil((@font-size-base * 1.7)); 
-@font-size-h4: ceil((@font-size-base * 1.25)); 
-@font-size-h5: @font-size-base;
-@font-size-h6: ceil((@font-size-base * 1)); 
-@font-size-nav: 13px;
-
-body {
-	font-family: @font-family-sans-serif;
-	font-size: @font-size-base;
-	color: @black;
-	//line-height: 1.5em;
-}
-p {
-	line-height: 1.5em;
-	font-style: normal;
-	//font-family: @font-family-serif;
-}
-h1 {
-	font-family: "Apercu Bold";
-	font-size: @font-size-h1;
-	font-style: normal;
-	font-weight: bold;
-}
-h2 {
-	font-family: "Apercu Bold";
-	font-size: @font-size-h2;
-	line-height: 1.1em;
-	font-style: normal;
-	font-weight: bold;
-	
-}
-h3 {
-	font-family: "Apercu Bold";
-	font-size: @font-size-h3;
-	line-height: 1.1em;
-	font-style: normal;
-	font-weight: bold;
-	
-}
-h4 {
-	font-family: "Apercu Bold";
-	font-size: @font-size-h4;
-	font-style: normal;
-	font-weight: bold;
-
-}
-h5 {
-	font-size: @font-size-h5;
-	font-weight: bold;
-	font-style: normal;
-}
-h6 {
-	font-size: @font-size-h6;
-	font-weight: bold;
-	font-style: normal;
-	font-weight: bold;
-}
-strong {
-	font-weight: bold;
-	font-style: normal;
-}
-a {
-	color: @blue;
-}
-a:hover {
-	text-decoration: none;
-}
-ul {
-	text-decoration: none;
-	list-style-type: none;
-	padding-left: 0;
-	font-size: normal;
-}
-
-.text-white {
-	color: #FFF;
-}
-
-
-// NAV // --------------------------------------
 ul.navbar-yieldmo li {
 	display: inline-block;
 }
+#nav-login {
+	margin-right: 45px;
+}
+
+// ABOUT // ------------------------------------
 
 // RETHINKING // -------------------------------
 #rethinking {
@@ -332,6 +332,18 @@ ul.navbar-yieldmo li {
 .rethinking-img img {
 	max-width: 216px;
 }
+
+#publishers .container,
+#advertisers .container,
+#readers .container {
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+
+// PUBLISHERS // -------------------------------
+// ADVERTISERS // ------------------------------
+// READERS // ----------------------------------
+
 // DEDICATED // --------------------------------
 
 #dedicated {
@@ -342,6 +354,16 @@ ul.navbar-yieldmo li {
 	background-image: url('../img/dots-bg.png');
 	background-repeat: repeat-x;
 	background-position: center;
+}
+#dedicated-phone button.btn-default {
+	border-color: transparent;
+	color: @some-gray;
+}
+#dedicated-phone button.btn-default.active {
+	border-color: @black;
+	color: @black;
+	background-color: transparent;
+	box-shadow: none;
 }
 .phone-carousel {
 	margin: 3em 0;
@@ -361,14 +383,26 @@ ul.navbar-yieldmo li {
 	//position: absolute;
 }
 #dedicated-details {
-	background-color: @blue;
+	background-color: @yellow;
 	padding: 2em 0;
+	margin-top: 2em;
+}
+
+// AD FORMAT LAB // ----------------------------
+#ad-format-lab {
+	padding: 4em 0;
+}
+#ad-format-lab h3 { 
+	margin: 0;
+}
+#ad-format-lab p { 
 	margin-top: 2em;
 }
 
 // TEAM // -------------------------------------
 #team {
 	padding-top: 4em;
+	background-color: @pink;
 }
 
 // TWITTER // ----------------------------------
@@ -377,7 +411,7 @@ ul.navbar-yieldmo li {
 }
 iframe#twitter-widget-0 {
 	//margin-top: 36px !important;
-	min-height: auto !important;
+	height: auto !important;
 	overflow-y: visible;
 	display: block;
 }
@@ -387,15 +421,84 @@ iframe#twitter-widget-0 {
   	margin-right: auto !important;
 }
 .twitter-timeline {
-	width: 80% !important;
+	//width: 80% !important;
 }
 #twitter .logo-twitter {
 	width: 36px;
 	margin: 0em auto 3.6em auto; 
 }
 .twttr {
+	margin-top: 1.5em;
+	clear: left !important;
+	margin-bottom: 3em;
+}
+
+// NEWS // -------------------------------------
+#sticky {
+	background-color: @black;
+}
+#sticky h3,
+#sticky h4,
+#sticky h5,
+#sticky p, {
+	color: #FFF;
+}
+#sticky h2 {
+	color: @yellow;
+	margin-bottom: 1em;
+}
+#sticky .col-md-3 img,
+#sticky .col-md-5 {
+	margin-top: 2em;
+}
+.img-sticky-bg {
+	background-image: url('../img/sticky-bg.png');
+	background-repeat: no-repeat;
+	background-position: top right;
+}
+#sticky .btn {
 	margin-top: 1em;
-	clear: both;
+}
+#sticky .btn-default {
+	background-color: transparent;
+	border-radius: 2px;
+	border-color: #FFF;
+	border-width: 2px;
+	color: #FFF;
+	font-family: "Apercu Bold";
+	font-weight: bold;
+	text-transform: uppercase;
+}
+#sticky .btn-default a {
+	color: #FFF;
+}
+#sticky .btn-default:hover {
+	background-color: transparent;
+	border-color: @white;
+	color: @white;
+}
+.container.news {
+	margin-top: 100px;
+}
+#post-cats {
+	background-color: @fafafa-gray;
+}
+#post-list {
+
+}
+#post-container {
+
+}
+.post-title a.current {
+	color: red;
+}
+#contents {
+	background-color: yellow;
+	//min-height: 200px;
+}
+.all-posts {
+	margin-top: 2em;
+	margin-bottom: 3em;
 }
 
 // FOOTER // -----------------------------------
@@ -417,24 +520,34 @@ footer .social-logos img {
 	display: inline-block;
 	float: left;
 }
-#copyright {
+.legals a {
+	color: @some-gray;
+}
+.colophon {
 	margin-top: 4em;
-	font-size: 70%;
 }
 #copyright p {
 	margin: 0;
 	padding: 0;
+	font-size: 70%;
+}
+#address {
+	//font-size: 12px;
 }
 
 // CAROUSEL // ---------------------------------
+@carousel-top: 34%;
 .carousel-caption {
 	pointer-events: none;
-	top: 34%;
+	top: @carousel-top;
 	left: 0;
 	right: 0;
 	text-shadow: none;
 	text-align: left;
-	color: @black;
+	color: #FFF;
+	background-color: @black-alpha;
+	bottom: initial;
+	padding: 3em 0em 3.5em 0em;
 }
 .carousel-caption h1 {
 	line-height: 1.3em;
@@ -465,47 +578,65 @@ footer .social-logos img {
 .carousel-inner {
 	height: auto;
 	display: block;
-	padding-bottom: 4em;
+	//padding-bottom: 4em;
 }	
 .carousel-inner > .item > img {
   min-width:100%;
   height:auto;
 }
 .carousel-control .glyphicon-chevron-left {
-	margin-left: -24px !important;
+	//margin-left: -24px !important;
 }
 .carousel-control .glyphicon-chevron-right {
-	margin-right: -24px !important;
+	//margin-right: -24px !important;
+}
+.glyphicon {
+	background-color: @black-alpha;
+	top: @carousel-top !important;
+	
 }
 .glyphicon-chevron-left, 
 .glyphicon-chevron-right {
-	width: 55px !important;
-  	height: 100px !important;	
+	width: 100px !important;
+  	height: 100px !important;
+  	margin-top: 0px !important;
+  	border-radius: 50%;
 }
 .glyphicon-chevron-left:before, 
 .glyphicon-chevron-right:before {
 	content: "";
 }
 .glyphicon-chevron-left {
-	background-image: url("../img/intro-slides/arrow-prev.png");
+	background-image: url("../img/intro-slides/arrow-prev.svg");
   	background-repeat: no-repeat;
-  	background-position: left;
+  	background-position: center;
 }
 .glyphicon-chevron-right {
-  	background-image: url("../img/intro-slides/arrow-next.png");
+  	background-image: url("../img/intro-slides/arrow-next.svg");
   	background-repeat: no-repeat;
-  	background-position: right;
+  	background-position: center;
 }
 .carousel-control .glyphicon-chevron-left, 
 .carousel-control .glyphicon-chevron-right {
-	margin-top: -69px;
+	//margin-top: -69px;
 }
 .glyphicon {
-  font-family: monospace;
-  width: 55px;
-  height: 200px;
+  //font-family: monospace;
+  //width: 55px;
+  //height: 200px;
 }
+.carousel-title {
+
+}
+.carousel-subtitle {
+
+}
+
 @dot: 6px;
+ol.carousel-indicators {
+	position: absolute;
+	top: 100px;
+}
 .carousel-indicators li, .carousel-indicators li.active {
 	border: none !important;
 	background-color: @black;
@@ -514,6 +645,7 @@ footer .social-logos img {
 	max-width: @dot;
 	max-height: @dot;
 	margin: 5px !important;
+	//position: absolute;
 }
 .carousel-indicators .active {
 	opacity: 1;
@@ -521,15 +653,16 @@ footer .social-logos img {
 	height: @dot;
 }
 .carousel-indicators li {
-	background-color: @deadbeef-black-alpha;
+	background-color: #FFF;
 }
 #carousel-publishers .carousel-control,
 #carousel-advertisers .carousel-control,
-#carousel-readers .carousel-control {
+#carousel-readers .carousel-control,
+#carousel-dedicated .carousel-control {
 	display: none;
 	visibility: hidden;
 }
-
+@btn-height: 42px;
 @media (max-width: 767px) {
 	#nav-contact {
 		display: none;
@@ -539,14 +672,20 @@ footer .social-logos img {
 @media (min-width: 768px) {
     #carousel-publishers .item,
     #carousel-advertisers .item,
-    #carousel-readers .item { 
+    #carousel-readers .item,
+    #carousel-dedicated .item { 
         display:block;
-        padding-bottom:100px;
+        min-height: 450px + @btn-height;
+    }
+	.item p.btn { 
+    	position: absolute;
+    	bottom: 0;
     }
 
     #carousel-publishers ol.carousel-indicators,
     #carousel-advertisers ol.carousel-indicators,
-    #carousel-readers ol.carousel-indicators {
+    #carousel-readers ol.carousel-indicators,
+    #carousel-dedicated ol.carousel-indicators {
     	display: none;
     	visibility: hidden;
     }

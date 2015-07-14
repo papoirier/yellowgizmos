@@ -9,5 +9,6 @@ foreach( $mypages as $page ) {
             <img src="<?php echo $url; ?>" title="<?php echo $content; ?>" alt="<?php echo $page->post_title; ?>'s photo" data-toggle="tooltip" data-placement="top" class="img-responsive">
             <h5><?php echo $page->post_title; ?></h5>
             <p><?php echo $page->post_content; ?></p>
+            <p class="btn btn-default"><a href="<?php echo get_page_link($page->ID); ?>">Learn more</a></p>
         </div>
 <?php } ?>
