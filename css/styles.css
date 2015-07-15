@@ -24,9 +24,6 @@ svg {
   background-repeat: repeat;
   background-attachment: fixed;
 }
-#contact {
-  background-color: #fdd147;
-}
 .btn-default {
   background-color: transparent;
   border-radius: 2px;
@@ -113,6 +110,7 @@ h4 {
   font-weight: bold;
 }
 h5 {
+  font-family: "Apercu Bold";
   font-size: 16px;
   font-weight: bold;
   font-style: normal;
@@ -467,6 +465,99 @@ footer .social-logos img {
   margin: 0;
   padding: 0;
   font-size: 70%;
+}
+#contact {
+  background-color: #fdd147;
+  padding-top: 3em;
+  padding-bottom: 3em;
+}
+.contact-title h4 {
+  margin: 0;
+  line-height: 1.2em;
+}
+.contact-title {
+  margin-bottom: 2em;
+}
+#type-of-client .wpcf7-list-item {
+  background-color: aqua;
+  display: inline-block;
+  width: 30%;
+}
+#type-of-client input[type="radio"] {
+  display: inline-block;
+  background-color: blue;
+  float: left;
+}
+.wpcf7-list-item-label {
+  float: left;
+  background-color: red;
+  display: inline-block;
+  margin-top: -15px;
+  margin-left: 20px;
+  pointer-events: none;
+}
+.wpcf7-form-control-wrap input,
+.wpcf7-form-control-wrap textarea {
+  width: 100%;
+  border: none;
+}
+.wpcf7-form-control-wrap input {
+  border-bottom: 1px solid #262626;
+  background-color: transparent;
+  color: #262626;
+  font-family: "Apercu Italic";
+  font-style: italic;
+  margin-top: 6px;
+}
+.wpcf7-form-control-wrap ::-webkit-input-placeholder {
+  color: #262626;
+  border-bottom: 1px;
+  border-color: #262626;
+}
+.wpcf7-form-control-wrap ::-moz-placeholder {
+  color: #262626;
+}
+.wpcf7-form-control-wrap :-ms-input-placeholder {
+  color: #262626;
+}
+.wpcf7-form-control-wrap textarea {
+  background-color: #FFF;
+  max-height: 150px;
+}
+.form-message {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+.wpcf7-form p input.wpcf7-submit {
+  background-color: transparent;
+  border-radius: 2px;
+  border-color: #262626;
+  border-width: 2px;
+  color: #262626;
+  font-family: "Apercu Bold";
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 13px;
+  padding: 10px 48px;
+}
+.wpcf7-form p input.wpcf7-submit:hover {
+  background-color: transparent;
+  border-color: rgba(38, 38, 38, 0.7);
+}
+.wpcf7-form p input.wpcf7-submit a {
+  color: #262626;
+}
+.wpcf7-form p input.wpcf7-submit:hover a {
+  color: rgba(38, 38, 38, 0.7);
+}
+.text-mail-phone h5 {
+  margin-bottom: 2em;
+}
+.mail-phone {
+  margin-top: 1em;
+}
+.mail-phone h5 {
+  margin-top: 0;
 }
 .spacer {
   padding-top: 50px;

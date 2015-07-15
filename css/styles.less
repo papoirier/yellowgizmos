@@ -49,9 +49,6 @@ svg {
     background-repeat: repeat; 
     background-attachment: fixed;
 }
-#contact {
-	background-color: @yellow;
-}
 .btn-default {
 	background-color: transparent;
 	border-radius: 2px;
@@ -156,6 +153,7 @@ h4 {
 
 }
 h5 {
+	font-family: "Apercu Bold";
 	font-size: @font-size-h5;
 	font-weight: bold;
 	font-style: normal;
@@ -556,8 +554,118 @@ footer .social-logos img {
 	padding: 0;
 	font-size: 70%;
 }
-#address {
-	//font-size: 12px;
+
+// CONTACT // -------------------------------
+#contact {
+	background-color: @yellow;
+	padding-top: 3em;
+	padding-bottom: 3em;
+}
+.contact-title h4 {
+	margin: 0;
+	line-height: 1.2em;
+}
+.contact-title {
+	margin-bottom: 2em;
+}
+// form
+#type-of-client .wpcf7-list-item {
+	background-color: aqua;
+	display: inline-block;
+	width: 30%;
+}
+
+#type-of-client input[type="radio"] {
+	display: inline-block;
+	background-color: blue;
+	//	width: 20px;
+	float: left;
+  // position: absolute;
+  // left: -30px;
+  // visibility: hidden;
+}
+.wpcf7-list-item-label {
+	float: left;
+	background-color: red;
+	display: inline-block;
+	margin-top: -15px;
+	margin-left: 20px;
+	pointer-events: none;
+	//padding: 10px 24px;
+	// background-color: transparent;
+	// border-radius: 2px;
+	// border-color: @black;
+	// border-width: 2px;
+	// color: @black;
+	// font-family: "Apercu Bold";
+	// font-weight: bold;
+	// text-transform: uppercase;
+	// font-size: 13px;
+}
+
+.wpcf7-form-control-wrap input,
+.wpcf7-form-control-wrap textarea {
+	width: 100%;
+	border: none;
+}
+.wpcf7-form-control-wrap input {
+	border-bottom: 1px solid @black;
+	background-color: transparent;
+	color: @black;
+	font-family: "Apercu Italic";
+	font-style: italic;
+	margin-top: 6px;
+}
+.wpcf7-form-control-wrap ::-webkit-input-placeholder {
+	color: @black;
+	border-bottom: 1px;
+	border-color: @black;
+}
+.wpcf7-form-control-wrap ::-moz-placeholder {
+	color: @black;
+}
+.wpcf7-form-control-wrap :-ms-input-placeholder {
+	color: @black;
+}
+.wpcf7-form-control-wrap textarea {
+	background-color: #FFF;
+	max-height: 150px;
+}
+.form-message {
+	margin-top: 1em;
+	margin-bottom: 1em;
+}
+.wpcf7-form p input.wpcf7-submit {
+	background-color: transparent;
+	border-radius: 2px;
+	border-color: @black;
+	border-width: 2px;
+	color: @black;
+	font-family: "Apercu Bold";
+	font-weight: bold;
+	text-transform: uppercase;
+	font-size: 13px;
+	padding: 10px 48px;
+}
+.wpcf7-form p input.wpcf7-submit:hover {
+	background-color: transparent;
+	border-color: @black-beta;
+}
+.wpcf7-form p input.wpcf7-submit a {
+	color: @black;
+}
+.wpcf7-form p input.wpcf7-submit:hover a {
+	color: @black-beta;
+}
+// mail and phone
+.text-mail-phone h5 {
+	margin-bottom: 2em;
+}
+.mail-phone {
+	margin-top: 1em;
+}
+.mail-phone h5 {
+	margin-top: 0;
 }
 
 // *********** // ------------------------------
