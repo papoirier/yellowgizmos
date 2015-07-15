@@ -141,6 +141,20 @@ ul {
 .text-white {
   color: #FFF;
 }
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a {
+  color: #262626;
+}
+h1 a:hover,
+h2 a:hover,
+h3 a:hover,
+h4 a:hover,
+h5 a:hover {
+  color: rgba(38, 38, 38, 0.25);
+}
 .navbar-default {
   border-bottom: none;
   background-color: #FFF;
@@ -459,16 +473,36 @@ footer .social-logos img {
 }
 .main-title {
   text-align: center;
+  margin: 3em auto;
+}
+.main-title h1 {
+  color: #FFF;
 }
 #careers {
   background-color: #fdd147;
 }
-#careers .main-title h1 {
-  color: #FFF;
-}
 .jobs .item {
   display: block;
   min-height: 642px;
+}
+.jobs {
+  margin: 2em auto 4em auto;
+}
+#terms {
+  background-color: #30ad63;
+}
+.container.terms {
+  margin-bottom: 6em;
+}
+.container.terms h4 {
+  color: #30ad63;
+  margin-top: 3em;
+}
+.container.terms h3 {
+  margin-bottom: 1em;
+}
+#faq {
+  background-color: #1786b9;
 }
 .carousel-caption {
   pointer-events: none;

@@ -185,6 +185,20 @@ ul {
 .text-white {
 	color: #FFF;
 }
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a {
+	color: @black;
+}
+h1 a:hover,
+h2 a:hover,
+h3 a:hover,
+h4 a:hover,
+h5 a:hover {
+	color: @black-alpha;
+}
 // NAVBAR // ----------------------------------
 @navbar-width: 240px;
 .navbar-default {
@@ -556,19 +570,44 @@ footer .social-logos img {
 }
 .main-title {
 	text-align: center;
+	margin: 3em auto;
+}
+.main-title h1 {
+	color: #FFF;
 }
 
 // CAREERS // ----------------------------------
 #careers {
 	background-color: @yellow;
 }
-#careers .main-title h1 {
-	color: #FFF;
-}
+
 .jobs .item { 
-        display:block;
-        min-height: 600px + @btn-height;
-    }
+    display:block;
+    min-height: 600px + @btn-height;
+}
+.jobs {
+	margin: 2em auto 4em auto;
+}
+
+// TERMS // ------------------------------------
+#terms {
+	background-color: @green;
+}
+.container.terms {
+	margin-bottom: 6em;
+}
+.container.terms h4 {
+	color: @green;
+	margin-top: 3em;
+}
+.container.terms h3 {
+	margin-bottom: 1em;
+}
+
+// FAQ // --------------------------------------
+#faq {
+	background-color: @blue;
+}
 
 // *********** // ------------------------------
 // *********** // ------------------------------
