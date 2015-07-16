@@ -43,6 +43,9 @@ function print_the_slug() {
   if (get_the_ID() == 91) {
     return "dedicated";
   }
+  if (get_the_ID() == 197) {
+    return "intro";
+  }
 }
 
 

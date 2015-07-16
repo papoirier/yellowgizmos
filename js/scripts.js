@@ -71,6 +71,9 @@ jQuery(document).ready(function($) {
     $('#carousel-readers > .carousel-inner > .item:first').addClass('active');
     $('#carousel-dedicated > .carousel-inner > .item:first').addClass('active');
 
+    // intro page carousel
+    //$('#carousel-intro > .carousel-inner > .item:first').addClass('active');
+
     // tabs
     $('#myTabs a').click(function (e) {
         e.preventDefault();
