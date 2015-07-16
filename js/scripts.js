@@ -32,6 +32,28 @@ jQuery(document).ready(function($) {
         });
     });
 
+    // contact form buttons
+    $(function() {
+        $( "input:radio[value='Publisher']" ).prop('checked',true);
+        $("input:radio[value='Publisher']").next().addClass("active");
+
+        $("input:radio[value='Publisher']").click(function(e){
+            //e.preventDefault();
+            $("span.wpcf7-list-item-label").removeClass("active");
+            $("input:radio[value='Publisher']").next().addClass("active");
+        });
+        $( "input:radio[value='Advertiser']" ).click(function(e){
+            //e.preventDefault();
+            $("span.wpcf7-list-item-label").removeClass("active");
+            $("input:radio[value='Advertiser']").next().addClass("active");
+        });
+        $( "input:radio[value='Reader']" ).click(function(e){
+            //e.preventDefault();
+            $("span.wpcf7-list-item-label").removeClass("active");
+            $("input:radio[value='Reader']").next().addClass("active");
+        });
+    });
+
     // twitter styling
     $(window).load(function() {
 
@@ -48,6 +70,12 @@ jQuery(document).ready(function($) {
     $('#carousel-advertisers > .carousel-inner > .item:first').addClass('active');
     $('#carousel-readers > .carousel-inner > .item:first').addClass('active');
     $('#carousel-dedicated > .carousel-inner > .item:first').addClass('active');
+
+    // tabs
+    $('#myTabs a').click(function (e) {
+        e.preventDefault();
+        $(this).tab('show');
+    });
 
     $(window).on("load resize", function(){
         // about pages carousels

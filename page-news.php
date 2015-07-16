@@ -71,7 +71,7 @@
     </div> <!-- / last row -->
     <div class="row all-posts">
         <div class="col-md-4">
-            <p class="btn btn-default"><a href="blog">All posts</a></p>
+            <p class="btn btn-default btn-lg"><a href="blog">All posts</a></p>
         </div>
     </div>
 </div> <!-- /.container -->

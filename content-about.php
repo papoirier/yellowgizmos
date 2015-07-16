@@ -3,7 +3,7 @@
 		<div class="row">
 	    	<div class="col-md-6 col-md-offset-3 text-center">
 	    		<h4><?php the_title(); ?></h4>
-				<h5><?php the_content(); ?></h5>
+				<h4 class="regular"><?php the_content(); ?></h4>
 	    		<div class="thumb"><?php the_post_thumbnail(); ?></div>
 	        </div>
 	    </div>

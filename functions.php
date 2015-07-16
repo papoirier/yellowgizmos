@@ -166,4 +166,4 @@ function ajax() {
 // ------------------------------------------------------------------
 // CAROUSEL PLUGIN --------------------------------------------------
 // ------------------------------------------------------------------
-require_once ( get_template_directory() . '/functions/cpt-bootstrap-carousel.php' );
+// require_once ( get_template_directory() . '/functions/cpt-bootstrap-carousel.php' );

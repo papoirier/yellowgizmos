@@ -3,8 +3,8 @@
 	<div class="row">
     	<div class="col-md-6 col-md-offset-3 text-center">
     		<div>
-	    		<h4><?php the_title(); ?></h4>
-				<h4><?php the_secondary_title(); ?></h4>
+	    		<h3><?php the_title(); ?></h3>
+				<h3><?php the_secondary_title(); ?></h3>
 				<p><?php the_content(); ?></p>
 			</div>
         </div>

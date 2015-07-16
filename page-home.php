@@ -2,31 +2,42 @@
 
 <?php 
 /*
- * blog 			->  5
+ * carousel         -> 197
  *
- * rethinking 		-> 15
- * publishers 		-> 17
- * advertisers 		-> 18
- * readers 			-> 19
+ * blog 			->   5
  *
- * dedicated ads 	-> 91
- * ad format lab 	-> 41
+ * rethinking 		->  15
+ * publishers 		->  17
+ * advertisers 		->  18
+ * readers 			->  19
  *
- * team 			-> 57
+ * dedicated ads 	->  91
+ * ad format lab 	->  41
  * 
- * about 			-> 62
- * careers 			-> 64
+ * team 			->  57
+ *  
+ * about 			->  62
+ * careers 			->  64
  *
- * contact 			-> 67
+ * contact 			->  67
  * 
  */
 ?>
 
 <div class="side-collapse-container">
 
-
 <!-- INTRO CAROUSEL - - - - - - - - - - - - -  -->
-<?php echo do_shortcode('[image-carousel showcaption="true" interval="5000"]'); ?>
+<?php //echo do_shortcode('[image-carousel showcaption="true" interval="5000"]'); ?>
+<section id="intro"> 
+    <div>
+        <?php $my_query = new WP_Query( 'page_id=197' ); ?>
+        <?php if ( $my_query->have_posts() ) : ?>
+        <?php 
+            //require(locate_template('content-intro.php'));
+                wp_reset_postdata();
+        endif; ?>
+    </div> <!-- / -->
+</section> <!-- /#intro -->
 
 <!-- ABOUT - - - - - - - - - - - - - - - - - - - -->
 <section id="about"> 
@@ -161,7 +172,7 @@
     <?php endif;?>
 </section> <!-- /#contact -->
 
-</div>
+</div> <!-- /.side-collapse-container -->
 
 <!-- FOOTER - - - - - - - - - - - - - - - - - - -->
 <?php get_footer(); ?>

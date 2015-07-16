@@ -59,7 +59,11 @@ svg {
 	font-weight: bold;
 	text-transform: uppercase;
 	font-size: 13px;
-	padding: 10px 24px;
+	padding: 10px 24px 8px 24px;
+}
+.btn-lg {
+	font-size: 17px;
+	padding: 12px 28px 11px 28px;
 }
 .btn-default:hover {
 	background-color: transparent;
@@ -141,7 +145,7 @@ h3 {
 	font-style: normal;
 	font-weight: bold;
 }
-h3.regular {
+.regular {
 	font-family: "Apercu Regular";
 	font-weight: normal;
 }
@@ -182,6 +186,9 @@ ul {
 }
 .text-white {
 	color: #FFF;
+}
+.text-yellow {
+	color: @yellow;
 }
 h1 a,
 h2 a,
@@ -362,6 +369,10 @@ ul.navbar-yieldmo li {
 
 #dedicated {
 	background-color: @fafafa-gray;
+	padding-top: 5em;
+}
+#dedicated h3 {
+	margin:0;
 }
 #dedicated-phone {
 	margin-top: 3em;
@@ -413,7 +424,7 @@ ul.navbar-yieldmo li {
 	margin-top: 2em;
 }
 .btn-afl {
-	margin-top: 2em;
+	margin-top: 0.5em;
 	margin-bottom: 3em;
 }
 
@@ -561,7 +572,7 @@ footer .social-logos img {
 	padding-top: 3em;
 	padding-bottom: 3em;
 }
-.contact-title h4 {
+.contact-title h3 {
 	margin: 0;
 	line-height: 1.2em;
 }
@@ -569,38 +580,64 @@ footer .social-logos img {
 	margin-bottom: 2em;
 }
 // form
-#type-of-client .wpcf7-list-item {
-	background-color: aqua;
-	display: inline-block;
-	width: 30%;
+.contact-form .row {
+	margin-bottom: 0.5em;
 }
-
+@btn-input: 51px;
+#type-of-client .wpcf7-list-item {
+	display: inline-block;
+	height: @btn-input;
+}
 #type-of-client input[type="radio"] {
 	display: inline-block;
 	background-color: blue;
-	//	width: 20px;
 	float: left;
-  // position: absolute;
-  // left: -30px;
-  // visibility: hidden;
+	height: @btn-input;
+	margin-top: 0;
+	visibility: hidden
+}
+#type-of-client {
+	height: @btn-input;
+	display: block;
+}
+.im-a {
+	margin-top: 8px;
 }
 .wpcf7-list-item-label {
+	background-color: transparent;
+	border: 2px solid transparent;
+	color: @black;
+	font-family: "Apercu Bold";
+	font-weight: bold;
+	text-transform: uppercase;
+	font-size: 17px;
+	padding: 12px 0px 11px 0px;
+	width: @btn-input*2.55;
+	text-align: center;
 	float: left;
-	background-color: red;
 	display: inline-block;
-	margin-top: -15px;
-	margin-left: 20px;
-	pointer-events: none;
-	//padding: 10px 24px;
-	// background-color: transparent;
-	// border-radius: 2px;
-	// border-color: @black;
-	// border-width: 2px;
-	// color: @black;
-	// font-family: "Apercu Bold";
-	// font-weight: bold;
-	// text-transform: uppercase;
-	// font-size: 13px;
+	margin-top: -@btn-input;
+	cursor: pointer;
+	//pointer-events: none;
+}
+.wpcf7-form p input.wpcf7-submit,
+.wpcf7-list-item-label.active{
+	background-color: transparent;
+	border: 2px solid @black;
+	color: @black;
+	font-family: "Apercu Bold";
+	font-weight: bold;
+	text-transform: uppercase;
+	font-size: 17px;
+	padding: 12px 0px 11px 0px;
+	width: @btn-input*2.55;
+	text-align: center;
+}
+.wpcf7-list-item.first {
+	margin-left: 0;
+}
+.wpcf7-list-item-label {
+	
 }
 
 .wpcf7-form-control-wrap input,
@@ -636,15 +673,6 @@ footer .social-logos img {
 	margin-bottom: 1em;
 }
 .wpcf7-form p input.wpcf7-submit {
-	background-color: transparent;
-	border-radius: 2px;
-	border-color: @black;
-	border-width: 2px;
-	color: @black;
-	font-family: "Apercu Bold";
-	font-weight: bold;
-	text-transform: uppercase;
-	font-size: 13px;
 	padding: 10px 48px;
 }
 .wpcf7-form p input.wpcf7-submit:hover {
@@ -716,11 +744,61 @@ footer .social-logos img {
 #faq {
 	background-color: @blue;
 }
+.tab-content {
+	margin-bottom: 4em;
+}
+.tab-pane .row {
+	margin-bottom: 2em;
+}
+.container.faq {
+	min-height: 20em;
+}
+.nav-tabs {
+	border: none;
+	margin-top: 4em;
+	margin-bottom: 3em;
+	margin-left: auto;
+	margin-right: auto;
+}
+.nav-tabs li {
+	float: none;
+	display: inline-block;
+	width: 120px;
+	//padding: 10px 24px 8px 24px;
+}
+.nav-tabs li a,
+.nav-tabs li a:hover {
+	background-color: transparent;
+	border-radius: 2px;
+	border: 2px solid transparent;
+	font-family: "Apercu Bold";
+	font-weight: bold;
+	text-transform: uppercase;
+	font-size: 13px;
+	padding: 10px 24px 8px 24px;
+	color: @black;
+	
+}
+.nav-tabs li.active a,
+.nav-tabs li.active a:hover,
+.nav-tabs li.active a:focus {
+	border: 2px solid @black;
+	text-decoration: none;
+	color: @black;
+}
 
+ .nav-tabs > li.active > a:focus {
+	border: 2px solid @black;
+	outline: none;
+}
 // *********** // ------------------------------
 // *********** // ------------------------------
 
 // CAROUSEL // ---------------------------------
+#intro {
+	margin-top: 4em;
+	min-height: 100vh;
+}
 @carousel-top: 34%;
 .carousel-caption {
 	pointer-events: none;
@@ -855,14 +933,18 @@ ol.carousel-indicators {
 	}
 }
 @media (min-width: 768px) {
+    .item { 
+        display:block;
+        min-height: 350px + @btn-height;
+    }
     #carousel-publishers .item,
     #carousel-advertisers .item,
     #carousel-readers .item { 
-        display:block;
+    	display:block;
         min-height: 450px + @btn-height;
     }
     #carousel-dedicated .item { 
-        display:block;
+    	display:block;
         min-height: 500px + @btn-height;
     }
 	.item p.btn { 

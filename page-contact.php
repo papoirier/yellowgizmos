@@ -9,8 +9,8 @@
 <div class="container contact-title">    
     <div class="row">
         <div class="col-md-7 ">
-            <h4><?php the_title();?></h4>
-            <h4 class="text-white"><?php the_secondary_title(); ?></h4>
+            <h3><?php the_title();?></h3>
+            <h3 class="text-white"><?php the_secondary_title(); ?></h3>
         </div>
     </div>
 </div>
