@@ -677,10 +677,6 @@ footer .social-logos img {
   border: 2px solid #262626;
   outline: none;
 }
-#intro {
-  margin-top: 4em;
-  min-height: 100vh;
-}
 .carousel-caption {
   pointer-events: none;
   top: 34%;
@@ -776,6 +772,13 @@ footer .social-logos img {
 #carousel-dedicated .carousel-control {
   display: none;
   visibility: hidden;
+}
+.carousel-video {
+  z-index: 15;
+  position: absolute;
+  top: 50%;
+  text-align: center;
+  width: 100%;
 }
 @media (max-width: 767px) {
   #nav-contact {

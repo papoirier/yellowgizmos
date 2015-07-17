@@ -29,14 +29,12 @@
 <!-- INTRO CAROUSEL - - - - - - - - - - - - -  -->
 <?php //echo do_shortcode('[image-carousel showcaption="true" interval="5000"]'); ?>
 <section id="intro"> 
-    <div>
         <?php $my_query = new WP_Query( 'page_id=197' ); ?>
         <?php if ( $my_query->have_posts() ) : ?>
         <?php 
             require(locate_template('content-intro.php'));
             wp_reset_postdata();
         endif; ?>
-    </div> <!-- / -->
 </section> <!-- /#intro -->
 
 <!-- ABOUT - - - - - - - - - - - - - - - - - - - -->

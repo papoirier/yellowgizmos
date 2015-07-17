@@ -57,12 +57,12 @@ jQuery(document).ready(function($) {
     // twitter styling
     $(window).load(function() {
 
-        $("iframe").contents().find('div.footer').remove();
-        $("iframe").contents().find('img.u-photo').remove();
+        $("iframe#twitter-widget-0").contents().find('div.footer').remove();
+        $("iframe#twitter-widget-0").contents().find('img.u-photo').remove();
 
         var $font = "Apercu";
         var $fontweight = "normal";
-        $("iframe").contents().find('head').append('<style>.html, body, h1, h2, h3, blockquote, p, ol, ul, li, img, iframe, button, .tweet-box-button{font-family:'+$font+' !important;font-weight:'+$fontweight+' !important;} .p-author, .e-entry-content, p.e-entry-title{text-align:center !important;} li.tweet{padding-left:0 !important;} p.e-entry-title{font-size:18px !important; line-height:1.2em !important; margin-bottom: 36px !important; min-height:70px !important;} .e-entry-content{min-height:70px !important;} a.permalink{float:none; text-align:center !important;} .header{text-align:center !important;} .p-author{margin-top:-36px; padding-top:36px; margin-bottom:24px;} .p-author a, .p-name{ color: #0B84BB !important;} .header{padding:0 !important;} }</style>');
+        $("iframe#twitter-widget-0").contents().find('head').append('<style>.html, body, h1, h2, h3, blockquote, p, ol, ul, li, img, iframe, button, .tweet-box-button{font-family:'+$font+' !important;font-weight:'+$fontweight+' !important;} .p-author, .e-entry-content, p.e-entry-title{text-align:center !important;} li.tweet{padding-left:0 !important;} p.e-entry-title{font-size:18px !important; line-height:1.2em !important; margin-bottom: 36px !important; min-height:70px !important;} .e-entry-content{min-height:70px !important;} a.permalink{float:none; text-align:center !important;} .header{text-align:center !important;} .p-author{margin-top:-36px; padding-top:36px; margin-bottom:24px;} .p-author a, .p-name{ color: #0B84BB !important;} .header{padding:0 !important;} }</style>');
     });
 
     // about pages carousels
@@ -72,7 +72,10 @@ jQuery(document).ready(function($) {
     $('#carousel-dedicated > .carousel-inner > .item:first').addClass('active');
 
     // intro page carousel
-    //$('#carousel-intro > .carousel-inner > .item:first').addClass('active');
+    $('#carousel-intro').carousel({
+      interval: 5000,
+      pause: "hover"
+    });
 
     // tabs
     $('#myTabs a').click(function (e) {
