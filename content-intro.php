@@ -26,7 +26,7 @@
   	</div> <!-- /#myModal -->
 
 
-				<div id="carousel-inside" class="carousel-inner <?php echo(get_post_meta($page->ID, 'bg-color', true));?>" role="listbox">
+				<div id="carousel-inside" class="carousel-inner" role="listbox">
 				<?php
 				$count = 0;
 				foreach( $mypages as $page ) {   
@@ -34,7 +34,7 @@
 				    $content = $page->post_content;
 				    $content = apply_filters( 'get_the_content', $content ); ?>
 
-						<div class="item <?php if($count == 1){echo 'active';}?>">
+						<div class="item <?php if($count == 1){echo 'active ';}?><?php if (get_post_meta($page->ID, 'bg-color', true)) { echo(get_post_meta($page->ID, 'bg-color', true)); } ?>">
 
 							<div class="container">
 						  		<div class="row">
@@ -44,11 +44,11 @@
 							        	<img src="<?php echo $url; ?>" class="img-responsive">
 							        	<div class="carousel-caption">
 							        		<h1><?php echo $page->post_title; ?></h1>
-							        		<h3><?php echo get_secondary_title($page->ID); ?></h3>
+							        		<h4><?php echo get_secondary_title($page->ID); ?></h4>
 							        	</div>
 							        	<?php 
 							        	if (get_post_meta($page->ID, 'vimeo-id', true)) {
-							        		echo '<div class="carousel-video"><button class="btn btn-default" data-toggle="modal" data-target="#myModal">'.( get_post_meta($page->ID, "vimeo-id", true) ).'</button></div>';
+							        		echo '<div class="carousel-video"><button class="btn btn-default" data-toggle="modal" data-target="#myModal">Plaiii!</button></div>';
 							        		?>	
 							        	<?php } ?>
 

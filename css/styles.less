@@ -21,7 +21,34 @@
 @some-gray:				rgb(178,178,178);
 
 
-// TEMP // -----------------------------------
+// GENERAL // -----------------------------------
+
+@carousel-top: 33%;
+
+// background colors for the carousel
+.yellow {
+	background-color: @yellow;
+}
+.purple {
+	background-color: @purple;
+}
+.blue {
+	background-color: @blue;
+}
+.green {
+	background-color: @green;
+}
+.pink {
+	background-color: @pink;
+}
+.orange {
+	background-color: @orange;
+}
+.white {
+	background-color: #FFF;
+}
+
+
 .center-block p {
 	text-align: center;
 }
@@ -795,10 +822,9 @@ footer .social-logos img {
 
 // CAROUSEL // ---------------------------------
 #carousel-intro .item {
-	margin-top: 5em;
-	margin-bottom: -5em;
+	padding-top: 5em;
+	padding-bottom: -5em;
 }
-@carousel-top: 33%;
 .carousel-caption {
 	pointer-events: none;
 	top: @carousel-top;
@@ -810,6 +836,8 @@ footer .social-logos img {
 	left: auto;
     right: auto;
     margin-bottom: 1em;
+    padding-left: 10%;
+    padding-right: 10%;
 }
 .carousel-caption h1 {
 	line-height: 1.3em;
@@ -892,9 +920,9 @@ footer .social-logos img {
 @dot: 6px;
 ol.carousel-indicators {
 	position: absolute;
-	// bottom: 0px;
+	bottom: 0px;
 	//margin-top: 2em;
-	background-color: red;
+	//background-color: red;
 }
 .carousel-indicators li, .carousel-indicators li.active {
 	border: none !important;
@@ -924,11 +952,13 @@ ol.carousel-indicators {
 .carousel-video {
 	z-index: 15;
 	position: absolute;
-	top: 50%;
+	top: @carousel-top;
 	text-align: center;
-	width: 100%;
+	width: calc(~'100% - 30px');
 }
-
+.carousel-video button.btn-default {
+	background-color: #FFF;
+}
 
 @btn-height: 42px;
 @media (max-width: 767px) {

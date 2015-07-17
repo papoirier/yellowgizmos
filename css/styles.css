@@ -1,3 +1,24 @@
+.yellow {
+  background-color: #fdd147;
+}
+.purple {
+  background-color: #a25cba;
+}
+.blue {
+  background-color: #1786b9;
+}
+.green {
+  background-color: #30ad63;
+}
+.pink {
+  background-color: #f27f8a;
+}
+.orange {
+  background-color: #faa938;
+}
+.white {
+  background-color: #FFF;
+}
 .center-block p {
   text-align: center;
 }
@@ -678,8 +699,8 @@ footer .social-logos img {
   outline: none;
 }
 #carousel-intro .item {
-  margin-top: 5em;
-  margin-bottom: -5em;
+  padding-top: 5em;
+  padding-bottom: -5em;
 }
 .carousel-caption {
   pointer-events: none;
@@ -692,6 +713,8 @@ footer .social-logos img {
   left: auto;
   right: auto;
   margin-bottom: 1em;
+  padding-left: 10%;
+  padding-right: 10%;
 }
 .carousel-caption h1 {
   line-height: 1.3em;
@@ -765,7 +788,7 @@ footer .social-logos img {
 }
 ol.carousel-indicators {
   position: absolute;
-  background-color: red;
+  bottom: 0px;
 }
 .carousel-indicators li,
 .carousel-indicators li.active {
@@ -795,9 +818,12 @@ ol.carousel-indicators {
 .carousel-video {
   z-index: 15;
   position: absolute;
-  top: 50%;
+  top: 33%;
   text-align: center;
-  width: 100%;
+  width: calc(100% - 30px);
+}
+.carousel-video button.btn-default {
+  background-color: #FFF;
 }
 @media (max-width: 767px) {
   #nav-contact {
