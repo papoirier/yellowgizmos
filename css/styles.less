@@ -636,9 +636,9 @@ footer .social-logos img {
 	font-family: "Apercu Bold";
 	font-weight: bold;
 	text-transform: uppercase;
-	font-size: 17px;
+	font-size: 13px;
 	padding: 12px 0px 11px 0px;
-	width: @btn-input*2.55;
+	width: @btn-input*2.2;
 	text-align: center;
 	float: left;
 	display: inline-block;
@@ -654,9 +654,9 @@ footer .social-logos img {
 	font-family: "Apercu Bold";
 	font-weight: bold;
 	text-transform: uppercase;
-	font-size: 17px;
+	font-size: 13px;
 	padding: 12px 0px 11px 0px;
-	width: @btn-input*2.55;
+	width: @btn-input*2.2;
 	text-align: center;
 }
 .wpcf7-list-item.first {
@@ -699,7 +699,7 @@ footer .social-logos img {
 	margin-bottom: 1em;
 }
 .wpcf7-form p input.wpcf7-submit {
-	padding: 10px 48px;
+	//padding: 10px 48px;
 }
 .wpcf7-form p input.wpcf7-submit:hover {
 	background-color: transparent;
@@ -821,16 +821,16 @@ footer .social-logos img {
 // *********** // ------------------------------
 
 // CAROUSEL // ---------------------------------
+@navbar-height: 53px;
 #carousel-intro .item {
-	padding-top: 5em;
-	padding-bottom: -5em;
+	padding-top: @navbar-height;
+	padding-bottom: -@navbar-height;
 }
 .carousel-caption {
-	pointer-events: none;
+	//pointer-events: none;
 	top: @carousel-top;
 	text-shadow: none;
 	color: @black;
-	background-color: @black-alpha;
 	padding: 0;
 	position: relative;
 	left: auto;
@@ -838,6 +838,7 @@ footer .social-logos img {
     margin-bottom: 1em;
     padding-left: 10%;
     padding-right: 10%;
+    margin-bottom: 3em;
 }
 .carousel-caption h1 {
 	line-height: 1.3em;
@@ -887,7 +888,7 @@ footer .social-logos img {
 }
 .glyphicon {
 	background-color: @black-alpha;
-	top: @carousel-top !important;
+	top: 40% !important;
 }
 .glyphicon-chevron-left, 
 .glyphicon-chevron-right {
@@ -971,6 +972,7 @@ ol.carousel-indicators {
     .item { 
         display:block;
         min-height: 350px + @btn-height;
+        text-align: center;
     }
     #carousel-publishers .item,
     #carousel-advertisers .item,
@@ -983,8 +985,8 @@ ol.carousel-indicators {
         min-height: 500px + @btn-height;
     }
 	.item p.btn { 
-    	position: absolute;
-    	bottom: 0;
+    	// position: absolute;
+    	// bottom: 0;
     }
 
     #carousel-publishers ol.carousel-indicators,

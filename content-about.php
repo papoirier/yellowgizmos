@@ -4,7 +4,11 @@
 	    	<div class="col-md-6 col-md-offset-3 text-center">
 	    		<h4><?php the_title(); ?></h4>
 				<h4 class="regular"><?php the_content(); ?></h4>
-	    		<div class="thumb"><?php the_post_thumbnail(); ?></div>
+	        </div>
+	    </div>
+	    <div class="row">
+	    	<div class="col-md-12">
+	    		<div class="thumb"><?php the_post_thumbnail('large', array( 'class' => 'img-responsive' )); ?></div>
 	        </div>
 	    </div>
 

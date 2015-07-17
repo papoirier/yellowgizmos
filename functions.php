@@ -40,7 +40,7 @@ function print_the_slug() {
   if (get_the_ID() == 19) {
     return "readers";
   }
-  if (get_the_ID() == 91) {
+  if (get_the_ID() == 91 || get_the_ID() == 101) {
     return "dedicated";
   }
   if (get_the_ID() == 197) {
@@ -140,33 +140,3 @@ function ajax() {
     true 
   );
 }
-
-
-// AJAX
-// add_action( 'wp_enqueue_scripts', 'ajaxxx' );
-// function ajaxxx() {
-  
-//   wp_enqueue_script( 'ajax-pagination', get_stylesheet_directory_uri() . '/js/ajax.js', array( 'jquery' ), '1.0', true );
-//   //wp_localize_script( 'ajax-pagination', 'ajaxpagination', array('ajaxurl' => admin_url( 'admin-ajax.php' )));
-//   global $wp_query;
-//   wp_localize_script( 'ajax-pagination', 'ajaxpagination', array(
-//   'ajaxurl' => admin_url( 'admin-ajax.php' ),
-//   'query_vars' => json_encode( $wp_query->query )
-//   ));
-// }
-
-// //
-// add_action( 'wp_ajax_nopriv_ajax_pagination', 'my_ajax_pagination' );
-// add_action( 'wp_ajax_ajax_pagination', 'my_ajax_pagination' );
-// function my_ajax_pagination() {
-//   echo get_the_title();
-//   die();
-// }
-
-
-
-
-// ------------------------------------------------------------------
-// CAROUSEL PLUGIN --------------------------------------------------
-// ------------------------------------------------------------------
-// require_once ( get_template_directory() . '/functions/cpt-bootstrap-carousel.php' );

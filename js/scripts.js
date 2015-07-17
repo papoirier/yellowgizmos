@@ -13,19 +13,19 @@ jQuery(document).ready(function($) {
     $(function() {
         $("#in-content").click(function(e){
             e.preventDefault();
-            $("img#phone-screen").attr("src","wp-content/themes/yellowgizmos/img/r.png");
+            $("img#phone-screen").attr("src","wp-content/themes/yellowgizmos/img/placement-in-content.gif");
             $("button").removeClass("active");
             $("button#in-content").addClass("active");
         });
         $("#footer").click(function(e){
             e.preventDefault();
-            $("img#phone-screen").attr("src","wp-content/themes/yellowgizmos/img/g.png");
+            $("img#phone-screen").attr("src","wp-content/themes/yellowgizmos/img/placement-footer.gif");
             $("button").removeClass("active");
             $("button#footer").addClass("active");
         });
         $("#wrapper").click(function(e){
             e.preventDefault();
-            $("img#phone-screen").attr("src","wp-content/themes/yellowgizmos/img/b.png");
+            $("img#phone-screen").attr("src","wp-content/themes/yellowgizmos/img/placement-wrapper.gif");
             $("button").removeClass("active");
             $("button#wrapper").addClass("active");
             console.log("nosl");

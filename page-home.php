@@ -11,7 +11,7 @@
  * advertisers 		->  18
  * readers 			->  19
  *
- * dedicated ads 	->  91
+ * dedicated ads 	->  91 / 101
  * ad format lab 	->  41
  * 
  * team 			->  57
@@ -79,7 +79,8 @@
 
 <!-- DEDICATED AD PLACEMENTS - - - - - - - - - - - - - -  -->
 <section id="dedicated"> 
-	<?php $my_query = new WP_Query( 'page_id=91' ); ?>
+	<?php //$my_query = new WP_Query( 'page_id=91' ); // local ?>
+    <?php $my_query = new WP_Query( 'page_id=101' ); // server ?>
     <?php if ( $my_query->have_posts() ) : ?>
     <?php 
     	require(locate_template('content-dedicated.php'));

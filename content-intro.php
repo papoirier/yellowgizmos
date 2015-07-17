@@ -15,15 +15,27 @@
 		<?php } ?>
 	</ol>
 
-	<div id="myModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" style="display: none;">
-	    <div class="modal-dialog" role="document">
-			<div class="modal-content">
-			<div class="modal-body">
-				<iframe src="//player.vimeo.com/video/<?php echo get_post_meta($page->ID, "vimeo-id", true);?>?title=0&byline=0&portrait=0" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-			</div>
-			</div><!-- /.modal-content -->
-	    </div><!-- /.modal-dialog -->
-  	</div> <!-- /#myModal -->
+	<?php
+		$count = 0;
+		foreach( $mypages as $page ) {  
+			$count++;   
+		    $content = $page->post_content;
+		    $content = apply_filters( 'get_the_content', $content ); ?>
+
+		    <?php if (get_post_meta($page->ID, "vimeo-id", true)) { ?>
+		    	<div id="my-modal-<?php echo $count-1; ?>" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" style="display: none;">
+			    <div class="modal-dialog" role="document">
+					<div class="modal-content">
+					<div class="modal-body">
+						<iframe src="//player.vimeo.com/video/<?php echo get_post_meta($page->ID, "vimeo-id", true);?>?title=0&byline=0&portrait=0" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+					</div>
+					</div><!-- /.modal-content -->
+			    </div><!-- /.modal-dialog -->
+		  	</div> <!-- /#my-modal- -->
+		    <?php } ?>
+
+			
+  	<?php } ?>
 
 
 				<div id="carousel-inside" class="carousel-inner" role="listbox">
@@ -44,11 +56,11 @@
 							        	<img src="<?php echo $url; ?>" class="img-responsive">
 							        	<div class="carousel-caption">
 							        		<h1><?php echo $page->post_title; ?></h1>
-							        		<h4><?php echo get_secondary_title($page->ID); ?></h4>
+							        		<h4><?php echo get_secondary_title($page->ID); ?></h4`>
 							        	</div>
 							        	<?php 
 							        	if (get_post_meta($page->ID, 'vimeo-id', true)) {
-							        		echo '<div class="carousel-video"><button class="btn btn-default" data-toggle="modal" data-target="#myModal">Plaiii!</button></div>';
+							        		echo '<div class="carousel-video"><button class="btn btn-default" data-toggle="modal" data-target="#my-modal-'.($count-1).' ">Plaiii!</button></div>';
 							        		?>	
 							        	<?php } ?>
 
