@@ -752,10 +752,6 @@ footer .social-logos img {
   background-repeat: no-repeat;
   background-position: center;
 }
-ol.carousel-indicators {
-  position: absolute;
-  top: 100px;
-}
 .carousel-indicators li,
 .carousel-indicators li.active {
   border: none !important;
