@@ -36,7 +36,8 @@ jQuery(document).ready(function($) {
 			var h = $(window).height();
 			var divPadding = 100;
 
-			var carousel = $("#cptbc_812").height();
+			var carouselHeight = $("#carousel-inside > .item").css({"min-height":h + "px"});
+			var carousel = $("#carousel-inside > .item").height();
 			var rethinkingHeight = $("#rethinking").css({"height":h + "px"});
 			var rethinking = $("#rethinking").height();
 			var topDivs = carousel + rethinking;

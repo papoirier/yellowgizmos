@@ -72,10 +72,10 @@ jQuery(document).ready(function($) {
     $('#carousel-dedicated > .carousel-inner > .item:first').addClass('active');
 
     // intro page carousel
-    $('#carousel-intro').carousel({
-      interval: 5000,
-      pause: "hover"
-    });
+    // $('#carousel-intro').carousel({
+    //   interval: 5000,
+    //   pause: "hover"
+    // });
 
     // tabs
     $('#myTabs a').click(function (e) {

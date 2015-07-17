@@ -12,11 +12,10 @@
 
 @navy:		rgb(16, 101, 138);
 
+@black-beta: 			rgba(38,38,38, 0.6);
+@white-beta: 			rgba(255,255,255, 0.6);
 
 @black-alpha: 			rgba(38,38,38, 0.25);
-@black-beta: 			rgba(38,38,38, 0.7);
-@venture-white-alpha:	rgba(237,237,237,0.7);
-@tucker-yellow-alpha:	rgba(253,209,71, 0.7);
 @hella-gray:			rgb(153,153,153);
 @fafafa-gray:			rgb(250, 250, 250);
 @some-gray:				rgb(178,178,178);
@@ -795,21 +794,22 @@ footer .social-logos img {
 // *********** // ------------------------------
 
 // CAROUSEL // ---------------------------------
-#intro {
-	//margin-top: 4em;
+#carousel-intro .item {
+	margin-top: 5em;
+	margin-bottom: -5em;
 }
-@carousel-top: 34%;
+@carousel-top: 33%;
 .carousel-caption {
 	pointer-events: none;
 	top: @carousel-top;
-	left: 0;
-	right: 0;
 	text-shadow: none;
-	text-align: left;
-	color: #FFF;
+	color: @black;
 	background-color: @black-alpha;
-	bottom: initial;
-	padding: 3em 0em 3.5em 0em;
+	padding: 0;
+	position: relative;
+	left: auto;
+    right: auto;
+    margin-bottom: 1em;
 }
 .carousel-caption h1 {
 	line-height: 1.3em;
@@ -818,10 +818,10 @@ footer .social-logos img {
 	display: block !important;
 }
 .carousel-control {
-  width: 5%;
+  width: 10%;
   text-shadow: none;
-  filter: alpha(opacity=50);
-  opacity: .5;
+  filter: alpha(opacity=0);
+  opacity: 0;
 }
 .carousel-control.left {
   background-image: none;
@@ -831,11 +831,16 @@ footer .social-logos img {
   background-image: none;
   background-repeat: no-repeat;
 }
-.carousel-control:hover,
-.carousel-control:focus {
-  filter: alpha(opacity=90);
-  outline: 0;
-  opacity: .9;
+.carousel-control:hover .glyphicon,
+.carousel-control:focus .glyphicon {
+	outline: 0;
+	filter: alpha(opacity=60);
+	opacity: .6;
+}
+.carousel-control:hover .glyphicon:hover,
+.carousel-control:focus .glyphicon:focus {
+  filter: alpha(opacity=1);
+  opacity: 1;
 }
 .carousel-inner {
 	height: auto;
@@ -847,15 +852,14 @@ footer .social-logos img {
   height:auto;
 }
 .carousel-control .glyphicon-chevron-left {
-	//margin-left: -24px !important;
+	margin-left: -40%;
 }
 .carousel-control .glyphicon-chevron-right {
-	//margin-right: -24px !important;
+	margin-right: -40%;
 }
 .glyphicon {
 	background-color: @black-alpha;
 	top: @carousel-top !important;
-	
 }
 .glyphicon-chevron-left, 
 .glyphicon-chevron-right {
@@ -878,15 +882,6 @@ footer .social-logos img {
   	background-repeat: no-repeat;
   	background-position: center;
 }
-.carousel-control .glyphicon-chevron-left, 
-.carousel-control .glyphicon-chevron-right {
-	//margin-top: -69px;
-}
-.glyphicon {
-  //font-family: monospace;
-  //width: 55px;
-  //height: 200px;
-}
 .carousel-title {
 
 }
@@ -896,8 +891,10 @@ footer .social-logos img {
 
 @dot: 6px;
 ol.carousel-indicators {
-	// position: absolute;
-	// top: 100px;
+	position: absolute;
+	// bottom: 0px;
+	//margin-top: 2em;
+	background-color: red;
 }
 .carousel-indicators li, .carousel-indicators li.active {
 	border: none !important;
@@ -907,7 +904,7 @@ ol.carousel-indicators {
 	max-width: @dot;
 	max-height: @dot;
 	margin: 5px !important;
-	//position: absolute;
+	
 }
 .carousel-indicators .active {
 	opacity: 1;
@@ -915,7 +912,7 @@ ol.carousel-indicators {
 	height: @dot;
 }
 .carousel-indicators li {
-	background-color: #FFF;
+	background-color: @black-alpha;
 }
 #carousel-publishers .carousel-control,
 #carousel-advertisers .carousel-control,
