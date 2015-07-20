@@ -19,11 +19,13 @@
 @hella-gray:			rgb(153,153,153);
 @fafafa-gray:			rgb(250, 250, 250);
 @some-gray:				rgb(178,178,178);
+@dark-gray:				rgb(71,71,71);
 
 
 // GENERAL // -----------------------------------
 
 @carousel-top: 33%;
+@navbar-height: 54px;
 
 // background colors for the carousel
 .yellow {
@@ -148,15 +150,17 @@ body {
 p {
 	line-height: 1.5em;
 	font-style: normal;
-	//font-family: @font-family-serif;
+	font-family: @font-family-serif;
 }
-h1 {
+h1,
+h1 p {
 	font-family: "Apercu Bold";
 	font-size: @font-size-h1;
 	font-style: normal;
 	font-weight: bold;
 }
-h2 {
+h2,
+h2 p {
 	font-family: "Apercu Bold";
 	font-size: @font-size-h2;
 	line-height: 1.1em;
@@ -164,25 +168,29 @@ h2 {
 	font-weight: bold;
 	
 }
-h3 {
+h3,
+h3 p {
 	font-family: "Apercu Bold";
 	font-size: @font-size-h3;
 	line-height: 1.1em;
 	font-style: normal;
 	font-weight: bold;
 }
-.regular {
+.regular,
+.regular p {
 	font-family: "Apercu Regular";
 	font-weight: normal;
 }
-h4 {
+h4,
+h4 p {
 	font-family: "Apercu Bold";
 	font-size: @font-size-h4;
 	font-style: normal;
 	font-weight: bold;
 
 }
-h5 {
+h5,
+h5 p {
 	font-family: "Apercu Bold";
 	font-size: @font-size-h5;
 	font-weight: bold;
@@ -210,11 +218,16 @@ ul {
 	padding-left: 0;
 	font-size: normal;
 }
-.text-white {
+.text-white,
+.text-white a {
 	color: #FFF;
 }
 .text-yellow {
 	color: @yellow;
+}
+.text-dark-gray,
+.text-dark-gray a {
+	color: @dark-gray;
 }
 h1 a,
 h2 a,
@@ -285,7 +298,32 @@ h5 a:hover {
 	margin-top: -6px;
 	//margin-right: 15px;
 }
-
+// hamburger
+.side-collapse {
+	background-color: @black;
+	top:@navbar-height;
+	bottom:0;
+	left:0;
+	width: @navbar-width + 10px;
+	position:fixed;
+	overflow:hidden;
+	transition:width .4s;
+}
+.collapse.in{
+	display:block !important;
+}
+.side-collapse-container{
+	width:100%;
+	position:relative;
+	left:0;
+	transition:left .4s;
+}
+.side-collapse-container.out{
+ 	left:@navbar-width;
+}
+.side-collapse.in {
+ 	width:0;
+}
 .side-collapse ul li,
 .side-collapse .social-logos {
 	width: @navbar-width;
@@ -305,6 +343,10 @@ h5 a:hover {
 	width: 62px;
 	height: 62px;
 }
+.menu-content {
+	margin: 30px auto auto 30px;
+}
+
 .navbar-header {
     float: none;
 }
@@ -336,30 +378,6 @@ h5 a:hover {
 .navbar-nav>li>a {
     padding-top: 10px;
     padding-bottom: 10px;
-}
-.collapse.in{
-	display:block !important;
-}
-.side-collapse-container{
-	width:100%;
-	position:relative;
-	left:0;
-	transition:left .4s;
-}
-.side-collapse-container.out{
- 	left:@navbar-width;
-}
-.side-collapse {
-	top:60px;
-	bottom:0;
-	left:0;
-	width:@navbar-width;
-	position:fixed;
-	overflow:hidden;
-	transition:width .4s;
-}
-.side-collapse.in {
- 	width:0;
 }
 ul.navbar-yieldmo li {
 	display: inline-block;
@@ -537,8 +555,11 @@ iframe#twitter-widget-0 {
 	border-color: @white;
 	color: @white;
 }
-.container.news {
-	margin-top: 100px;
+#old-news {
+	margin-top: 3em;
+}
+#old-news .row {
+	margin-top: 2em;
 }
 #post-cats {
 	background-color: @fafafa-gray;
@@ -726,9 +747,8 @@ footer .social-logos img {
 // *********** // ------------------------------
 
 // OTHER PAGES // ------------------------------
-@spacer: 50px;
 .spacer {
-	padding-top: @spacer;
+	padding-top: @navbar-height;
 }
 .main-title {
 	text-align: center;
@@ -812,16 +832,94 @@ footer .social-logos img {
 	text-decoration: none;
 	color: @black;
 }
-
  .nav-tabs > li.active > a:focus {
 	border: 2px solid @black;
 	outline: none;
 }
+
+// BLOG // -------------------------------------
+#blog-search img,
+#blog-search form {
+	display: inline-block;
+}
+#blog-search img {
+	margin-right: 0.5em;
+}
+#blog-search form {
+	width: 70%;
+}
+#blog-search form input {
+	width: 100%;
+	font-size: @font-size-h4;
+}
+#blog-search form input::-webkit-input-placeholder {
+   color: @black;
+}
+#blog-search form input:-moz-placeholder { /* Firefox 18- */
+   color: @black;  
+}
+#blog-search form input::-moz-placeholder {  /* Firefox 19+ */
+   color: @black;  
+}
+#blog-search form input:-ms-input-placeholder {  
+   color: @black;  
+}
+li.cat-item {
+	display: inline-block;
+	margin-right: 0.5em;
+	background-color: transparent;
+	border: 2px solid @black;
+	border-radius: 2px;
+	font-family: "Apercu Bold";
+	font-weight: bold;
+	text-transform: uppercase;
+	font-size: 13px;
+	padding: 10px 10px 8px 10px;
+	width: 140px;
+	text-align: center;
+}
+li.cat-item a {
+	color: @black;
+}
+ul.post-category {
+}
+.post-excerpt {
+	margin-top: 1em;
+}
+ul.post-more {
+	margin-top: 2em;
+	height: 40px;
+}
+ul.post-more:hover {
+	opacity: 0.7;
+}
+ul.post-more li {
+	display: inline-block;
+}
+li.more-text {
+	margin-left: 0.5em;
+	text-transform: uppercase;
+	font-size: 85%;
+	letter-spacing: 1px;
+}
+li.more-text a {
+	color: @some-gray;
+	float: left;
+	margin-bottom: 9px;
+}
+li.more-img {
+	margin: 0;
+	padding: 0;
+}
+li.more-img img {
+	float: left;
+}
+
+
 // *********** // ------------------------------
 // *********** // ------------------------------
 
 // CAROUSEL // ---------------------------------
-@navbar-height: 53px;
 #carousel-intro .item {
 	padding-top: @navbar-height;
 	padding-bottom: -@navbar-height;

@@ -78,7 +78,7 @@ function add_responsive_class($content){
     return $html;   
 }
 
-// CONTACT -----------------------------------------------------
+// CONTACT // --------------------------------------------------
 
 add_filter('wpcf7_form_elements', 'my_wpcf7_dropdown_form');
 function my_wpcf7_dropdown_form($html) {
@@ -86,6 +86,10 @@ function my_wpcf7_dropdown_form($html) {
 	$html = str_replace('<option value="">---</option>', '<option value="">' . $text . '</option>', $html);
 	return $html;
 }
+
+// BLOG // -----------------------------------------------------
+
+add_theme_support( 'html5', array( 'search-form' ) );
 
 // SCRIPTS -----------------------------------------------------
 add_action( 'wp_enqueue_scripts', 'bootstrap_script' );
@@ -130,13 +134,13 @@ function modernizr() {
     true 
   );
 }
-add_action( 'wp_enqueue_scripts', 'ajax' );
-function ajax() {
-  wp_enqueue_script( 
-    'ajax', 
-    get_stylesheet_directory_uri() . '/js/ajax.js', 
-    array('jquery'), 
-    '', 
-    true 
-  );
-}
+// add_action( 'wp_enqueue_scripts', 'ajax' );
+// function ajax() {
+//   wp_enqueue_script( 
+//     'ajax', 
+//     get_stylesheet_directory_uri() . '/js/ajax.js', 
+//     array('jquery'), 
+//     '', 
+//     true 
+//   );
+// }

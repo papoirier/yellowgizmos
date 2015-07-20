@@ -31,7 +31,7 @@
     </div>
 </div> <!-- /#sticky -->
 
-<div class="container">
+<div id="old-news" class="container">
     <div class="row">
     <?php
 
@@ -48,27 +48,27 @@
         'post__not_in'=> $post_to_exclude
     );
 
-    $latest_blog_posts = new WP_Query( $latest_args );
+    $counter=0;
 
+    $latest_blog_posts = new WP_Query( $latest_args );
     if ( $latest_blog_posts->have_posts() ) : while ( $latest_blog_posts->have_posts() ) : $latest_blog_posts->the_post(); ?>
          
 
             <div class="col-md-4">
-                <h5><?php the_category(); ?></h5>
+                <h5 class="text-yellow"><?php echo get_cat_name($latest_blog_posts); ?></h5>
                 <h4><?php the_title(); ?></h4>
                 <p><?php the_excerpt(); ?></p>
             </div>
 
-            <?php
-            $count++;
-            if ( $count%3 == 0) {
-                echo "</div><div class=\"row\">";
+             <?php $counter++;
+                  if ($counter % 3 == 0) {
+                  echo '</div><div class="row">';
             } ?>
 
 
-    <?php endwhile; endif;
-    ?>
+    <?php endwhile; endif; ?>
     </div> <!-- / last row -->
+
     <div class="row all-posts">
         <div class="col-md-4">
             <p class="btn btn-default btn-lg"><a href="blog">All posts</a></p>
