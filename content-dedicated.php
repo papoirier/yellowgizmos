@@ -21,7 +21,7 @@
         </div>
         <div class="row">
             <div class="col-md-12 phone-carousel">
-                <img src="<?php echo get_stylesheet_directory_uri() ?>/img/phone-gray.png" class="img-responsive center-block">
+                <img src="<?php echo get_stylesheet_directory_uri() ?>/img/phone-gray.svg" class="img-responsive center-block">
                 <div class="phone-contour">
                     <img src="<?php echo get_stylesheet_directory_uri() ?>/img/placement-in-content.gif" id="phone-screen" class="img-responsive center-block">
                 </div>

@@ -391,6 +391,9 @@ ul.navbar-yieldmo li {
 }
 
 // ABOUT // ------------------------------------
+.shape-spacer {
+	height: 50vh;
+}
 
 // RETHINKING // -------------------------------
 #rethinking {
@@ -442,15 +445,15 @@ ul.navbar-yieldmo li {
 	margin: 3em 0;
 	position: relative;
 }
-@phone-screen-width: 220px;
-@phone-screen-height: 384px;
+@phone-screen-width: 276px;
+@phone-screen-height: 492px;
 .phone-contour {
 	display: block;
 	position: absolute;
 	width: @phone-screen-width;
 	height: @phone-screen-height;
-	left: calc(~'50% - 110px');
-	top: 57px;
+	left: calc(~'50% - 138px');
+	top: 80px;
 }
 .phone-screen {
 	//position: absolute;
@@ -473,13 +476,17 @@ ul.navbar-yieldmo li {
 }
 .btn-afl {
 	margin-top: 0.5em;
-	margin-bottom: 3em;
 }
 
 // TEAM // -------------------------------------
 #team {
-	padding-top: 4em;
 	background-color: @pink;
+}
+#team .team-content {
+	padding-top: 4em;
+}
+.thumb {
+	
 }
 
 // TWITTER // ----------------------------------
@@ -751,8 +758,8 @@ footer .social-logos img {
 // *********** // ------------------------------
 
 // OTHER PAGES // ------------------------------
-.spacer {
-	padding-top: @navbar-height;
+#spacer {
+	height: @navbar-height;
 }
 .main-title {
 	text-align: center;

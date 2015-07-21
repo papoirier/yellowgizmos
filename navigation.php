@@ -49,5 +49,5 @@
             </div>
         </div><!--/.nav-collapse -->
 </nav>
-<div class="spacer"></div>
+<div id="spacer"></div>
 

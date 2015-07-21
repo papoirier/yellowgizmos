@@ -34,13 +34,14 @@ jQuery(document).ready(function($) {
 
 			// DIV HEIGHTS // ------------------------------------------
 			var h = $(window).height();
-			var divPadding = 100;
 
+			var spacer = $("#spacer").height();
+			var shapeSpacer = $(".shape-spacer").height();
 			var carouselHeight = $("#carousel-inside > .item").css({"min-height":h + "px"});
 			var carousel = $("#carousel-inside > .item").height();
 			var rethinkingHeight = $("#rethinking").css({"height":h + "px"});
 			var rethinking = $("#rethinking").height();
-			var topDivs = carousel + rethinking;
+			//var topDivs = carousel + rethinking;
 
 			var sha = $("#shape").height();
 			
@@ -59,25 +60,28 @@ jQuery(document).ready(function($) {
 
 			$(window).scroll(function(){
 			    var y = $(window).scrollTop();		
-				if (y < pub + pubHeight) {
+				if (y < pub + pubHeight + spacer) {
 			    	$("#shape").css({"position":"absolute", "top": adv - sha});
 			    };
-			    if (y >= pub + pubHeight - h && y <= rea) {
+			    if (y >= pub + pubHeight  + spacer - h && y <= rea) {
 			    	$("#shape").css({"position":"fixed", "top": h - sha});
 			    };			    
-			    if (y > rea + reaHeight - h) {
+			    if (y > rea + reaHeight + spacer - h) {
 			    	$("#shape").css({"position":"absolute", "top": rea + reaHeight - sha});
 			    };
 
 			    // yellow
-			    if( (y < adv-sha && flagYellow == true) || ((y < adv-sha && flagPink == false)) ) {
+			    if( (y < adv-sha+ shapeSpacer && flagYellow == true) || 
+			    	((y < adv-sha+ shapeSpacer && flagPink == false)) ) {
 			    	animateYellow();
 			    	flagYellow = false;
 			    	flagPink = true;
 			    	flagOrange = true;
 			    }
 			    // pink
-			    if( (y >= adv-sha && y < rea-sha && flagPink == true) || (y >= adv-sha-sha && y < rea-sha && flagOrange == false) || (y >= adv-sha && y < rea-sha && flagYellow == false) ){
+			    if( (y >= adv-sha + shapeSpacer && y < rea-sha - shapeSpacer && flagPink == true) || 
+			    	(y >= adv-sha-sha + shapeSpacer && y < rea-sha && flagOrange == false) || 
+			    	(y >= adv-sha + shapeSpacer && y < rea-sha && flagYellow == false) ){
 			    	animatePink();
 			    	flagYellow = true;
 			    	flagPink = false;

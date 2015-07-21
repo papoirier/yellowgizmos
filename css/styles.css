@@ -330,6 +330,9 @@ ul.navbar-yieldmo li {
 #nav-login {
   margin-right: 45px;
 }
+.shape-spacer {
+  height: 50vh;
+}
 #rethinking {
   background-color: #fdd147;
   padding: 3em 0;
@@ -374,10 +377,10 @@ ul.navbar-yieldmo li {
 .phone-contour {
   display: block;
   position: absolute;
-  width: 220px;
-  height: 384px;
-  left: calc(50% - 110px);
-  top: 57px;
+  width: 276px;
+  height: 492px;
+  left: calc(50% - 138px);
+  top: 80px;
 }
 #dedicated-details {
   background-color: #fdd147;
@@ -395,11 +398,12 @@ ul.navbar-yieldmo li {
 }
 .btn-afl {
   margin-top: 0.5em;
-  margin-bottom: 3em;
 }
 #team {
-  padding-top: 4em;
   background-color: #f27f8a;
+}
+#team .team-content {
+  padding-top: 4em;
 }
 #twitter {
   padding-top: 3em;
@@ -636,8 +640,8 @@ footer .social-logos img {
 .mail-phone h5 {
   margin-top: 0;
 }
-.spacer {
-  padding-top: 54px;
+#spacer {
+  height: 54px;
 }
 .main-title {
   text-align: center;
