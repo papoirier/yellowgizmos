@@ -18,7 +18,7 @@
                     <img src="<?php echo $url; ?>" class="img-responsive img-circle center-block">
                 <?php }
                 else { ?>
-                    <img src="<?php echo get_stylesheet_directory_uri() ?>/img/fpo.png" class="ing-responsive">
+                    <img src="<?php echo get_stylesheet_directory_uri() ?>/img/fpo.png" class="img-responsive">
                 <?php } ?>
             </div>
             <div class="col-md-5 col-md-offset-1">

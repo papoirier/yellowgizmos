@@ -328,10 +328,14 @@ h5 a:hover {
 .side-collapse .social-logos {
 	width: @navbar-width;
 }
-.social-logos img {
-	max-width: 40px;
-	margin-right: 0.5em;
+.sans-serif {
+	font-family: @font-family-sans-serif;
+}
+.social-logos ul {
 	//display: inline-block;
+}
+.social-logos img {
+	margin-right: 0.5em;
 	float: left;
 }
 .made-in-nyc {
@@ -838,6 +842,9 @@ footer .social-logos img {
 }
 
 // BLOG // -------------------------------------
+#blog-search {
+	margin-top: 2em;
+}
 #blog-search img,
 #blog-search form {
 	display: inline-block;
@@ -851,6 +858,7 @@ footer .social-logos img {
 #blog-search form input {
 	width: 100%;
 	font-size: @font-size-h4;
+	border: none;
 }
 #blog-search form input::-webkit-input-placeholder {
    color: @black;
@@ -913,6 +921,58 @@ li.more-img {
 }
 li.more-img img {
 	float: left;
+}
+
+// SINGLE
+.single-download-pdf li {
+	display: inline-block;
+	text-transform: uppercase;
+	font-size: 85%;
+	letter-spacing: 1px;
+}
+.single-download-pdf li.more-text a {
+	color: #FFF;
+}
+.wp-caption {
+	margin: 3em auto;
+}
+.wp-caption-text {
+	font-family: "Apercu Bold";
+	font-weight: bold;
+	text-align: center;
+	margin-top: 0.5em;
+}
+.single-category,
+.single-author {
+	margin-top: 2em;
+}
+.single-download-pdf a {
+	color: #FFF;
+}
+.single-author img,
+.single-author ul {
+	float: left;
+}
+.single-author ul {
+	margin-left: 1em;
+	margin-top: 1.1em;
+	font-family: "Apercu Bold";
+	font-weight: bold;
+}
+.single-author a {
+	color: @black;
+}
+.single-share h4 {
+	text-transform: uppercase;
+	letter-spacing: 1px; 
+	margin-top: 1em;
+}
+.single-social-logos img {
+	margin-left: 0.5em;
+	float: right;
+}
+.post-next .more-img {
+	margin-left: 0.4em;
 }
 
 

@@ -38,10 +38,10 @@
                 <ul class="social-logos">
                     <li>Follow us</li>
                     <?php $on = "Yieldmo on"?>
-                    <li><a href="https://www.facebook.com/Yieldmo" title="<?php echo $on?> Facebook" target="_blank"><img src="<?php echo get_stylesheet_directory_uri() ?>/img/social-logos/logo-fb.png" class="img-responsive"></a></li>
-                    <li><a href="https://twitter.com/yieldmo" title="<?php echo $on?> Twitter" target="_blank"><img src="<?php echo get_stylesheet_directory_uri() ?>/img/social-logos/logo-twitter.png" class="img-responsive"></a></li>
-                    <li><a href="https://www.linkedin.com/company/yieldmo" title="<?php echo $on?> Linkedin" target="_blank"><img src="<?php echo get_stylesheet_directory_uri() ?>/img/social-logos/logo-linkedin.png" class="img-responsive"></a></li>
-                    <li><a href="http://vimeo.com/adformatlab" title="<?php echo $on ?> Vimeo" target="_blank"><img src="<?php echo get_stylesheet_directory_uri() ?>/img/social-logos/logo-vimeo.png" class="img-responsive"></a></li>
+                    <li><a href="https://www.facebook.com/Yieldmo" title="<?php echo $on?> Facebook" target="_blank"><img src="<?php echo get_stylesheet_directory_uri() ?>/img/social-logos/logo-facebook.svg" class="img-responsive"></a></li>
+                    <li><a href="https://twitter.com/yieldmo" title="<?php echo $on?> Twitter" target="_blank"><img src="<?php echo get_stylesheet_directory_uri() ?>/img/social-logos/logo-twitter.svg" class="img-responsive"></a></li>
+                    <li><a href="https://www.linkedin.com/company/yieldmo" title="<?php echo $on?> Linkedin" target="_blank"><img src="<?php echo get_stylesheet_directory_uri() ?>/img/social-logos/logo-linkedin.svg" class="img-responsive"></a></li>
+                    <li><a href="http://vimeo.com/adformatlab" title="<?php echo $on ?> Vimeo" target="_blank"><img src="<?php echo get_stylesheet_directory_uri() ?>/img/social-logos/logo-vimeo.svg" class="img-responsive"></a></li>
                 </ul>
                 <div class="made-in-nyc">
                     <img src="<?php echo get_stylesheet_directory_uri() ?>/img/made-in-nyc.png" title="Made in NYC" class="img-responsive">

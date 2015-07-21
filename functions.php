@@ -91,6 +91,44 @@ function my_wpcf7_dropdown_form($html) {
 
 add_theme_support( 'html5', array( 'search-form' ) );
 
+add_filter('get_avatar','add_gravatar_class');
+function add_gravatar_class($class) {
+    $class = str_replace("class='avatar", "class='avatar img-circle", $class);
+    return $class;
+}
+
+function img_responsive($content){
+    return str_replace('<img class="','<img class="img-responsive ',$content);
+}
+add_filter('the_content','img_responsive');
+
+add_shortcode( 'wp_caption', 'fixed_img_caption_shortcode' );
+add_shortcode( 'caption', 'fixed_img_caption_shortcode' );
+
+function fixed_img_caption_shortcode($attr, $content = null) {
+     if ( ! isset( $attr['caption'] ) ) {
+         if ( preg_match( '#((?:<a [^>]+>s*)?<img [^>]+>(?:s*</a>)?)(.*)#is', $content, $matches ) ) {
+         $content = $matches[1];
+         $attr['caption'] = trim( $matches[2] );
+         }
+     }
+     $output = apply_filters( 'img_caption_shortcode', '', $attr, $content );
+         if ( $output != '' )
+         return $output;
+     extract( shortcode_atts(array(
+     'id'      => '',
+     'align'   => 'alignnone',
+     'width'   => '',
+     'caption' => ''
+     ), $attr));
+     if ( 1 > (int) $width || empty($caption) )
+     return $content;
+     if ( $id ) $id = 'id="' . esc_attr($id) . '" ';
+     return '<div ' . $id . 'class="wp-caption ' . esc_attr($align) . '" >'
+     . do_shortcode( $content ) . '<p class="wp-caption-text">' . $caption . '</p></div>';
+}
+
+
 // SCRIPTS -----------------------------------------------------
 add_action( 'wp_enqueue_scripts', 'bootstrap_script' );
 function bootstrap_script() {
