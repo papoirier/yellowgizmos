@@ -69,9 +69,9 @@
     		</div>
     		<div class="single-social-logos">
 	    		<ul>
-		    		<li><a href="http://www.facebook.com/sharer/sharer.php?u=<?php the_permalink();?>&title=<?php the_title();?>" target="_blank" alt="Facebook"><img src="<?php echo get_stylesheet_directory_uri() ?>/img/social-logos/logo-facebook.svg"></a></li>
-		    		<li><a href="http://twitter.com/intent/tweet?status=<?php the_title();?>+<?php the_permalink();?>" target="_blank" alt="Twitter"><img src="<?php echo get_stylesheet_directory_uri() ?>/img/social-logos/logo-twitter.svg"></a></li>
-		    		<li><a href="http://www.linkedin.com/shareArticle?mini=true&url=<?php the_permalink();?>&title=<?php the_title();?>" target="_blank" alt="Linkedin"><img src="<?php echo get_stylesheet_directory_uri() ?>/img/social-logos/logo-linkedin.svg"></a></li>
+		    		<li><a href="http://www.linkedin.com/shareArticle?mini=true&url=<?php the_permalink();?>&title=<?php the_title();?>" target="_blank" alt="Linkedin" title="Share on Linkedin"><img src="<?php echo get_stylesheet_directory_uri() ?>/img/social-logos/logo-linkedin.svg"></a></li>
+		    		<li><a href="http://twitter.com/intent/tweet?status=<?php the_title();?>+<?php the_permalink();?>" target="_blank" alt="Twitter" title="Share on Twitter"><img src="<?php echo get_stylesheet_directory_uri() ?>/img/social-logos/logo-twitter.svg"></a></li>
+		    		<li><a href="http://www.facebook.com/sharer/sharer.php?u=<?php the_permalink();?>&title=<?php the_title();?>" target="_blank" alt="Facebook" title="Share on Facebook"><img src="<?php echo get_stylesheet_directory_uri() ?>/img/social-logos/logo-facebook.svg"></a></li>
 		    	</ul>
 		    </div>
         </div>
@@ -82,12 +82,10 @@
 	<div class="row single-previous-next">
     	<div class="col-md-6 col-md-offset-3">
     		<ul class="post-more pull-left">
-    			<li class="more-img"><img src="<?php echo get_stylesheet_directory_uri() ?>/img/post-previous.svg"></a></li>
-    			<li class="more-text"><?php previous_post_link('%link'); ?><li>
+    			<li class="more-text prev"><?php previous_post_link('%link'); ?><li>
     		</ul>
     		<ul class="post-more pull-right">
-    			<li class="more-text"><?php next_post_link('%link'); ?></li>
-    			<li class="more-img"><img src="<?php echo get_stylesheet_directory_uri() ?>/img/post-next.svg"></a></li>
+    			<li class="more-text next"><?php next_post_link('%link'); ?></li>
     		</li>
         </div>
     </div>

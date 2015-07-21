@@ -8,9 +8,11 @@
                 <span class="icon-bar"></span>
             </button>
             <a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="home"><img src="<?php echo get_stylesheet_directory_uri() ?>/img/logo-navbar.svg" title="logo" alt="Yieldmo logo" class="img-responsive"></a>
-            <a href="<?php echo esc_url( home_url( '/blog/' ) ); ?>"><?php if (is_page_template( 'single.php' ) ) { ?> 
-                <p>Blog</p>
-            <?php }?></a>
+            <?php if ( is_home() || is_single()  ) {
+                echo "Blog";
+
+            }
+            ?>
             <ul class="navbar-yieldmo navbar-text navbar-right text-right">
                 <li id="nav-contact"><a href="#contact">Contact</a></li>
                 <li id="nav-login" class="btn btn-default"><a href="#login">Log in</a></li>
@@ -19,7 +21,6 @@
             
         
         <div class="side-collapse in">
-            <?php if (is_front_page()) { ?>
             <div class="menu-content">
                 <ul class="text-white">
                     <li><a href="#home">Home</a></li>
@@ -34,7 +35,6 @@
                     <li><a href="#press">Press &amp; Media</a></li>
                     <li><a href="#privacy">Privacy Policy</a></li>
                 </ul>
-                <?php } ?>
                 <ul class="social-logos">
                     <li>Follow us</li>
                     <?php $on = "Yieldmo on"?>

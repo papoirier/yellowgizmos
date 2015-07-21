@@ -777,12 +777,14 @@ ul.post-more:hover {
 }
 ul.post-more li {
   display: inline-block;
+  cursor: pointer;
 }
 li.more-text {
   margin-left: 0.5em;
   text-transform: uppercase;
   font-size: 85%;
   letter-spacing: 1px;
+  height: 40px;
 }
 li.more-text a {
   color: #b2b2b2;
@@ -843,8 +845,19 @@ li.more-img img {
   margin-left: 0.5em;
   float: right;
 }
-.post-next .more-img {
-  margin-left: 0.4em;
+ul.post-more li.more-text.prev {
+  background: url("../img/post-previous.svg") no-repeat left top;
+}
+ul.post-more li.more-text.prev a {
+  margin-top: 10px;
+  margin-left: 50px;
+}
+ul.post-more li.more-text.next {
+  background: url("../img/post-next.svg") no-repeat right top;
+}
+ul.post-more li.more-text.next a {
+  margin-top: 10px;
+  margin-right: 50px;
 }
 #carousel-intro .item {
   padding-top: 54px;

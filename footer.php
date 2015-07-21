@@ -62,7 +62,7 @@
 			    </div>
 
 			    <div class="row">
-			    	<div id="copyright" class="col-md-9 col-md-offset-3 col-xs-12">
+			    	<div id="copyright" class="col-md-9 col-md-offset-3 col-xs-12 regular">
 			    		<p>&copy;<?php echo date("Y"); ?> Yieldmo, Inc. Proudly made in New York City.</p>
 			    		<p>Yieldmo, the Yieldmo logo, and Ad Format Lab are servicemarks of Yieldmo, Inc.</p>
 			    	</div>
