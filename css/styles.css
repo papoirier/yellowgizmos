@@ -28,6 +28,10 @@
   background-color: #FFF;
   color: #262626;
 }
+.social-logos img {
+  margin-right: 0.5em;
+  float: left;
+}
 .center-block p {
   text-align: center;
 }
@@ -225,6 +229,9 @@ h5 a:hover {
 .navbar-toggle .icon-bar {
   border-radius: 0px;
 }
+#nav-contact {
+  margin-top: 5px;
+}
 .brand-logo {
   width: 100px;
 }
@@ -253,12 +260,15 @@ h5 a:hover {
   margin-left: 36px;
   margin-top: -6px;
 }
+.navbar-text {
+  margin-bottom: 12px;
+}
 .side-collapse {
   background-color: #262626;
   top: 54px;
   bottom: 0;
   left: 0;
-  width: 250px;
+  width: 300px;
   position: fixed;
   overflow: hidden;
   transition: width .4s;
@@ -273,33 +283,38 @@ h5 a:hover {
   transition: left .4s;
 }
 .side-collapse-container.out {
-  left: 240px;
+  left: 300px;
 }
 .side-collapse.in {
   width: 0;
 }
 .side-collapse ul li,
 .side-collapse .social-logos {
-  width: 240px;
+  width: 300px;
 }
 .sans-serif {
   font-family: "Apercu Regular", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
-.social-logos img {
-  margin-right: 0.5em;
-  float: left;
-}
-.made-in-nyc {
-  display: block;
-  float: left;
-  clear: both;
-}
-.made-in-nyc img {
-  width: 62px;
-  height: 62px;
+.side-collapse .social-logos li {
+  font-size: 85%;
+  color: #FFF;
+  margin-bottom: 0.5em;
 }
 .menu-content {
   margin: 30px auto auto 30px;
+}
+.menu-content ul {
+  margin-top: 2em;
+}
+.menu-content li {
+  line-height: 28px;
+}
+.made-in-nyc {
+  display: block;
+  position: absolute;
+  bottom: 2em;
+  width: 62px;
+  height: 62px;
 }
 .navbar-header {
   float: none;
@@ -958,21 +973,19 @@ ul.post-more li.more-text.next a {
   margin-right: 50px;
 }
 #carousel-intro .item {
-  padding-top: 54px;
-  padding-bottom: -54px;
+  padding-top: 13.5px;
+}
+#carousel-inside img {
+  margin: 0 auto;
 }
 .carousel-caption {
-  top: 33%;
   text-shadow: none;
   color: #262626;
-  padding: 0;
   position: relative;
   left: auto;
   right: auto;
-  margin-bottom: 1em;
-  padding-left: 10%;
-  padding-right: 10%;
-  margin-bottom: 3em;
+  padding: 0 10%;
+  margin: 3em auto;
 }
 .carousel-caption h1 {
   line-height: 1.3em;

@@ -9,6 +9,12 @@ jQuery(document).ready(function($) {
         $(sel2).toggleClass('out');
     });
 
+    // tabs
+    $('#myTabs a').click(function (e) {
+        e.preventDefault();
+        $(this).tab('show');
+    });
+
     // phone image carousel
     $(function() {
         $("#in-content").click(function(e){
@@ -32,6 +38,8 @@ jQuery(document).ready(function($) {
         });
     });
 
+    // CONTACT // ------------------------------------------------------------
+
     // contact form buttons
     $(function() {
         $( "input:radio[value='Publisher']" ).prop('checked',true);
@@ -53,6 +61,9 @@ jQuery(document).ready(function($) {
             $("input:radio[value='Reader']").next().addClass("active");
         });
     });
+    // contact form placeholder text
+    $(".hear option:first").html('How did you hear about us?*');
+    $(".state option:first").html('State (US and Canada only)*');
 
     // twitter styling
     $(window).load(function() {
@@ -65,27 +76,23 @@ jQuery(document).ready(function($) {
         $("iframe#twitter-widget-0").contents().find('head').append('<style>.html, body, h1, h2, h3, blockquote, p, ol, ul, li, img, iframe, button, .tweet-box-button{font-family:'+$font+' !important;font-weight:'+$fontweight+' !important;} .p-author, .e-entry-content, p.e-entry-title{text-align:center !important;} li.tweet{padding-left:0 !important;} p.e-entry-title{font-size:18px !important; line-height:1.2em !important; margin-bottom: 36px !important; min-height:70px !important;} .e-entry-content{min-height:70px !important;} a.permalink{float:none; text-align:center !important;} .header{text-align:center !important;} .p-author{margin-top:-36px; padding-top:36px; margin-bottom:24px;} .p-author a, .p-name{ color: #0B84BB !important;} .header{padding:0 !important;} }</style>');
     });
 
+    // ABOUT // ------------------------------------------------------------
+
     // about pages carousels
     $('#carousel-publishers > .carousel-inner > .item:first').addClass('active');
     $('#carousel-advertisers > .carousel-inner > .item:first').addClass('active');
     $('#carousel-readers > .carousel-inner > .item:first').addClass('active col-md-offset-1-5');
     $('#carousel-dedicated > .carousel-inner > .item:first').addClass('active');
+    
 
-    // intro page carousel
-    // $('#carousel-intro').carousel({
-    //   interval: 5000,
-    //   pause: "hover"
-    // });
+    // INTRO // ------------------------------------------------------------
 
-    // tabs
-    $('#myTabs a').click(function (e) {
-        e.preventDefault();
-        $(this).tab('show');
-    });
+    // intro carousel image
+    // var carouselHeight = $("#carousel-inside > .item").css({"min-height":h + "px"});
+    // var carousel = $("#carousel-inside > .item").height();
+    
 
-    // contact form placeholder text
-    $(".hear option:first").html('How did you hear about us?*');
-    $(".state option:first").html('State (US and Canada only)*');
+    // ------------------------------------------------------------
 
     $(window).on("load resize", function(){
         // about pages carousels

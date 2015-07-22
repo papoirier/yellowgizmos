@@ -37,11 +37,14 @@ jQuery(document).ready(function($) {
 
 			var spacer = $("#spacer").height();
 			var shapeSpacer = $(".shape-spacer").height();
-			var carouselHeight = $("#carousel-inside > .item").css({"min-height":h + "px"});
+			var carouselHeight = $("#carousel-inside > .item").css({"min-height":h-54});
 			var carousel = $("#carousel-inside > .item").height();
 			var rethinkingHeight = $("#rethinking").css({"height":h + "px"});
 			var rethinking = $("#rethinking").height();
-			//var topDivs = carousel + rethinking;
+			
+			// if (h < 650) {
+			// 	$('#carousel-inside > .item > .container > .row > .col-md-12 > img').css({"width":"75%"});
+			// };
 
 			var sha = $("#shape").height();
 			

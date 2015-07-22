@@ -58,8 +58,10 @@
 	background-color: #FFF;
 	color: @black;
 }
-
-
+.social-logos img {
+	margin-right: 0.5em;
+	float: left;
+}
 .center-block p {
 	text-align: center;
 }
@@ -253,7 +255,7 @@ h5 a:hover {
 	color: @black-alpha;
 }
 // NAVBAR // ----------------------------------
-@navbar-width: 240px;
+@navbar-width: 300px;
 .navbar-default {
 	border-bottom: none;
 	background-color: #FFF;
@@ -276,6 +278,9 @@ h5 a:hover {
 }
 .navbar-toggle .icon-bar {
 	border-radius: 0px;
+}
+#nav-contact {
+	margin-top: 5px;
 }
 
 .brand-logo {
@@ -307,13 +312,16 @@ h5 a:hover {
 	margin-top: -6px;
 	//margin-right: 15px;
 }
+.navbar-text {
+	margin-bottom: 12px;
+}
 // hamburger
 .side-collapse {
 	background-color: @black;
 	top:@navbar-height;
 	bottom:0;
 	left:0;
-	width: @navbar-width + 10px;
+	width: @navbar-width;
 	position:fixed;
 	overflow:hidden;
 	transition:width .4s;
@@ -340,26 +348,29 @@ h5 a:hover {
 .sans-serif {
 	font-family: @font-family-sans-serif;
 }
-.social-logos ul {
-	//display: inline-block;
-}
-.social-logos img {
-	margin-right: 0.5em;
-	float: left;
-}
-.made-in-nyc {
-	display: block;
-	float: left;
-	clear: both;
-}
-.made-in-nyc img {
-	width: 62px;
-	height: 62px;
+.side-collapse .social-logos li {
+	font-size: 85%;
+	color: #FFF;
+	margin-bottom: 0.5em;
 }
 .menu-content {
 	margin: 30px auto auto 30px;
 }
-
+.menu-content ul {
+	margin-top: 2em;
+}
+.menu-content li {
+	line-height: 28px;
+}
+.made-in-nyc {
+	display: block;
+	position: absolute;
+	bottom: 2em;
+	width: 62px;
+	height: 62px;
+}
+.made-in-nyc img {
+}
 .navbar-header {
     float: none;
 }
@@ -1105,22 +1116,20 @@ ul.post-more li.more-text.next a {
 
 // CAROUSEL // ---------------------------------
 #carousel-intro .item {
-	padding-top: @navbar-height;
-	padding-bottom: -@navbar-height;
+	padding-top: @navbar-height/4;
+}
+#carousel-inside img {
+	//max-height: 50vh;
+	margin: 0 auto;
 }
 .carousel-caption {
-	//pointer-events: none;
-	top: @carousel-top;
 	text-shadow: none;
 	color: @black;
-	padding: 0;
 	position: relative;
 	left: auto;
     right: auto;
-    margin-bottom: 1em;
-    padding-left: 10%;
-    padding-right: 10%;
-    margin-bottom: 3em;
+    padding: 0 10%;
+    margin: 3em auto;
 }
 .carousel-caption h1 {
 	line-height: 1.3em;
