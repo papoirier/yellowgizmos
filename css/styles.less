@@ -258,6 +258,12 @@ h5 a:hover {
 	color: @black-alpha;
 }
 // NAVBAR // ----------------------------------
+.navbar-toggle {
+	visibility: visible;
+	display: initial;
+	float: left;
+	margin-left: 30px;
+}
 @navbar-width: 300px;
 .navbar-default {
 	border-bottom: none;
@@ -319,43 +325,16 @@ h5 a:hover {
 	margin-bottom: 12px;
 }
 // hamburger
-.side-collapse {
+.navmenu {
 	background-color: @black;
-	top:@navbar-height;
-	bottom:0;
-	left:0;
-	width: @navbar-width;
-	position:fixed;
-	overflow:hidden;
-	transition:width .4s;
 }
-.collapse.in{
-	display:block !important;
-}
-.side-collapse-container{
-	width:100%;
-	position:relative;
-	left:0;
-	transition:left .4s;
-}
-.side-collapse-container.out{
- 	left:@navbar-width;
-}
-.side-collapse.in {
- 	width:0;
-}
-.side-collapse ul li,
-.side-collapse .social-logos {
-	width: @navbar-width;
+.navmenu-default {
+	border: none;
 }
 .sans-serif {
 	font-family: @font-family-sans-serif;
 }
-.side-collapse .social-logos li {
-	font-size: 85%;
-	color: #FFF;
-	margin-bottom: 0.5em;
-}
+
 .menu-content {
 	margin: 30px auto auto 30px;
 }
@@ -515,16 +494,14 @@ ul.navbar-yieldmo li {
 // TEAM // -------------------------------------
 #team {
 	background-color: @pink;
+	background-image: url('../img/yieldmo-team.png');
+	background-repeat: no-repeat;
+	background-position: bottom right;
+	background-size: 70%;
 }
 #team .row {
 	padding-top: 4em;
-}
-#team .team-content {
-}
-#team .thumb {
-	position: relative;
-}
-#team .thumb img {
+	padding-bottom: 4em;
 }
 
 // TWITTER // ----------------------------------

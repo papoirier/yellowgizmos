@@ -1,13 +1,11 @@
 jQuery(document).ready(function($) {
     
     // hamburger menu
-    // var sideslider = $('[data-toggle=collapse-side]');
-    // var sel = sideslider.attr('data-target');
-    // var sel2 = sideslider.attr('data-target-2');
-    // sideslider.click(function(event){
-    //     $(sel).toggleClass('in');
-    //     $(sel2).toggleClass('out');
-    // });
+    $(".menu-content a").click(function(){
+        // Close offcanvas nav
+        // offcanvas_selector is any valid css selector to get your offcanvas element
+        $('.navmenu').offcanvas('hide');
+    });
 
     // tabs
     $('#myTabs a').click(function (e) {

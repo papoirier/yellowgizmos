@@ -24,7 +24,7 @@
  */
 ?>
 
-<div class="side-collapse-container">
+<div class="content-wrapper">
 
 <!-- INTRO CAROUSEL - - - - - - - - - - - - -  -->
 <?php //echo do_shortcode('[image-carousel showcaption="true" interval="5000"]'); ?>
@@ -136,7 +136,7 @@
     <?php endif;?>
 </section> <!-- /#contact -->
 
-</div> <!-- /.side-collapse-container -->
+</div> <!-- /.content-wrapper -->
 
 <!-- FOOTER - - - - - - - - - - - - - - - - - - -->
 <?php get_footer(); ?>
