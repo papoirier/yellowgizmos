@@ -143,14 +143,14 @@ svg {
 
 @font-family-sans-serif: "Apercu Regular", "Helvetica Neue", Helvetica, Arial, sans-serif;
 @font-family-serif: "Georgia", "Times New Roman", serif;
-@font-size-base: 16px;
-@font-size-h1: floor((@font-size-base * 2.6));
-@font-size-h2: floor((@font-size-base * 1.90)); 
-@font-size-h3: ceil((@font-size-base * 1.7)); 
-@font-size-h4: ceil((@font-size-base * 1.25)); 
+@font-size-base: 15px;
+@font-size-h1: floor((@font-size-base * 4));
+@font-size-h2: floor((@font-size-base * 2.66667)); 
+@font-size-h3: ceil((@font-size-base * 2)); 
+@font-size-h4: ceil((@font-size-base * 1.66667)); 
 @font-size-h5: @font-size-base;
 @font-size-h6: ceil((@font-size-base * 1)); 
-@font-size-nav: 13px;
+@font-size-nav: @font-size-base;
 
 body {
 	font-family: @font-family-sans-serif;
@@ -159,7 +159,7 @@ body {
 	//line-height: 1.5em;
 }
 p {
-	line-height: 1.5em;
+	line-height: 25px;
 	font-style: normal;
 	font-family: @font-family-serif;
 }
@@ -167,6 +167,7 @@ h1,
 h1 p {
 	font-family: "Apercu Bold";
 	font-size: @font-size-h1;
+	line-height: 62px;
 	font-style: normal;
 	font-weight: bold;
 }
@@ -174,7 +175,7 @@ h2,
 h2 p {
 	font-family: "Apercu Bold";
 	font-size: @font-size-h2;
-	line-height: 1.1em;
+	line-height: 42px;
 	font-style: normal;
 	font-weight: bold;
 	
@@ -183,7 +184,7 @@ h3,
 h3 p {
 	font-family: "Apercu Bold";
 	font-size: @font-size-h3;
-	line-height: 1.1em;
+	line-height: 40px;
 	font-style: normal;
 	font-weight: bold;
 }
@@ -196,6 +197,7 @@ h4,
 h4 p {
 	font-family: "Apercu Bold";
 	font-size: @font-size-h4;
+	line-height: 27px;
 	font-style: normal;
 	font-weight: bold;
 
@@ -204,6 +206,7 @@ h5,
 h5 p {
 	font-family: "Apercu Bold";
 	font-size: @font-size-h5;
+	line-height: 22px;
 	font-weight: bold;
 	font-style: normal;
 }
@@ -517,10 +520,11 @@ ul.navbar-yieldmo li {
 	padding-top: 4em;
 }
 #team .team-content {
-	//margin-bottom: 2em;
 }
 #team .thumb {
-	margin-top: 2em;
+	position: relative;
+}
+#team .thumb img {
 }
 
 // TWITTER // ----------------------------------
@@ -679,6 +683,9 @@ footer .social-logos img {
 	margin-bottom: 2em;
 }
 // form
+.contact-form h5 { 
+	line-height: 15px;
+}
 .contact-form .row {
 	margin-bottom: 0.5em;
 }
@@ -700,7 +707,7 @@ footer .social-logos img {
 	display: block;
 }
 .im-a {
-	margin-top: 8px;
+	margin-top: 4px;
 }
 .wpcf7-list-item-label {
 	background-color: transparent;
@@ -1128,11 +1135,8 @@ ul.post-more li.more-text.next a {
 	position: relative;
 	left: auto;
     right: auto;
-    padding: 0 10%;
+    padding: 0;
     margin: 3em auto;
-}
-.carousel-caption h1 {
-	line-height: 1.3em;
 }
 .my-carousel .carousel-control {
 	display: block !important;

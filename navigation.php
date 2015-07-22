@@ -7,24 +7,22 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="home"><img src="<?php echo get_stylesheet_directory_uri() ?>/img/logo-navbar.svg" title="logo" alt="Yieldmo logo" class="img-responsive"></a>
-            <?php if ( is_home() || is_single()  ) {
-                echo "Blog";
-
-            }
-            ?>
+            <?php if ( is_home() || is_single()  ) { ?>
+                <a class="navbar-brand" href="<?php echo esc_url( home_url( '/blog/' ) ); ?>" title="home"><img src="<?php echo get_stylesheet_directory_uri() ?>/img/logo-blog.svg" title="logo" alt="Yieldmo logo" class="logo-blog img-responsive"></a>
+            <?php } else { ?>
+                <a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="home"><img src="<?php echo get_stylesheet_directory_uri() ?>/img/logo-navbar.svg" title="logo" alt="Yieldmo logo" class="img-responsive"></a>
+            <?php } ?>
             <ul class="navbar-yieldmo navbar-text navbar-right text-right">
                 <li id="nav-contact"><a href="#contact">Contact</a></li>
                 <li id="nav-login" class="btn btn-default"><a href="#login">Log in</a></li>
             </ul>
         </div>
-            
         
         <div class="side-collapse in">
             <div class="menu-content">
                 <ul class="text-white">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
+                    <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>">Home</a></li>
+                    <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>#about">About</a></li>
                     <li><a href="#team">Team</a></li>
                     <li><a href="#blog">Blog</a></li>
                     <li><a href="#contact">Contact</a></li>

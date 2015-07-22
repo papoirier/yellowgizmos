@@ -110,34 +110,35 @@ svg {
 }
 body {
   font-family: "Apercu Regular", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 16px;
+  font-size: 15px;
   color: #262626;
 }
 p {
-  line-height: 1.5em;
+  line-height: 25px;
   font-style: normal;
   font-family: "Georgia", "Times New Roman", serif;
 }
 h1,
 h1 p {
   font-family: "Apercu Bold";
-  font-size: 41px;
+  font-size: 60px;
+  line-height: 62px;
   font-style: normal;
   font-weight: bold;
 }
 h2,
 h2 p {
   font-family: "Apercu Bold";
-  font-size: 30px;
-  line-height: 1.1em;
+  font-size: 40px;
+  line-height: 42px;
   font-style: normal;
   font-weight: bold;
 }
 h3,
 h3 p {
   font-family: "Apercu Bold";
-  font-size: 28px;
-  line-height: 1.1em;
+  font-size: 30px;
+  line-height: 40px;
   font-style: normal;
   font-weight: bold;
 }
@@ -149,19 +150,21 @@ h3 p {
 h4,
 h4 p {
   font-family: "Apercu Bold";
-  font-size: 20px;
+  font-size: 26px;
+  line-height: 27px;
   font-style: normal;
   font-weight: bold;
 }
 h5,
 h5 p {
   font-family: "Apercu Bold";
-  font-size: 16px;
+  font-size: 15px;
+  line-height: 22px;
   font-weight: bold;
   font-style: normal;
 }
 h6 {
-  font-size: 16px;
+  font-size: 15px;
   font-style: normal;
   font-weight: bold;
 }
@@ -240,7 +243,7 @@ h5 a:hover {
 .navbar-text li,
 .navbar-text li a {
   text-transform: uppercase;
-  font-size: 13px;
+  font-size: 15px;
   letter-spacing: 1px;
   font-family: "Apercu Bold";
   font-weight: normal;
@@ -442,7 +445,7 @@ ul.navbar-yieldmo li {
   padding-top: 4em;
 }
 #team .thumb {
-  margin-top: 2em;
+  position: relative;
 }
 #twitter {
   padding-top: 3em;
@@ -581,6 +584,9 @@ footer .social-logos img {
 .contact-title {
   margin-bottom: 2em;
 }
+.contact-form h5 {
+  line-height: 15px;
+}
 .contact-form .row {
   margin-bottom: 0.5em;
 }
@@ -601,7 +607,7 @@ footer .social-logos img {
   display: block;
 }
 .im-a {
-  margin-top: 8px;
+  margin-top: 4px;
 }
 .wpcf7-list-item-label {
   background-color: transparent;
@@ -844,7 +850,7 @@ _:-o-prefocus .styled-select,
 }
 #blog-search form input {
   width: 100%;
-  font-size: 20px;
+  font-size: 26px;
   border: none;
 }
 #blog-search form input::-webkit-input-placeholder {
@@ -984,11 +990,8 @@ ul.post-more li.more-text.next a {
   position: relative;
   left: auto;
   right: auto;
-  padding: 0 10%;
+  padding: 0;
   margin: 3em auto;
-}
-.carousel-caption h1 {
-  line-height: 1.3em;
 }
 .my-carousel .carousel-control {
   display: block !important;
