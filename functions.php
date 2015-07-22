@@ -56,10 +56,15 @@ add_theme_support( 'post-thumbnails' );
 
 add_filter( 'post_thumbnail_html', 'remove_width_attribute', 10 );
 add_filter( 'image_send_to_editor', 'remove_width_attribute', 10 );
-
 function remove_width_attribute( $html ) {
    $html = preg_replace( '/(width|height)="\d*"\s/', "", $html );
    return $html;
+}
+
+add_filter( 'post_thumbnail_html', 'remove_thumbnail_dimensions', 10, 3 );
+function remove_thumbnail_dimensions( $html, $post_id, $post_image_id ) {
+    $html = preg_replace( '/(width|height)=\"\d*\"\s/', "", $html );
+    return $html;
 }
 
 add_filter ('the_content', 'add_responsive_class');
@@ -68,7 +73,7 @@ function add_responsive_class($content){
     $document = new DOMDocument();
     libxml_use_internal_errors(true);
     $document->loadHTML(utf8_decode($content));
-
+    libxml_use_internal_errors(false);
     $imgs = $document->getElementsByTagName('img');
     foreach ($imgs as $img) {           
        $img->setAttribute('class','img-responsive');
@@ -77,6 +82,7 @@ function add_responsive_class($content){
     $html = $document->saveHTML();
     return $html;   
 }
+
 
 // CONTACT // --------------------------------------------------
 

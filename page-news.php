@@ -55,8 +55,10 @@
          
 
             <div class="col-md-4">
+                <?php $category = get_the_category(); ?>
+                <img src="<?php echo get_stylesheet_directory_uri() ?>/img/cat/<?php echo $category[0]->category_nicename ;?>.svg" alt="arrow" title="Continue reading arrow" class="">
                 <h5 class="text-yellow"><?php echo get_cat_name($latest_blog_posts); ?></h5>
-                <h4><?php the_title(); ?></h4>
+                <h5><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h5>
                 <p><?php the_excerpt(); ?></p>
             </div>
 

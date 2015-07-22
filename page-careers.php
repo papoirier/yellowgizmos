@@ -1,7 +1,6 @@
 <?php
 /*
  * Template Name: Careers Page
- * 175
  */
 ?>
 <?php get_header(); ?>
@@ -35,7 +34,7 @@
 						$content = apply_filters( 'the_content', $content ); ?>
 					<div class="col-md-4 item">
 						<h5><?php echo get_secondary_title($page->ID); ?></h5>
-						<h4><a href="<?php echo get_page_link( $page->ID ); ?>"><?php echo $page->post_title; ?></a></h4>
+						<h4><?php echo $page->post_title; ?></h4>
 						<p><?php echo $page->post_excerpt; ?></p>
 						<p class="btn btn-default"><a href="<?php echo get_page_link($page->ID); ?>">Learn more</a></p>
 					</div>

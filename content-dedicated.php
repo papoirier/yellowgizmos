@@ -31,8 +31,6 @@
 </div>
 <div id="dedicated-details">
     <div class="container">
-        
-
         <div class="row">
             <div id="carousel-<?php echo print_the_slug(); ?>" class="carousel slide" data-ride="carousel" data-interval="false">
                 <!-- indicators -->

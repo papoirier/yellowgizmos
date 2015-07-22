@@ -1,7 +1,7 @@
 <?php while ($my_query->have_posts()) : $my_query->the_post(); ?>
 <div class="container">
 	<div class="row">
-    	<div class="col-md-6">
+    	<div class="col-md-5">
     		<div>
 	    		<h3><?php the_title(); ?></h3>
 				<h3 class="regular"><?php the_secondary_title(); ?></h3>
@@ -14,8 +14,8 @@
 				<?php //require(locate_template('content-ad-format-lab-details.php')); ?>
 			</div>
         </div>
-        <div class="col-md-6 polka">
-            <?php the_post_thumbnail( 'medium', array( 'class' => 'center-block img-responsive' ) ); ?>
+        <div class="col-md-7 polka">
+            <?php the_post_thumbnail( 'full', array( 'class' => 'center-block img-responsive' ) ); ?>
         </div>
     </div>
 </div>

@@ -9,15 +9,15 @@ jQuery(document).ready(function($) {
 				animationToReaders = $("#animation-to-readers");
 			var animationToYellow = $("#animation-to-yellow"),
 				animationToPink = $("#animation-to-pink"),
-				animationToOrange = $("#animation-to-orange");
+				animationToBlue = $("#animation-to-orange");
 
 			var flagYellow = true;
 			var flagPink = true;
-			var flagOrange = true;
+			var flagBlue = true;
 
 			var	colorYellow = "rgba(253,209,71,0.5)";
 			var	colorPink = "rgba(250, 169, 56,0.5)";
-			var	colorOrange = "rgba(242, 127, 138,0.5)";
+			var	colorBlue = "rgba(242, 127, 138,0.5)";
 
 			function animateYellow() {
 				animationToPublishers[0].beginElement();
@@ -27,9 +27,9 @@ jQuery(document).ready(function($) {
 				animationToAdvertisers[0].beginElement();
 				animationToPink[0].beginElement();
 			}
-			function animateOrange() {
+			function animateBlue() {
 				animationToReaders[0].beginElement();
-				animationToOrange[0].beginElement();
+				animationToBlue[0].beginElement();
 			}
 
 			// DIV HEIGHTS // ------------------------------------------
@@ -48,15 +48,12 @@ jQuery(document).ready(function($) {
 			var pub = $("#publishers").offset().top;
 			var adv = $("#advertisers").offset().top;
 			var rea = $("#readers").offset().top;
-			var ded = $("#dedicated").offset().top;
+			//var ded = $("#dedicated").offset().top;
 
 			var pubHeight = $("#publishers").height();
 			var advHeight = $("#advertisers").height();
 			var reaHeight = $("#readers").height();
-			var dedHeight = $("#dedicated").height(); 
-
-			console.log("publishers y: "+pub);
-			console.log("rethinking y: "+reaHeight);
+			//var dedHeight = $("#dedicated").height(); 
 
 			$(window).scroll(function(){
 			    var y = $(window).scrollTop();		
@@ -76,23 +73,24 @@ jQuery(document).ready(function($) {
 			    	animateYellow();
 			    	flagYellow = false;
 			    	flagPink = true;
-			    	flagOrange = true;
+			    	flagBlue = true;
 			    }
 			    // pink
-			    if( (y >= adv-sha + shapeSpacer && y < rea-sha - shapeSpacer && flagPink == true) || 
-			    	(y >= adv-sha-sha + shapeSpacer && y < rea-sha && flagOrange == false) || 
+			    if( (y >= adv-sha + shapeSpacer && y < rea-sha && flagPink == true) || 
+			    	(y >= adv-sha + shapeSpacer && y < rea-sha && flagBlue == false) || 
 			    	(y >= adv-sha + shapeSpacer && y < rea-sha && flagYellow == false) ){
 			    	animatePink();
 			    	flagYellow = true;
 			    	flagPink = false;
-			    	flagOrange = true;
+			    	flagBlue = true;
 			    }
 			    // blue
-			    if( (y >= rea-sha && flagOrange == true) || (y >= rea-sha && flagPink == false)) {
-			    	animateOrange();
+			    if( (y >= rea-sha && flagBlue == true) || 
+			    	(y >= rea-sha && flagPink == false)) {
+			    	animateBlue();
 			    	flagYellow = true;
 			    	flagPink = true;
-			    	flagOrange = false;
+			    	flagBlue = false;
 			    }
 			});
 		}

@@ -68,7 +68,7 @@ jQuery(document).ready(function($) {
     // about pages carousels
     $('#carousel-publishers > .carousel-inner > .item:first').addClass('active');
     $('#carousel-advertisers > .carousel-inner > .item:first').addClass('active');
-    $('#carousel-readers > .carousel-inner > .item:first').addClass('active');
+    $('#carousel-readers > .carousel-inner > .item:first').addClass('active col-md-offset-1-5');
     $('#carousel-dedicated > .carousel-inner > .item:first').addClass('active');
 
     // intro page carousel
@@ -82,6 +82,10 @@ jQuery(document).ready(function($) {
         e.preventDefault();
         $(this).tab('show');
     });
+
+    // contact form placeholder text
+    $(".hear option:first").html('How did you hear about us?*');
+    $(".state option:first").html('State (US and Canada only)*');
 
     $(window).on("load resize", function(){
         // about pages carousels
