@@ -115,10 +115,10 @@
 	<?php include_once('content-twitter.php'); ?>
 </section> <!-- /#twitter -->
 
-<!-- NEWS - - - - - - - - - - - - - - - - - - - - -->
-<section id="news">
-    <?php require(locate_template('page-news.php')); ?>
-</section> <!-- /#news -->
+<!-- BLOG - - - - - - - - - - - - - - - - - - - - -->
+<section id="blog">
+    <?php require(locate_template('page-blog.php')); ?>
+</section> <!-- /#blog -->
 
 
 <!-- CONTACT - - - - - - - - - - - - - - - - - - -->

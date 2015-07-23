@@ -338,6 +338,25 @@ ul.navbar-yieldmo li {
 .shape-spacer {
   height: 25em;
 }
+#about h3,
+#about h3 p {
+  margin: 0;
+}
+#about h4,
+#about h4 p {
+  font-family: "Apercu Regular";
+  font-weight: normal;
+  margin-bottom: 0.5em;
+}
+#about .carousel-inner img {
+  margin-bottom: 1.5em;
+}
+#about .thumb {
+  margin: 2em auto 3em auto;
+}
+.thumb img {
+  margin: 0 auto;
+}
 #rethinking {
   background-color: #fdd147;
   padding: 3em 0;
@@ -352,14 +371,13 @@ ul.navbar-yieldmo li {
   padding-top: 50px;
   padding-bottom: 50px;
 }
-#publishers h4,
-#publishers h4 p,
-#advertisers h4,
-#advertisers h4 p,
-#readers h4,
-#readers h4 p {
+#publishers h3,
+#publishers h3 p,
+#advertisers h3,
+#advertisers h3 p,
+#readers h3,
+#readers h3 p {
   margin: 0;
-  line-height: 1.2em;
 }
 .col-md-offset-1-5 {
   margin-left: 12.5%;
@@ -416,6 +434,10 @@ ul.navbar-yieldmo li {
 .btn-afl {
   margin-top: 0.5em;
 }
+#load-more.done {
+  opacity: 0.3;
+  cursor: default;
+}
 #team {
   background-color: #f27f8a;
   background-image: url('../img/yieldmo-team.png');
@@ -449,6 +471,9 @@ iframe#twitter-widget-0 {
   clear: left !important;
   margin-bottom: 3em;
 }
+#twitter-widget-0 {
+  width: 900px;
+}
 #sticky {
   background-color: #262626;
 }
@@ -472,9 +497,17 @@ iframe#twitter-widget-0 {
   background-position: top right;
 }
 .img-sticky-bg img {
-  width: 80%;
+  width: 300px;
+  height: 300px;
   margin-top: 2em;
   margin-bottom: 2em;
+  object-fit: cover;
+  /* Do not scale the image */
+  object-position: center;
+  /* Center the image within the element */
+  display: block;
+  max-width: 100%;
+  min-height: auto;
 }
 #sticky .btn {
   margin-top: 1em;
@@ -523,6 +556,19 @@ iframe#twitter-widget-0 {
   margin-top: 2em;
   margin-bottom: 3em;
 }
+.alm-btn-wrap button {
+  display: block;
+  margin: 2em auto;
+  background-color: transparent;
+  border-radius: 2px;
+  border: 2px solid #262626;
+  color: #262626;
+  font-family: "Apercu Bold";
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 13px;
+  padding: 10px 24px 8px 24px;
+}
 footer {
   background-color: #262626;
   color: #FFF;
@@ -551,6 +597,7 @@ footer .social-logos img {
   margin: 0;
   padding: 0;
   font-size: 70%;
+  line-height: 1.4em;
 }
 #contact {
   background-color: #fdd147;
@@ -736,7 +783,7 @@ _:-o-prefocus .styled-select,
   margin-top: 0;
 }
 #spacer {
-  height: 54px;
+  height: 57px;
 }
 .main-title {
   text-align: center;
@@ -782,15 +829,13 @@ _:-o-prefocus .styled-select,
 }
 .nav-tabs {
   border: none;
-  margin-top: 4em;
-  margin-bottom: 3em;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 2em auto 5em auto;
 }
 .nav-tabs li {
   float: none;
   display: inline-block;
-  width: 120px;
+  width: 140px;
+  text-align: center;
 }
 .nav-tabs li a,
 .nav-tabs li a:hover {
@@ -888,7 +933,7 @@ li.more-text {
 li.more-text a {
   color: #b2b2b2;
   float: left;
-  margin-bottom: 9px;
+  margin-top: 12px;
 }
 li.more-img {
   margin: 0;
@@ -896,6 +941,10 @@ li.more-img {
 }
 li.more-img img {
   float: left;
+}
+.single-download-pdf,
+.read-more {
+  margin-top: 1em;
 }
 .single-download-pdf li {
   display: inline-block;
@@ -959,7 +1008,7 @@ ul.post-more li.more-text.next a {
   margin-right: 50px;
 }
 #carousel-intro .item {
-  padding-top: 13.5px;
+  padding-top: 14.25px;
 }
 #carousel-inside img {
   margin: 0 auto;

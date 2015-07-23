@@ -3,8 +3,8 @@
 	<div class="row">
     	<div class="col-md-5">
     		<div>
-	    		<h3><?php the_title(); ?></h3>
-				<h3 class="regular"><?php the_secondary_title(); ?></h3>
+	    		<h4><?php the_title(); ?></h4>
+				<h4 class="regular"><?php the_secondary_title(); ?></h4>
 				<p><?php the_content(); ?></p>
 			</div>
             <div>

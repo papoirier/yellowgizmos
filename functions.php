@@ -29,6 +29,19 @@ function page_excerpt() {
 @ini_set( 'post_max_size', '64M');
 @ini_set( 'max_execution_time', '300' );
 
+
+function get_cat_slug($cat_id) {
+  $cat_id = (int) $cat_id;
+  $category = &get_category($cat_id);
+  return $category->slug;
+}
+
+function get_page_slug($post_id) {
+  $post = get_post($post_id); 
+  $slug = $post->post_name;
+  return $slug;
+}
+
 // print page slug
 function print_the_slug() {
   if (get_the_ID() == 17) {
@@ -86,12 +99,7 @@ function add_responsive_class($content){
 
 // CONTACT // --------------------------------------------------
 
-add_filter('wpcf7_form_elements', 'my_wpcf7_dropdown_form');
-function my_wpcf7_dropdown_form($html) {
-	$text = 'Please select...';
-	$html = str_replace('<option value="">---</option>', '<option value="">' . $text . '</option>', $html);
-	return $html;
-}
+
 
 // BLOG // -----------------------------------------------------
 

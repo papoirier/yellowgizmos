@@ -29,14 +29,14 @@
 		        		<?php 
 		        		/* About 	->  62
 		        		 * Blog 	->   5
-		        		 * Careers 	->  64
-		        		 * FAQ 		-> 118
-		        		 * Terms 	-> 119
+		        		 * Careers 	->  64 // 141
+		        		 * FAQ 		-> 118 // 125
+		        		 * Terms 	-> 119 // 126
 		        		 */
 		        		?>
-		        		<li><a href="<?php echo get_page_link(64); ?>">Careers</a></li>
-		        		<li><a href="<?php echo get_page_link(118); ?>">FAQ</a></li>
-		        		<li><a href="<?php echo get_page_link(119); ?>">Terms &amp; Privacy</a></li>
+		        		<li><a href="<?php echo get_page_link(141); ?>">Careers</a></li>
+		        		<li><a href="<?php echo get_page_link(125); ?>">FAQ</a></li>
+		        		<li><a href="<?php echo get_page_link(126); ?>">Terms &amp; Privacy</a></li>
 		        	</ul>
 		        </div>
 		        <div class="col-md-3 social-logos">

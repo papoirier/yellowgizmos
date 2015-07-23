@@ -5,12 +5,10 @@
 <div id="sticky">
     <div class="container">
         <div class="row">
-            
             <div class="col-md-4 img-sticky-bg">
-
                 <?php if ( has_post_thumbnail() ) {
                     $url = wp_get_attachment_url( get_post_thumbnail_id($query->ID, 'medium') ); ?>
-                    <img src="<?php echo $url; ?>" class="img-responsive img-circle center-block">
+                    <img src="<?php echo $url; ?>" class="img-circle center-block">
                 <?php }
                 else { ?>
                     <img src="<?php echo get_stylesheet_directory_uri() ?>/img/fpo.png" class="img-responsive">

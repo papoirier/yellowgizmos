@@ -63,7 +63,7 @@ jQuery(document).ready(function($) {
 				if (y < pub + pubHeight + spacer) {
 			    	$("#shape").css({"position":"absolute", "top": adv - sha});
 			    };
-			    if (y >= pub + pubHeight  + spacer - h && y <= rea) {
+			    if (y >= pub + pubHeight - h && y <= rea) {
 			    	$("#shape").css({"position":"fixed", "top": h - sha});
 			    };			    
 			    if (y > rea + reaHeight + spacer - h) {

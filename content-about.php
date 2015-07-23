@@ -2,8 +2,8 @@
 <?php while ($my_query->have_posts()) : $my_query->the_post(); ?>
 		<div class="row">
 	    	<div class="col-md-6 col-md-offset-3 text-center">
-	    		<h4><?php the_title(); ?></h4>
-				<h4 class="regular"><?php the_content(); ?></h4>
+	    		<h3><?php the_title(); ?></h3>
+				<h3 class="regular"><?php the_content(); ?></h3>
 	        </div>
 	    </div>
 	    <div class="row">

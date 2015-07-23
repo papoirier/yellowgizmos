@@ -105,4 +105,21 @@ jQuery(document).ready(function($) {
         } 
     });
 
+    // SMOOTH SCROLLING // --------------------------------------------
+
+    $(function() {
+    $('a[href=#about], a[href=#team], a[href=#blog], a[href=#contact]').click(function() {
+      if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+        var target = $(this.hash);
+        target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+        if (target.length) {
+          $('html,body').animate({
+            scrollTop: target.offset().top-57
+          }, 500);
+          return false;
+        }
+      }
+    });
+  });
+
 });
