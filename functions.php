@@ -164,6 +164,16 @@ function jasny_script() {
     true 
   );
 }
+add_action( 'wp_enqueue_scripts', 'froog' );
+function froog() {
+  wp_enqueue_script( 
+    'froog', 
+    get_stylesheet_directory_uri() . '/js/froogaloop.min.js', 
+    array('jquery'), 
+    '', 
+    true 
+  );
+}
 add_action( 'wp_enqueue_scripts', 'my_scripts' );
 function my_scripts() {
   wp_enqueue_script( 

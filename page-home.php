@@ -27,8 +27,6 @@
 <div class="content-wrapper">
 
 <!-- INTRO CAROUSEL - - - - - - - - - - - - -  -->
-<?php //echo do_shortcode('[image-carousel showcaption="true" interval="5000"]'); ?>
-
         <?php $my_query = new WP_Query( 'page_id=197' ); ?>
         <?php if ( $my_query->have_posts() ) : ?>
         <?php 
@@ -81,8 +79,8 @@
 
 <!-- DEDICATED AD PLACEMENTS - - - - - - - - - - - - - -  -->
 <section id="dedicated"> 
-	<?php $my_query = new WP_Query( 'page_id=91' ); // local ?>
-    <?php // $my_query = new WP_Query( 'page_id=101' ); // server ?>
+	<?php //$my_query = new WP_Query( 'page_id=91' ); // local ?>
+    <?php $my_query = new WP_Query( 'page_id=101' ); // server ?>
     <?php if ( $my_query->have_posts() ) : ?>
     <?php 
     	require(locate_template('content-dedicated.php'));

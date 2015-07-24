@@ -156,7 +156,6 @@ body {
 	font-family: @font-family-sans-serif;
 	font-size: @font-size-base;
 	color: @black;
-	//line-height: 1.5em;
 }
 p {
 	line-height: 25px;
@@ -178,7 +177,6 @@ h2 p {
 	line-height: 42px;
 	font-style: normal;
 	font-weight: bold;
-	
 }
 h3,
 h3 p {
@@ -187,11 +185,6 @@ h3 p {
 	line-height: 40px;
 	font-style: normal;
 	font-weight: bold;
-}
-.regular,
-.regular p {
-	font-family: "Apercu Regular";
-	font-weight: normal;
 }
 h4,
 h4 p {
@@ -215,6 +208,17 @@ h6 {
 	font-weight: bold;
 	font-style: normal;
 	font-weight: bold;
+}
+h3 em,
+h3 p em {
+	font-family: "Apercu Bold";
+	font-style: italic;
+	font-weight: bold;
+}
+.regular,
+.regular p {
+	font-family: "Apercu Regular";
+	font-weight: normal;
 }
 strong {
 	font-weight: bold;
@@ -419,11 +423,13 @@ ul.navbar-yieldmo li {
 // RETHINKING // -------------------------------
 #rethinking {
 	background-color: @yellow;
-	padding: 3em 0;
 	position: relative;
 }
 .rethinking-img img {
 	max-width: 216px;
+}
+.status {
+	color: white;
 }
 
 #publishers .container,
@@ -450,7 +456,7 @@ ul.navbar-yieldmo li {
 
 #dedicated {
 	background-color: #FFF;
-	padding-top: 5em;
+	//padding-top: 5em;
 }
 #dedicated h3 {
 	margin:0;
@@ -1148,6 +1154,7 @@ ul.post-more li.more-text.next a {
 // CAROUSEL // ---------------------------------
 #carousel-intro .item {
 	padding-top: @navbar-height/4;
+	min-height: 100vh;
 }
 #carousel-inside img {
 	//max-height: 50vh;
@@ -1296,14 +1303,82 @@ ol.carousel-indicators {
 	top: @carousel-top;
 	text-align: center;
 	width: calc(~'100% - 30px');
+
 }
-.carousel-video button.btn-default {
-	background-color: #FFF;
+.btn-play img {
+	cursor: pointer;
+}
+.btn-play img:hover {
+	opacity: 0.9;
 }
 
 @btn-height: 42px;
 @media (max-width: 767px) {
-	#nav-contact {
+	@font-size-base: 15px;
+	@font-size-h1: floor((@font-size-base * 2.5));
+	@font-size-h2: floor((@font-size-base * 2)); 
+	@font-size-h3: ceil((@font-size-base * 1.66667)); 
+	@font-size-h4: ceil((@font-size-base * 1.3)); 
+	@font-size-h5: @font-size-base;
+	@font-size-h6: ceil((@font-size-base * 1)); 
+	@font-size-nav: 12px;
+
+	body {
+		font-size: @font-size-base;
+	}
+	p {
+		line-height: 25px;
+		font-family: @font-family-serif;
+	}
+	h1,
+	h1 p {
+		font-size: @font-size-h1;
+		line-height: @font-size-h1*1.1;
+	}
+	h2,
+	h2 p {
+		font-size: @font-size-h2;
+		line-height: 42px;
+	}
+	h3,
+	h3 p {
+		font-size: @font-size-h3;
+		line-height: 40px;
+	}
+	h4,
+	h4 p {
+		font-size: @font-size-h4;
+		line-height: 27px;
+	}
+	h5,
+	h5 p {
+		font-size: @font-size-h5;
+		line-height: 22px;
+	}
+	h6 {
+		font-size: @font-size-h6;
+	}
+	.navbar-text,
+	.navbar-text a,
+	.navbar-text li,
+	.navbar-text li a, {
+		font-size: @font-size-nav;
+	}
+	.carousel-caption {
+		display: initial;
+	}
+	.navbar-default .navbar-toggle {
+		margin: 10px 0 0 10px;
+	}
+	.navbar-default .navbar-brand {
+		width: 100px;
+		padding: 10px 10px;
+	}
+	.navbar-text {
+		margin-top: 8px;
+		margin-right: 10px;
+	}
+	#nav-login {
 		display: none;
 		visibility: hidden;
 	}
@@ -1311,25 +1386,16 @@ ol.carousel-indicators {
 @media (min-width: 768px) {
     .item { 
         display:block;
-        //min-height: 350px + @btn-height;
-        //text-align: center;
     }
     #carousel-publishers .item,
     #carousel-advertisers .item,
     #carousel-readers .item { 
     	display:block;
     	text-align: center;
-        //min-height: 450px + @btn-height;
     }
     #carousel-dedicated .item { 
     	display:block;
-        //min-height: 500px + @btn-height;
     }
-	.item p.btn { 
-    	// position: absolute;
-    	// bottom: 0;
-    }
-
     #carousel-publishers ol.carousel-indicators,
     #carousel-advertisers ol.carousel-indicators,
     #carousel-readers ol.carousel-indicators,
@@ -1337,4 +1403,93 @@ ol.carousel-indicators {
     	display: none;
     	visibility: hidden;
     }
+    // video modal
+    .modal {
+    	background-color: rgba(0, 0, 0, 0.9)
+    }
+    button.close {
+    	color: rgba(255, 255, 255, 0);
+    	opacity: 1;
+    	margin: 1em 1em 0 0;
+    	text-shadow: none;
+    	font-size: 20px;
+  //   	background-image: url('../img/btn-close.svg');
+  //   	background-repeat: no-repeat;
+		// background-position: top right;
+		// height: 36px;
+    	//text-indent: -9999px;  
+    }
+    button.close:hover {
+    	color: rgba(255, 255, 255, 0);
+    }
+    .modal-dialog {
+    	width: 900px;
+    	height: 506px;
+    	//vertical-align: middle;
+    	margin: auto auto;
+    }
+    .modal-body {
+    	padding: 0;
+    	margin: 0;
+    }
+    .modal-content {
+    	background-color: @black;
+    	border-radius: 0;
+    	border: none;
+    	box-shadow: none;
+    	-webkit-box-shadow: none;
+    }
+    .modal-content iframe {
+    	margin-bottom: -6px;
+    }
+}
+@media (max-height: 750px) and (min-width: 768px) {
+
+	@font-size-base: 15px;
+	@font-size-h1: floor((@font-size-base * 3));
+	@font-size-h2: floor((@font-size-base * 2)); 
+	@font-size-h3: ceil((@font-size-base * 1.66667)); 
+	@font-size-h4: ceil((@font-size-base * 1.3)); 
+	@font-size-h5: @font-size-base;
+	@font-size-h6: ceil((@font-size-base * 1)); 
+	@font-size-nav: 13px;
+
+	body {
+		font-size: @font-size-base;
+	}
+	p {
+		line-height: 25px;
+		font-family: @font-family-serif;
+	}
+	h1,
+	h1 p {
+		font-size: @font-size-h1;
+		line-height: 62px;
+	}
+	h2,
+	h2 p {
+		font-size: @font-size-h2;
+		line-height: 42px;
+	}
+	h3,
+	h3 p {
+		font-size: @font-size-h3;
+		line-height: 40px;
+	}
+	h4,
+	h4 p {
+		font-size: @font-size-h4;
+		line-height: 27px;
+	}
+	h5,
+	h5 p {
+		font-size: @font-size-h5;
+		line-height: 22px;
+	}
+	h6 {
+		font-size: @font-size-h6;
+	}
+	#carousel-inside .item .container .row .col-md-12 img {
+		max-height: 60vh;
+	}
 }

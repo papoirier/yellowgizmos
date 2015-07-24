@@ -142,11 +142,6 @@ h3 p {
   font-style: normal;
   font-weight: bold;
 }
-.regular,
-.regular p {
-  font-family: "Apercu Regular";
-  font-weight: normal;
-}
 h4,
 h4 p {
   font-family: "Apercu Bold";
@@ -167,6 +162,17 @@ h6 {
   font-size: 15px;
   font-style: normal;
   font-weight: bold;
+}
+h3 em,
+h3 p em {
+  font-family: "Apercu Bold";
+  font-style: italic;
+  font-weight: bold;
+}
+.regular,
+.regular p {
+  font-family: "Apercu Regular";
+  font-weight: normal;
 }
 strong {
   font-weight: bold;
@@ -359,11 +365,13 @@ ul.navbar-yieldmo li {
 }
 #rethinking {
   background-color: #fdd147;
-  padding: 3em 0;
   position: relative;
 }
 .rethinking-img img {
   max-width: 216px;
+}
+.status {
+  color: white;
 }
 #publishers .container,
 #advertisers .container,
@@ -384,7 +392,6 @@ ul.navbar-yieldmo li {
 }
 #dedicated {
   background-color: #FFF;
-  padding-top: 5em;
 }
 #dedicated h3 {
   margin: 0;
@@ -1009,6 +1016,7 @@ ul.post-more li.more-text.next a {
 }
 #carousel-intro .item {
   padding-top: 14.25px;
+  min-height: 100vh;
 }
 #carousel-inside img {
   margin: 0 auto;
@@ -1144,11 +1152,69 @@ ol.carousel-indicators {
   text-align: center;
   width: calc(100% - 30px);
 }
-.carousel-video button.btn-default {
-  background-color: #FFF;
+.btn-play img {
+  cursor: pointer;
+}
+.btn-play img:hover {
+  opacity: 0.9;
 }
 @media (max-width: 767px) {
-  #nav-contact {
+  body {
+    font-size: 15px;
+  }
+  p {
+    line-height: 25px;
+    font-family: "Georgia", "Times New Roman", serif;
+  }
+  h1,
+  h1 p {
+    font-size: 37px;
+    line-height: 40.7px;
+  }
+  h2,
+  h2 p {
+    font-size: 30px;
+    line-height: 42px;
+  }
+  h3,
+  h3 p {
+    font-size: 26px;
+    line-height: 40px;
+  }
+  h4,
+  h4 p {
+    font-size: 20px;
+    line-height: 27px;
+  }
+  h5,
+  h5 p {
+    font-size: 15px;
+    line-height: 22px;
+  }
+  h6 {
+    font-size: 15px;
+  }
+  .navbar-text,
+  .navbar-text a,
+  .navbar-text li,
+  .navbar-text li a {
+    font-size: 12px;
+  }
+  .carousel-caption {
+    display: initial;
+  }
+  .navbar-default .navbar-toggle {
+    margin: 10px 0 0 10px;
+  }
+  .navbar-default .navbar-brand {
+    width: 100px;
+    padding: 10px 10px;
+  }
+  .navbar-text {
+    margin-top: 8px;
+    margin-right: 10px;
+  }
+  #nav-login {
     display: none;
     visibility: hidden;
   }
@@ -1172,5 +1238,77 @@ ol.carousel-indicators {
   #carousel-dedicated ol.carousel-indicators {
     display: none;
     visibility: hidden;
+  }
+  .modal {
+    background-color: rgba(0, 0, 0, 0.9);
+  }
+  button.close {
+    color: rgba(255, 255, 255, 0);
+    opacity: 1;
+    margin: 1em 1em 0 0;
+    text-shadow: none;
+    font-size: 20px;
+  }
+  button.close:hover {
+    color: rgba(255, 255, 255, 0);
+  }
+  .modal-dialog {
+    width: 900px;
+    height: 506px;
+    margin: auto auto;
+  }
+  .modal-body {
+    padding: 0;
+    margin: 0;
+  }
+  .modal-content {
+    background-color: #262626;
+    border-radius: 0;
+    border: none;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+  }
+  .modal-content iframe {
+    margin-bottom: -6px;
+  }
+}
+@media (max-height: 750px) and (min-width: 768px) {
+  body {
+    font-size: 15px;
+  }
+  p {
+    line-height: 25px;
+    font-family: "Georgia", "Times New Roman", serif;
+  }
+  h1,
+  h1 p {
+    font-size: 45px;
+    line-height: 62px;
+  }
+  h2,
+  h2 p {
+    font-size: 30px;
+    line-height: 42px;
+  }
+  h3,
+  h3 p {
+    font-size: 26px;
+    line-height: 40px;
+  }
+  h4,
+  h4 p {
+    font-size: 20px;
+    line-height: 27px;
+  }
+  h5,
+  h5 p {
+    font-size: 15px;
+    line-height: 22px;
+  }
+  h6 {
+    font-size: 15px;
+  }
+  #carousel-inside .item .container .row .col-md-12 img {
+    max-height: 60vh;
   }
 }

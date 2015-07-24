@@ -24,12 +24,22 @@
 
 		    <?php if (get_post_meta($page->ID, "vimeo-id", true)) { ?>
 		    	<div id="my-modal-<?php echo $count-1; ?>" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" style="display: none;">
+		    		<button type="button" class="close" data-dismiss="modal" aria-label="Close"><img src="<?php echo get_stylesheet_directory_uri() ?>/img/btn-close.svg"></button>
 			    <div class="modal-dialog" role="document">
+			    	Pause
 					<div class="modal-content">
-					<div class="modal-body">
-						<iframe src="//player.vimeo.com/video/<?php echo get_post_meta($page->ID, "vimeo-id", true);?>?title=0&byline=0&portrait=0" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-					</div>
+						<div class="modal-body">
+							<iframe id="player1" src="//player.vimeo.com/video/<?php echo get_post_meta($page->ID, "vimeo-id", true);?>?title=0&byline=0&portrait=0" width="900" height="506" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+							<div>
+							  
+							  
+							  
+							</div>
+						</div>
+						
+
 					</div><!-- /.modal-content -->
+					
 			    </div><!-- /.modal-dialog -->
 		  	</div> <!-- /#my-modal- -->
 		    <?php } ?>
@@ -60,7 +70,7 @@
 							        	</div>
 							        	<?php 
 							        	if (get_post_meta($page->ID, 'vimeo-id', true)) {
-							        		echo '<div class="carousel-video"><button class="btn btn-default" data-toggle="modal" data-target="#my-modal-'.($count-1).' ">Plaiii!</button></div>';
+							        		echo '<div class="carousel-video"><div class="btn-play" data-toggle="modal" data-target="#my-modal-'.($count-1).' "><img src="'.get_stylesheet_directory_uri().'/img/btn-play.svg"></div></div>';
 							        		?>	
 							        	<?php } ?>
 

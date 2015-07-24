@@ -1,6 +1,8 @@
 <!-- NAV - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
 <div class="navmenu navmenu-default navmenu-fixed-left offcanvas">
     <div class="menu-content">
+
+        <?php if (is_front_page()) { ?>
         <ul class="text-white">
             <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>">Home</a></li>
             <li><a href="#about">About</a></li>
@@ -8,6 +10,16 @@
             <li><a href="#blog">Blog</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
+        <?php } else { ?>
+        <ul class="text-white">
+            <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>">Home</a></li>
+            <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>#about">About</a></li>
+            <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>#team">Team</a></li>
+            <li><a href="<?php echo get_page_link(6); ?>">Blog</a></li>
+            <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>#contact">Contact</a></li>
+        </ul>
+        <?php } ?>
+
         <ul class="text-dark-gray">
             <li><a href="<?php echo get_page_link(141); ?>">Careers</a></li>
             <li><a href="<?php echo get_page_link(125); ?>">FAQ</a></li>

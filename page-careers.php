@@ -36,7 +36,7 @@
 						<h5><?php echo get_secondary_title($page->ID); ?></h5>
 						<h4><?php echo $page->post_title; ?></h4>
 						<p><?php echo $page->post_excerpt; ?></p>
-						<p class="btn btn-default"><a href="<?php echo get_page_link($page->ID); ?>">Learn more</a></p>
+						<p class="btn btn-default"><a href="<?php echo (get_post_meta($page->ID, 'link-to-job', true)); ?>">Learn more</a></p>
 					</div>
 					<?php
         // add a row at each 3 jobs

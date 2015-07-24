@@ -24,7 +24,9 @@
             <div class="col-md-5 col-md-offset-1">
                 <h2><?php the_title(); ?></h2>
                 <h5><?php the_excerpt(); ?></h5>
-                <p class="btn btn-default"><a href="<?php echo the_permalink(); ?>">Read more</a></p>
+                <div class="read-more">
+                    <p class="btn btn-default"><a href="<?php the_permalink(); ?>">Read more</a> </p>
+                </div>
             </div>
             <?php endwhile; endif; ?>
         </div>
