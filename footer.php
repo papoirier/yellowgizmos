@@ -18,11 +18,20 @@
 					<img src="<?php echo get_stylesheet_directory_uri() ?>/img/logo-footer.svg" class="img-responsive">
 				</div>
 		    	<div class="col-md-3">
-		    		<ul>
-		    			<?php wp_list_pages('include=62&title_li='); ?>
-		    			<li><a href="http://adformatlab.yieldmo.com" title="Ad Format Lab">Ad Format Lab</a></li>
-		    			<?php wp_list_pages('include=5&title_li='); ?>
-		    		</ul>
+		    		<?php if (is_front_page()) { ?>
+			        <ul>
+			            <li><a href="#about">About</a></li>
+			            <li><a href="#team">Team</a></li>
+			            <li><a href="#blog">Blog</a></li>
+			        </ul>
+			        <?php } else { ?>
+			        <ul>
+			            <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>#about">About</a></li>
+			            <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>#team">Team</a></li>
+			            <li><a href="<?php echo get_page_link(6); ?>">Blog</a></li>
+			            <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>#contact">Contact</a></li>
+			        </ul>
+			        <?php } ?>
 		        </div>
 		        <div class="col-md-3 legals">
 		        	<ul>

@@ -1,6 +1,6 @@
 jQuery(document).ready(function($) {
 
-    $('#nav-menu').fadeIn('slow');
+    $('.navbar').fadeIn();
 
     $(window).load(function() {
         show();
@@ -69,9 +69,23 @@ jQuery(document).ready(function($) {
     $(".hear option:first").html('How did you hear about us?*');
     $(".state option:first").html('State (US and Canada only)*');
 
-    // twitter styling
+    
     $(window).load(function() {
 
+        var h = $(window).height();
+        var navbarHeight = 59;
+                
+        var carouselHeight = $("#carousel-inside > .item").css("min-height", h-navbarHeight);
+        var carousel = $("#carousel-inside > .item").height();
+        
+        var carouseContainerHeight = $("#carousel-inside > .item > .container").css("min-height", (h*0.8)-navbarHeight);
+        var carouseInsideHeight = $("#carousel-inside > .item > .container").height();
+        console.log("carousel height: "+carouseInsideHeight);
+
+        var carouseInsideAlign = $("#carousel-inside > .item > .container").css("padding-top", (h/2 - carouseInsideHeight/2));
+
+
+        // twitter styling
         $("iframe#twitter-widget-0").contents().find('div.footer').remove();
         $("iframe#twitter-widget-0").contents().find('img.u-photo').remove();
 
@@ -89,12 +103,8 @@ jQuery(document).ready(function($) {
     $('#carousel-dedicated > .carousel-inner > .item:first').addClass('active');
     
 
-    // INTRO // ------------------------------------------------------------
-
-    // intro carousel image
-    // var carouselHeight = $("#carousel-inside > .item").css({"min-height":h + "px"});
-    // var carousel = $("#carousel-inside > .item").height();
-    
+    // center elements vertically
+    //var carouseInsideAlign = $("#carousel-inside > .item > .container").css("padding-top", (h/2 - carouseInsideHeight/2));
 
     // ------------------------------------------------------------
 
@@ -116,6 +126,7 @@ jQuery(document).ready(function($) {
         $("#about-intro").css("padding-top", $height/2 - aboutIntroHeight*0.65 );
 
         
+
 
     });
 

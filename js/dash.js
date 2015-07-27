@@ -83,9 +83,11 @@ jQuery(document).ready(function($) {
 			e.preventDefault();
 			closeOverlay();
 		});
-		$( '.menu-content > ul > li a' ).click(function(e) {
-			e.preventDefault();
-			closeOverlay();
+		$( '.menu-content a' ).click(function() {
+			//e.preventDefault();
+			if ( $( '.content-wrap' ).hasClass( 'dnl-overlay' ) ) {
+				dnlHide();
+			}
 		});
 
 		// Close top navbar when left navbar opens
