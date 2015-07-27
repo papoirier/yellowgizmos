@@ -1,11 +1,17 @@
 jQuery(document).ready(function($) {
+
+    $('#nav-menu').fadeIn('slow');
+
+    $(window).load(function() {
+        show();
+    });
+    function show() {
+        $('#loading').hide();
+        $('.content-wrap').fadeIn();
+    };
     
     // hamburger menu
-    $(".menu-content a").click(function(){
-        // Close offcanvas nav
-        // offcanvas_selector is any valid css selector to get your offcanvas element
-        $('.navmenu').offcanvas('hide');
-    });
+
 
     // tabs
     $('#myTabs a').click(function (e) {
@@ -105,8 +111,11 @@ jQuery(document).ready(function($) {
         } 
 
         $(".modal-dialog").css("margin-top", $height/2 - 506/2);
+        
         var aboutIntroHeight = $("#about-intro").height();
-        $("#about-intro").css("padding-top", $height/2 - aboutIntroHeight*0.75 );
+        $("#about-intro").css("padding-top", $height/2 - aboutIntroHeight*0.65 );
+
+        
 
     });
 

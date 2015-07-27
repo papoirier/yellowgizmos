@@ -25,7 +25,7 @@
 // GENERAL // -----------------------------------
 
 @carousel-top: 33%;
-@navbar-height: 57px;
+@navbar-height: 59px;
 
 // background colors for the carousel
 .yellow {
@@ -58,9 +58,13 @@
 	background-color: #FFF;
 	color: @black;
 }
+.social-logos {
+	width: auto;
+}
 .social-logos img {
 	margin-right: 0.5em;
 	float: left;
+	display: inline-block;
 }
 .center-block p {
 	text-align: center;
@@ -84,9 +88,9 @@ svg {
 }
 #about,
 .polka {
-	background: url("../img/polka-dot.svg");
-    background-repeat: repeat; 
-    background-attachment: fixed;
+	// background: url("../img/polka-dot.svg");
+ //    background-repeat: repeat; 
+ //    background-attachment: fixed;
 }
 .btn-default {
 	background-color: transparent;
@@ -262,11 +266,17 @@ h5 a:hover {
 	color: @black-alpha;
 }
 // NAVBAR // ----------------------------------
-.navbar-toggle {
+.dnl-btn-toggle {
 	visibility: visible;
 	display: initial;
 	float: left;
-	margin-left: 30px;
+	border-color: transparent;
+	border-radius: 0px;
+	margin: 20px 0 0 30px;
+	padding: 0;
+	width: 30px;
+	height: 30px;
+	background-color: transparent;
 }
 @navbar-width: 300px;
 .navbar-default {
@@ -274,26 +284,21 @@ h5 a:hover {
 	background-color: #FFF;
 	box-shadow: 0px 0px 3px @black-beta;
 }
-.navbar-default .navbar-toggle .icon-bar {
+.dnl-btn-toggle .icon-bar {
 	background-color: @black;
+	height: 2px;	
 }
-.navbar-default .navbar-toggle:hover .icon-bar {
+.dnl-btn-toggle:hover .icon-bar {
 	background-color: @gray;
 }
-.navbar-default .navbar-toggle {
-	border-color: transparent;
-	border-radius: 0px;
-	margin: 20px 0 0 30px;
-	padding: 0;
-}
-.navbar-default .navbar-toggle:hover {
+.dnl-btn-toggle:hover {
 	background-color: transparent;
 }
-.navbar-toggle .icon-bar {
+.dnl-btn-toggle .icon-bar {
 	border-radius: 0px;
 }
 #nav-contact {
-	margin-top: 5px;
+	margin-top: 7px;
 }
 
 .brand-logo {
@@ -340,8 +345,16 @@ h5 a:hover {
 }
 
 .menu-content {
-	margin: 30px auto auto 30px;
+	min-width: 200px;
+	margin: 0 auto auto 30px;
+	height: 100%;
 }
+@media (min-width: 768px) { 
+	.menu-content {
+		position: fixed;
+	}
+}
+
 .menu-content ul {
 	margin-top: 2em;
 }
@@ -349,9 +362,9 @@ h5 a:hover {
 	line-height: 28px;
 }
 .made-in-nyc {
-	display: block;
+	//display: block;
 	position: absolute;
-	bottom: 2em;
+	bottom: 100px;
 	width: 62px;
 	height: 62px;
 }
@@ -364,7 +377,7 @@ h5 a:hover {
 .navbar-right {
     float: none !important;
 }
-.navbar-toggle {
+.dnl-btn-toggle {
     display: block;
 }
 .navbar-collapse {
@@ -395,10 +408,16 @@ ul.navbar-yieldmo li {
 #nav-login {
 	margin-right: 45px;
 }
+#nav-login a {
+	font-size: @font-size-nav;
+}
+#nav-menu {
+	display: none;
+}
 
 // ABOUT // ------------------------------------
 .shape-spacer {
-	height: 25em;
+	height: 10vh;
 }
 #about h3,
 #about h3 p {
@@ -425,8 +444,14 @@ ul.navbar-yieldmo li {
 	background-color: @yellow;
 	position: relative;
 }
+#about-intro h1,
+#about-intro h1 p {
+	margin: 0;
+}
 .rethinking-img img {
-	max-width: 216px;
+	max-width: 210px;
+	margin: 0 auto 2em auto;
+
 }
 .status {
 	color: white;
@@ -505,7 +530,10 @@ ul.navbar-yieldmo li {
 #ad-format-lab {
 	padding: 6em 0;
 }
-#ad-format-lab h3 { 
+#ad-format-lab h3,
+#ad-format-lab h3 p,
+#ad-format-lab h4,
+#ad-format-lab h4 p { 
 	margin: 0;
 }
 #ad-format-lab p { 
@@ -525,7 +553,7 @@ ul.navbar-yieldmo li {
 	background-image: url('../img/yieldmo-team.png');
 	background-repeat: no-repeat;
 	background-position: bottom right;
-	background-size: 70%;
+	background-size: 60%;
 }
 #team .row {
 	padding-top: 4em;
@@ -834,7 +862,9 @@ footer .social-logos img {
 .wpcf7-form p input.wpcf7-submit:hover a {
 	color: @black-beta;
 }
-
+.wpcf7-form-control option {
+	margin-left: 2em;
+}
 //////
 
 // select button
@@ -1149,12 +1179,34 @@ ul.post-more li.more-text.next a {
 
 
 // *********** // ------------------------------
+
+#loading {
+    background: url('http://cdn.nirmaltv.com/images/generatorphp-thumb.gif');
+    height: 64px;
+    width: 64px;
+    margin-top: 300px;
+}
+
+.content-wrapper {
+    display: none;
+}
+
+
 // *********** // ------------------------------
 
 // CAROUSEL // ---------------------------------
+@carousel-intro-height: calc(~'100vh - 59px');
 #carousel-intro .item {
-	padding-top: @navbar-height/4;
-	min-height: 100vh;
+	//padding-top: @navbar-height/4;
+	min-height: @carousel-intro-height;
+}
+#carousel-inside .item .container {
+	//padding-top: calc(~'10vh');
+}
+#carousel-inside .item .container {
+
+  resize: vertical;
+  overflow: auto;
 }
 #carousel-inside img {
 	//max-height: 50vh;
@@ -1311,6 +1363,45 @@ ol.carousel-indicators {
 .btn-play img:hover {
 	opacity: 0.9;
 }
+@-webkit-keyframes rotating /* Safari and Chrome */ {
+  from {
+    -ms-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -ms-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotating {
+  from {
+    -ms-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -ms-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+.rotating {
+  -webkit-animation: rotating 3s linear infinite;
+  -moz-animation: rotating 3s linear infinite;
+  -ms-animation: rotating 3s linear infinite;
+  -o-animation: rotating 3s linear infinite;
+  animation: rotating 3s linear infinite;
+}
 
 @btn-height: 42px;
 @media (max-width: 767px) {
@@ -1367,11 +1458,21 @@ ol.carousel-indicators {
 	.carousel-caption {
 		display: initial;
 	}
-	.navbar-default .navbar-toggle {
+	.navbar {
+		min-height: initial;
+	}
+	.navbar-default .dnl-btn-toggle {
 		margin: 10px 0 0 10px;
+	}
+	.navbar-default .dnl-btn-toggle .icon-bar {
+		width: 18px;
+	}
+	.dnl-btn-toggle .icon-bar+.icon-bar {
+		margin-top: 3px;
 	}
 	.navbar-default .navbar-brand {
 		width: 100px;
+		height: 40px;
 		padding: 10px 10px;
 	}
 	.navbar-text {
@@ -1384,6 +1485,9 @@ ol.carousel-indicators {
 	}
 }
 @media (min-width: 768px) {
+	.navmenu {
+		width: 250px;
+	}
     .item { 
         display:block;
     }

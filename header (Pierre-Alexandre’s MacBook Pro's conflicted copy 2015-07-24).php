@@ -12,9 +12,8 @@
 		<title><?php bloginfo('name');?> &mdash; <?php echo get_bloginfo ( 'description' );  ?></title>
 		<!-- CSS - - - - - - - - - - - - - - - -->
 		<link href="<?php echo get_stylesheet_directory_uri() ?>/css/bootstrap.min.css" rel="stylesheet" media="screen">
+		<link href="<?php echo get_stylesheet_directory_uri() ?>/css/jasny-bootstrap.min.css" rel="stylesheet" media="screen">
 		<link href="<?php echo get_stylesheet_directory_uri() ?>/css/bootstrap-touch-carousel.css" rel="stylesheet" media="screen">
-		<link href="<?php echo get_stylesheet_directory_uri() ?>/css/dash.css" rel="stylesheet" media="screen">
-		<link href="<?php echo get_stylesheet_directory_uri() ?>/css/font-awesome.min.css" rel="stylesheet" media="screen">
 		<link href="<?php echo get_stylesheet_directory_uri() ?>/css/styles.css" rel="stylesheet" media="screen">
 		<link rel="stylesheet" href="//f.fontdeck.com/s/css/5lDZkZYzUY6kLuxHyyfRPYqFU4o/<?php echo $_SERVER['SERVER_NAME']; ?>/50640.css" type="text/css" />
 		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -25,5 +24,5 @@
 		<![endif]-->
 		<?php wp_head(); ?>
 	</head>
-	<?php include_once "navigation.php"; ?>
-	<div class="content-wrap dnl-hidden content-opacity" data-effect="dnl-overlay">
+		<?php include_once "navigation.php"; ?>
+		<div id="loading"></div>

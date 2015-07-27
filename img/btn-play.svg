@@ -6,7 +6,7 @@
 <g id="Layer_2">
 </g>
 <g id="Layer_1">
-	<circle fill-rule="evenodd" clip-rule="evenodd" fill="#FFFFFF" cx="50" cy="50" r="50"/>
+	<circle fill-rule="evenodd" clip-rule="evenodd" fill="#00A7FF" cx="50" cy="50" r="50"/>
 	<g enable-background="new    ">
 		<g>
 			<g>
@@ -27,6 +27,18 @@
 			</g>
 		</g>
 	</g>
-	<polygon fill-rule="evenodd" clip-rule="evenodd" fill="#A25CBA" points="78,50 30,74 30,26 	"/>
+	<g enable-background="new    ">
+		<g>
+			<g>
+				<defs>
+					<rect id="SVGID_2107_" x="-1345" y="70" width="1440" height="1024"/>
+				</defs>
+				<clipPath id="SVGID_6_">
+					<use xlink:href="#SVGID_2107_"  overflow="visible"/>
+				</clipPath>
+			</g>
+		</g>
+	</g>
+	<text transform="matrix(1 0 0 1 13.3516 59.25)" fill="#FFFFFF" font-family="'Apercu-Bold'" font-size="30" letter-spacing="1">PLAY</text>
 </g>
 </svg>

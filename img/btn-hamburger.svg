@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.3, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="24px"
+	 height="16px" viewBox="0 0 24 16" enable-background="new 0 0 24 16" xml:space="preserve">
+<g id="Layer_2">
+</g>
+<g id="Layer_1">
+	<g enable-background="new    ">
+		<g>
+			<g>
+				<defs>
+					<rect id="SVGID_2103_" x="-419" y="-315" width="1200" height="853.333"/>
+				</defs>
+				<clipPath id="SVGID_2_">
+					<use xlink:href="#SVGID_2103_"  overflow="visible"/>
+				</clipPath>
+			</g>
+			<g>
+				<defs>
+					<rect id="SVGID_2105_" x="-419" y="-315" width="1200" height="853.333"/>
+				</defs>
+				<clipPath id="SVGID_4_">
+					<use xlink:href="#SVGID_2105_"  overflow="visible"/>
+				</clipPath>
+			</g>
+		</g>
+	</g>
+	<g>
+		<defs>
+			<rect id="SVGID_2107_" x="-30" width="25" height="3.177"/>
+		</defs>
+		<clipPath id="SVGID_6_">
+			<use xlink:href="#SVGID_2107_"  overflow="visible"/>
+		</clipPath>
+		<g clip-path="url(#SVGID_6_)">
+			<defs>
+				<rect id="SVGID_2109_" x="-30" width="25" height="18"/>
+			</defs>
+			<clipPath id="SVGID_8_">
+				<use xlink:href="#SVGID_2109_"  overflow="visible"/>
+			</clipPath>
+			<rect x="-35" y="-5" clip-path="url(#SVGID_8_)" fill="#262626" width="35" height="13.177"/>
+		</g>
+	</g>
+	<g>
+		<defs>
+			<rect id="SVGID_2111_" x="-30" y="7.412" width="25" height="3.176"/>
+		</defs>
+		<clipPath id="SVGID_10_">
+			<use xlink:href="#SVGID_2111_"  overflow="visible"/>
+		</clipPath>
+		<g clip-path="url(#SVGID_10_)">
+			<defs>
+				<rect id="SVGID_2113_" x="-30" width="25" height="18"/>
+			</defs>
+			<clipPath id="SVGID_12_">
+				<use xlink:href="#SVGID_2113_"  overflow="visible"/>
+			</clipPath>
+			<rect x="-35" y="2.412" clip-path="url(#SVGID_12_)" fill="#262626" width="35" height="13.176"/>
+		</g>
+	</g>
+	<g>
+		<defs>
+			<rect id="SVGID_2115_" x="-30" y="14.823" width="25" height="3.177"/>
+		</defs>
+		<clipPath id="SVGID_14_">
+			<use xlink:href="#SVGID_2115_"  overflow="visible"/>
+		</clipPath>
+		<g clip-path="url(#SVGID_14_)">
+			<defs>
+				<rect id="SVGID_2117_" x="-30" width="25" height="18"/>
+			</defs>
+			<clipPath id="SVGID_16_">
+				<use xlink:href="#SVGID_2117_"  overflow="visible"/>
+			</clipPath>
+			<rect x="-35" y="9.823" clip-path="url(#SVGID_16_)" fill="#262626" width="35" height="13.177"/>
+		</g>
+	</g>
+	<line fill="none" stroke="#262626" stroke-width="2" stroke-miterlimit="10" x1="0" y1="1" x2="24" y2="1"/>
+	<line fill="none" stroke="#262626" stroke-width="2" stroke-miterlimit="10" x1="0" y1="8" x2="24" y2="8"/>
+	<line fill="none" stroke="#262626" stroke-width="2" stroke-miterlimit="10" x1="0" y1="15" x2="24" y2="15"/>
+</g>
+</svg>

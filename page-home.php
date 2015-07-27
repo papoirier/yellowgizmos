@@ -24,8 +24,6 @@
  */
 ?>
 
-<div class="content-wrapper">
-
 <!-- INTRO CAROUSEL - - - - - - - - - - - - -  -->
         <?php $my_query = new WP_Query( 'page_id=197' ); ?>
         <?php if ( $my_query->have_posts() ) : ?>
@@ -133,8 +131,6 @@
     </div>
     <?php endif;?>
 </section> <!-- /#contact -->
-
-</div> <!-- /.content-wrapper -->
 
 <!-- FOOTER - - - - - - - - - - - - - - - - - - -->
 <?php get_footer(); ?>

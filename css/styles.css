@@ -28,9 +28,13 @@
   background-color: #FFF;
   color: #262626;
 }
+.social-logos {
+  width: auto;
+}
 .social-logos img {
   margin-right: 0.5em;
   float: left;
+  display: inline-block;
 }
 .center-block p {
   text-align: center;
@@ -51,12 +55,6 @@ svg {
   padding: 0;
   margin: 0;
   z-index: 1000 !important;
-}
-#about,
-.polka {
-  background: url("../img/polka-dot.svg");
-  background-repeat: repeat;
-  background-attachment: fixed;
 }
 .btn-default {
   background-color: transparent;
@@ -215,37 +213,38 @@ h4 a:hover,
 h5 a:hover {
   color: rgba(38, 38, 38, 0.25);
 }
-.navbar-toggle {
+.dnl-btn-toggle {
   visibility: visible;
   display: initial;
   float: left;
-  margin-left: 30px;
+  border-color: transparent;
+  border-radius: 0px;
+  margin: 20px 0 0 30px;
+  padding: 0;
+  width: 30px;
+  height: 30px;
+  background-color: transparent;
 }
 .navbar-default {
   border-bottom: none;
   background-color: #FFF;
   box-shadow: 0px 0px 3px rgba(38, 38, 38, 0.6);
 }
-.navbar-default .navbar-toggle .icon-bar {
+.dnl-btn-toggle .icon-bar {
   background-color: #262626;
+  height: 2px;
 }
-.navbar-default .navbar-toggle:hover .icon-bar {
+.dnl-btn-toggle:hover .icon-bar {
   background-color: #474747;
 }
-.navbar-default .navbar-toggle {
-  border-color: transparent;
-  border-radius: 0px;
-  margin: 20px 0 0 30px;
-  padding: 0;
-}
-.navbar-default .navbar-toggle:hover {
+.dnl-btn-toggle:hover {
   background-color: transparent;
 }
-.navbar-toggle .icon-bar {
+.dnl-btn-toggle .icon-bar {
   border-radius: 0px;
 }
 #nav-contact {
-  margin-top: 5px;
+  margin-top: 7px;
 }
 .brand-logo {
   width: 100px;
@@ -288,7 +287,14 @@ h5 a:hover {
   font-family: "Apercu Regular", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 .menu-content {
-  margin: 30px auto auto 30px;
+  min-width: 200px;
+  margin: 0 auto auto 30px;
+  height: 100%;
+}
+@media (min-width: 768px) {
+  .menu-content {
+    position: fixed;
+  }
 }
 .menu-content ul {
   margin-top: 2em;
@@ -297,9 +303,8 @@ h5 a:hover {
   line-height: 28px;
 }
 .made-in-nyc {
-  display: block;
   position: absolute;
-  bottom: 2em;
+  bottom: 100px;
   width: 62px;
   height: 62px;
 }
@@ -310,7 +315,7 @@ h5 a:hover {
 .navbar-right {
   float: none !important;
 }
-.navbar-toggle {
+.dnl-btn-toggle {
   display: block;
 }
 .navbar-collapse {
@@ -341,8 +346,14 @@ ul.navbar-yieldmo li {
 #nav-login {
   margin-right: 45px;
 }
+#nav-login a {
+  font-size: 15px;
+}
+#nav-menu {
+  display: none;
+}
 .shape-spacer {
-  height: 25em;
+  height: 10vh;
 }
 #about h3,
 #about h3 p {
@@ -367,8 +378,13 @@ ul.navbar-yieldmo li {
   background-color: #fdd147;
   position: relative;
 }
+#about-intro h1,
+#about-intro h1 p {
+  margin: 0;
+}
 .rethinking-img img {
-  max-width: 216px;
+  max-width: 210px;
+  margin: 0 auto 2em auto;
 }
 .status {
   color: white;
@@ -432,7 +448,10 @@ ul.navbar-yieldmo li {
 #ad-format-lab {
   padding: 6em 0;
 }
-#ad-format-lab h3 {
+#ad-format-lab h3,
+#ad-format-lab h3 p,
+#ad-format-lab h4,
+#ad-format-lab h4 p {
   margin: 0;
 }
 #ad-format-lab p {
@@ -450,7 +469,7 @@ ul.navbar-yieldmo li {
   background-image: url('../img/yieldmo-team.png');
   background-repeat: no-repeat;
   background-position: bottom right;
-  background-size: 70%;
+  background-size: 60%;
 }
 #team .row {
   padding-top: 4em;
@@ -730,6 +749,9 @@ footer .social-logos img {
 .wpcf7-form p input.wpcf7-submit:hover a {
   color: rgba(38, 38, 38, 0.6);
 }
+.wpcf7-form-control option {
+  margin-left: 2em;
+}
 .styled-select.hear {
   margin-top: 0.75em;
 }
@@ -790,7 +812,7 @@ _:-o-prefocus .styled-select,
   margin-top: 0;
 }
 #spacer {
-  height: 57px;
+  height: 59px;
 }
 .main-title {
   text-align: center;
@@ -1014,9 +1036,21 @@ ul.post-more li.more-text.next a {
   margin-top: 10px;
   margin-right: 50px;
 }
+#loading {
+  background: url('http://cdn.nirmaltv.com/images/generatorphp-thumb.gif');
+  height: 64px;
+  width: 64px;
+  margin-top: 300px;
+}
+.content-wrapper {
+  display: none;
+}
 #carousel-intro .item {
-  padding-top: 14.25px;
-  min-height: 100vh;
+  min-height: calc(100vh - 59px);
+}
+#carousel-inside .item .container {
+  resize: vertical;
+  overflow: auto;
 }
 #carousel-inside img {
   margin: 0 auto;
@@ -1158,6 +1192,45 @@ ol.carousel-indicators {
 .btn-play img:hover {
   opacity: 0.9;
 }
+@-webkit-keyframes rotating {
+  from {
+    -ms-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -ms-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotating {
+  from {
+    -ms-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -ms-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+.rotating {
+  -webkit-animation: rotating 3s linear infinite;
+  -moz-animation: rotating 3s linear infinite;
+  -ms-animation: rotating 3s linear infinite;
+  -o-animation: rotating 3s linear infinite;
+  animation: rotating 3s linear infinite;
+}
 @media (max-width: 767px) {
   body {
     font-size: 15px;
@@ -1203,11 +1276,21 @@ ol.carousel-indicators {
   .carousel-caption {
     display: initial;
   }
-  .navbar-default .navbar-toggle {
+  .navbar {
+    min-height: initial;
+  }
+  .navbar-default .dnl-btn-toggle {
     margin: 10px 0 0 10px;
+  }
+  .navbar-default .dnl-btn-toggle .icon-bar {
+    width: 18px;
+  }
+  .dnl-btn-toggle .icon-bar + .icon-bar {
+    margin-top: 3px;
   }
   .navbar-default .navbar-brand {
     width: 100px;
+    height: 40px;
     padding: 10px 10px;
   }
   .navbar-text {
@@ -1220,6 +1303,9 @@ ol.carousel-indicators {
   }
 }
 @media (min-width: 768px) {
+  .navmenu {
+    width: 250px;
+  }
   .item {
     display: block;
   }

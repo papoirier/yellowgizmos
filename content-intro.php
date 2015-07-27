@@ -70,7 +70,7 @@
 							        	</div>
 							        	<?php 
 							        	if (get_post_meta($page->ID, 'vimeo-id', true)) {
-							        		echo '<div class="carousel-video"><div class="btn-play" data-toggle="modal" data-target="#my-modal-'.($count-1).' "><img src="'.get_stylesheet_directory_uri().'/img/btn-play.svg"></div></div>';
+							        		echo '<div class="carousel-video"><div class="btn-play rotating" data-toggle="modal" data-target="#my-modal-'.($count-1).' "><img src="'.get_stylesheet_directory_uri().'/img/btn-play.svg"></div></div>';
 							        		?>	
 							        	<?php } ?>
 

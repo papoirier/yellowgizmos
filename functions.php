@@ -154,11 +154,11 @@ function bootstrap_script() {
 		true 
 	);
 }
-add_action( 'wp_enqueue_scripts', 'jasny_script' );
-function jasny_script() {
+add_action( 'wp_enqueue_scripts', 'dash_script' );
+function dash_script() {
   wp_enqueue_script( 
-    'jasny', 
-    get_stylesheet_directory_uri() . '/js/jasny-bootstrap.min.js', 
+    'dash', 
+    get_stylesheet_directory_uri() . '/js/dash.js', 
     array('jquery'), 
     '', 
     true 
