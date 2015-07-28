@@ -205,28 +205,72 @@ h4 a:hover,
 h5 a:hover {
   color: rgba(38, 38, 38, 0.25);
 }
-.lines-button.x.close .lines {
-  background: transparent;
+#nav-icon3 {
+  width: 26px;
+  height: 20px;
+  position: relative;
+  cursor: pointer;
 }
-.lines-button.x.close .lines:before,
-.lines-button.x.close .lines:after {
-  transform-origin: 50% 50%;
-  top: 0;
-  width: 30px;
+#nav-icon3 span {
+  padding: 0;
+  margin: 0;
+  display: block;
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  background: #262626;
+  border: none;
+  opacity: 1;
+  left: 0;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: 0.25s ease-in-out;
+  -moz-transition: 0.25s ease-in-out;
+  -o-transition: 0.25s ease-in-out;
+  transition: 0.25s ease-in-out;
 }
-.lines-button.x.close .lines:before {
-  transform: rotate3d(0, 0, 1, 45deg);
+#nav-icon3 span:nth-child(1) {
+  top: 0px;
 }
-.lines-button.x.close .lines:after {
-  transform: rotate3d(0, 0, 1, -45deg);
+#nav-icon3 span:nth-child(2),
+#nav-icon3 span:nth-child(3) {
+  top: 8px;
+}
+#nav-icon3 span:nth-child(4) {
+  top: 16px;
+}
+#nav-icon3.open span:nth-child(1) {
+  top: 8px;
+  width: 0%;
+  left: 50%;
+}
+#nav-icon3.open span:nth-child(2) {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+#nav-icon3.open span:nth-child(3) {
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+#nav-icon3.open span:nth-child(4) {
+  top: 8px;
+  width: 0%;
+  left: 50%;
 }
 .dnl-btn-toggle {
   visibility: visible;
-  display: initial;
+  display: block;
+  width: 24px;
+  height: 18px;
   float: left;
-  border-color: transparent;
-  border-radius: 0px;
-  margin: 17px 0 0 30px;
+  border: none;
+  margin: 21px 0 0 30px;
   padding: 0;
   background-color: transparent;
 }
@@ -238,6 +282,39 @@ h5 a:hover {
 .navbar-brand {
   height: 26px;
   padding: 16px 0px 0px 10px;
+}
+@media (max-width: 767px) {
+  #nav-icon3 {
+    width: 20px;
+  }
+  #nav-icon3 span {
+    height: 2px;
+  }
+  #nav-icon3 span:nth-child(1) {
+    top: 0px;
+  }
+  #nav-icon3 span:nth-child(2),
+  #nav-icon3 span:nth-child(3) {
+    top: 6px;
+  }
+  #nav-icon3 span:nth-child(4) {
+    top: 12px;
+  }
+  #nav-icon3.open span:nth-child(1) {
+    top: 6px;
+    width: 0%;
+    left: 50%;
+  }
+  .navbar-brand {
+    padding: 11px 0px 0px 15px;
+  }
+  .navbar-brand img {
+    width: 90px;
+  }
+  .dnl-btn-toggle {
+    border: none;
+    margin: 15px 0 0 20px;
+  }
 }
 .dnl-btn-toggle .icon-bar {
   background-color: #262626;
@@ -848,6 +925,11 @@ _:-o-prefocus .styled-select,
 #spacer {
   height: 59px;
 }
+@media (max-width: 767px) {
+  #spacer {
+    height: 44px;
+  }
+}
 .main-title {
   text-align: center;
   margin: 3em auto;
@@ -1089,16 +1171,23 @@ ul.post-more li.more-text.next a {
   margin: 0 auto;
 }
 .carousel-caption {
+  display: block;
+  float: left;
   text-shadow: none;
   color: #262626;
   position: relative;
-  left: auto;
-  right: auto;
   padding: 0;
-  margin: 2em auto;
+  margin: 1em auto 0 auto;
+  width: 100%;
+  left: 0%;
 }
 .carousel-caption h1 {
   margin: 0;
+}
+@media (max-width: 767px) {
+  .carousel-caption {
+    margin: 1em auto 0 auto;
+  }
 }
 .my-carousel .carousel-control {
   display: block !important;
@@ -1188,7 +1277,7 @@ ul.post-more li.more-text.next a {
 }
 ol.carousel-indicators {
   position: absolute;
-  margin-bottom: 5%;
+  border: 5px;
 }
 .carousel-indicators li,
 .carousel-indicators li.active {
@@ -1425,7 +1514,7 @@ button.close:hover {
   h1,
   h1 p {
     font-size: 45px;
-    line-height: 62px;
+    line-height: 48px;
   }
   h2,
   h2 p {

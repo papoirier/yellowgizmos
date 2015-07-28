@@ -10,8 +10,10 @@ jQuery(document).ready(function($) {
         $('.content-wrap').fadeIn();
     };
     
-    // hamburger menu
-
+    // // hamburger menu
+    // $('#nav-icon3').click(function(){
+    //     $(this).toggleClass('open');
+    // });
 
     // tabs
     $('#myTabs a').click(function (e) {
@@ -72,8 +74,14 @@ jQuery(document).ready(function($) {
     
     $(window).load(function() {
 
+        var navbarHeight;
         var h = $(window).height();
-        var navbarHeight = 59;
+        var w = $(window).width();
+        if (w <= 767) {
+            navbarHeight = 44;
+        } else {
+            navbarHeight = 59;
+        }
                 
         var carouselHeight = $("#carousel-inside > .item").css("min-height", h-navbarHeight);
         var carousel = $("#carousel-inside > .item").height();
@@ -82,7 +90,7 @@ jQuery(document).ready(function($) {
         var carouseInsideHeight = $("#carousel-inside > .item > .container").height();
         console.log("carousel height: "+carouseInsideHeight);
 
-        var carouseInsideAlign = $("#carousel-inside > .item > .container").css("padding-top", (h/2 - carouseInsideHeight/2));
+        var carouseInsideAlign = $("#carousel-inside > .item > .container").css("padding-top", (h/2 - carouseInsideHeight*0.6));
 
 
         // twitter styling
@@ -124,9 +132,6 @@ jQuery(document).ready(function($) {
         
         var aboutIntroHeight = $("#about-intro").height();
         $("#about-intro").css("padding-top", $height/2 - aboutIntroHeight*0.65 );
-
-        
-
 
     });
 

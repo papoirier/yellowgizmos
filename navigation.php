@@ -1,8 +1,11 @@
 <!-- NAV - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
 <nav class="navbar navbar-default navbar-fixed-top dash-navbar-top dnl-hidden">
     <div class="navbar-header">
-        <button class="dnl-btn-toggle">
-            <img src="<?php echo get_stylesheet_directory_uri() ?>/img/btn-hamburger.svg" title="menu">
+        <button class="dnl-btn-toggle" id="nav-icon3">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
         </button>
         <?php if ( is_home() || is_single()  ) { ?>
         <a class="navbar-brand" href="<?php echo esc_url( home_url( '/blog/' ) ); ?>" title="home"><img src="<?php echo get_stylesheet_directory_uri() ?>/img/logo-blog.svg" title="logo" alt="Yieldmo logo" class="logo-blog img-responsive"></a>

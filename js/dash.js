@@ -34,6 +34,14 @@ jQuery(document).ready(function($) {
 				}
 			}
 
+			function hamburger() {
+				// hamburger menu
+			    // $('#nav-icon3').click(function(){
+			    //     $(this).toggleClass('open');
+			    // });
+				$('#nav-icon3').toggleClass('open');
+			}
+
 			function dnlShow() {
 				dnl.addClass("dnl-show").removeClass("dnl-hide");
 				contentWrap.addClass(contentWrapEffect);
@@ -53,8 +61,10 @@ jQuery(document).ready(function($) {
 			dnlBtnToggle.click( function() {
 				if( dnl.hasClass("dnl-hide") ) {
 					dnlShow();
+					hamburger();
 				} else {
 					dnlHide();
+					hamburger();
 				}
 			});
 
@@ -77,16 +87,22 @@ jQuery(document).ready(function($) {
 		function closeOverlay() {
 			if ( $( this ).hasClass( 'dnl-overlay' ) ) {
 				dnlHide();
+				hamburger();
 			}
 		};
 		$( '.content-wrap' ).click(function(e) {
+			if ( $( '.content-wrap' ).hasClass( 'dnl-overlay' ) ) {
+				hamburger();
+			}
 			e.preventDefault();
 			closeOverlay();
+			//hamburger();
 		});
 		$( '.menu-content a' ).click(function() {
 			//e.preventDefault();
 			if ( $( '.content-wrap' ).hasClass( 'dnl-overlay' ) ) {
 				dnlHide();
+				hamburger();
 			}
 		});
 
