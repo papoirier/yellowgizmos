@@ -25,12 +25,12 @@
 ?>
 
 <!-- INTRO CAROUSEL - - - - - - - - - - - - -  -->
-        <?php $my_query = new WP_Query( 'page_id=197' ); ?>
-        <?php if ( $my_query->have_posts() ) : ?>
-        <?php 
-            require(locate_template('content-intro.php'));
-            wp_reset_postdata();
-        endif; ?>
+<?php $my_query = new WP_Query( 'page_id=197' ); ?>
+<?php if ( $my_query->have_posts() ) : ?>
+<?php 
+    require(locate_template('content-intro.php'));
+    wp_reset_postdata();
+endif; ?>
 
 <!-- ABOUT - - - - - - - - - - - - - - - - - - - -->
 <section id="about"> 
@@ -54,16 +54,16 @@
 		    	wp_reset_postdata();
 			endif; ?>
 		</div> <!-- /#publishers -->
+        <div class="shape-spacer"></div>
 		<div id="advertisers">
-            <div class="shape-spacer"></div>
 			<?php $my_query = new WP_Query( 'page_id=18' ); ?>
 		    <?php if ( $my_query->have_posts() ) : ?>
 		    <?php 
 		    	require(locate_template('content-about.php'));
 		    	wp_reset_postdata();
 			endif; ?>
-            <div class="shape-spacer"></div>
 		</div> <!-- /#advertisers -->
+        <div class="shape-spacer"></div>
 		<div id="readers">
 			<?php $my_query = new WP_Query( 'page_id=19' ); ?>
 		    <?php if ( $my_query->have_posts() ) : ?>
@@ -77,8 +77,8 @@
 
 <!-- DEDICATED AD PLACEMENTS - - - - - - - - - - - - - -  -->
 <section id="dedicated"> 
-	<?php $my_query = new WP_Query( 'page_id=91' ); // local ?>
-    <?php //$my_query = new WP_Query( 'page_id=101' ); // server ?>
+	<?php //$my_query = new WP_Query( 'page_id=91' ); // local ?>
+    <?php $my_query = new WP_Query( 'page_id=101' ); // server ?>
     <?php if ( $my_query->have_posts() ) : ?>
     <?php 
     	require(locate_template('content-dedicated.php'));

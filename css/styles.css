@@ -174,6 +174,80 @@ a {
 a:hover {
   text-decoration: none;
 }
+@media (max-width: 767px) {
+  body {
+    font-size: 14px;
+  }
+  p {
+    font-size: 14px;
+    line-height: 19.6px;
+  }
+  h1,
+  h1 p {
+    font-size: 33px;
+    line-height: 36.3px;
+  }
+  #rethinking h1,
+  #rethinking h1 p {
+    font-size: 24px;
+    line-height: 31.2px;
+  }
+  h2,
+  h2 p {
+    font-size: 28px;
+    line-height: 33.6px;
+  }
+  h3,
+  h3 p {
+    font-size: 24px;
+    line-height: 31.2px;
+  }
+  h4,
+  h4 p {
+    font-size: 17px;
+    line-height: 23.8px;
+  }
+  h5,
+  h5 p {
+    font-size: 14px;
+    line-height: 19.6px;
+  }
+  h6,
+  h6 p {
+    font-size: 14px;
+    line-height: 19.6px;
+  }
+  .navbar-text,
+  .navbar-text a,
+  .navbar-text li,
+  .navbar-text li a {
+    font-size: 12px;
+  }
+  .carousel-caption {
+    display: block;
+    bottom: initial;
+    clear: both;
+    margin-top: 1em;
+  }
+  .navbar {
+    min-height: initial;
+  }
+  .navbar-text {
+    margin-top: 8px;
+    margin-right: 10px;
+  }
+  #nav-login,
+  #nav-ad-formats {
+    display: none;
+    visibility: hidden;
+  }
+  #player .video-wrapper .video {
+    max-width: 100px;
+  }
+  iframe#player1 {
+    max-width: 100%;
+  }
+}
 ul {
   text-decoration: none;
   list-style-type: none;
@@ -204,6 +278,11 @@ h3 a:hover,
 h4 a:hover,
 h5 a:hover {
   color: rgba(38, 38, 38, 0.25);
+}
+@media (max-width: 767px) {
+  body {
+    text-align: center;
+  }
 }
 #nav-icon3 {
   width: 26px;
@@ -285,7 +364,7 @@ h5 a:hover {
 }
 @media (max-width: 767px) {
   #nav-icon3 {
-    width: 20px;
+    width: 18px;
   }
   #nav-icon3 span {
     height: 2px;
@@ -295,25 +374,25 @@ h5 a:hover {
   }
   #nav-icon3 span:nth-child(2),
   #nav-icon3 span:nth-child(3) {
-    top: 6px;
+    top: 5px;
   }
   #nav-icon3 span:nth-child(4) {
-    top: 12px;
+    top: 10px;
   }
   #nav-icon3.open span:nth-child(1) {
-    top: 6px;
+    top: 5px;
     width: 0%;
     left: 50%;
   }
   .navbar-brand {
-    padding: 11px 0px 0px 15px;
+    padding: 12px 0px 0px 10px;
   }
   .navbar-brand img {
-    width: 90px;
+    width: 80px;
   }
   .dnl-btn-toggle {
     border: none;
-    margin: 15px 0 0 20px;
+    margin: 15px 0 0 14px;
   }
 }
 .dnl-btn-toggle .icon-bar {
@@ -371,10 +450,27 @@ h5 a:hover {
 .sans-serif {
   font-family: "Apercu Regular", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
-.menu-content {
-  min-width: 200px;
-  margin: 0 auto auto 30px;
-  height: 100%;
+@media (min-width: 768px) {
+  .menu-content {
+    position: fixed;
+    height: 100%;
+    min-width: 200px;
+    margin: 0 auto auto 30px;
+  }
+  .made-in-nyc {
+    position: absolute;
+    bottom: 100px;
+  }
+}
+@media (max-width: 767px) {
+  .menu-content {
+    text-align: left;
+    margin: 0 auto auto 14px;
+  }
+  .made-in-nyc {
+    position: absolute;
+    bottom: 20px;
+  }
 }
 .social-logos {
   width: auto;
@@ -388,21 +484,6 @@ h5 a:hover {
   margin-right: 0.5em;
   float: left;
   display: inline-block;
-}
-@media (min-width: 768px) {
-  .menu-content {
-    position: fixed;
-  }
-  .made-in-nyc {
-    position: absolute;
-    bottom: 100px;
-  }
-}
-@media (max-width: 767px) {
-  .made-in-nyc {
-    position: relative;
-    bottom: 0px;
-  }
 }
 .menu-content ul {
   margin-top: 1.5em;
@@ -460,7 +541,7 @@ ul.navbar-yieldmo li {
   font-size: 14px;
 }
 .shape-spacer {
-  height: 10vh;
+  height: 12vh;
 }
 #about h3,
 #about h3 p {
@@ -489,9 +570,19 @@ ul.navbar-yieldmo li {
 #about-intro h1 p {
   margin: 0;
 }
+.rethinking-img {
+  margin: 0 auto 2em auto;
+}
 .rethinking-img img {
   max-width: 210px;
-  margin: 0 auto 2em auto;
+}
+@media (max-width: 767px) {
+  .rethinking-img {
+    margin: 2em auto 2em auto;
+  }
+  .rethinking-img img {
+    width: 40%;
+  }
 }
 .status {
   color: white;
@@ -499,8 +590,8 @@ ul.navbar-yieldmo li {
 #publishers .container,
 #advertisers .container,
 #readers .container {
-  padding-top: 50px;
-  padding-bottom: 50px;
+  padding-top: 4em;
+  padding-bottom: 4em;
 }
 #publishers h3,
 #publishers h3 p,
@@ -510,13 +601,15 @@ ul.navbar-yieldmo li {
 #readers h3 p {
   margin: 0;
 }
-.col-md-offset-1-5 {
-  margin-left: 12.5%;
+@media (min-width: 768px) {
+  .col-md-offset-1-5 {
+    margin-left: 12.5%;
+  }
 }
 #dedicated {
   background-color: #FFF;
   clear: both;
-  padding-top: 7em;
+  padding-top: 4em;
 }
 #dedicated h3 {
   margin: 0;
@@ -551,8 +644,7 @@ ul.navbar-yieldmo li {
 }
 #dedicated-details {
   background-color: #fdd147;
-  padding: 2em 0;
-  margin-top: 2em;
+  padding: 2em 0 4em 0;
 }
 #ad-format-lab {
   padding: 6em 0;
@@ -583,6 +675,15 @@ ul.navbar-yieldmo li {
 #team .row {
   padding-top: 4em;
   padding-bottom: 4em;
+}
+@media (max-width: 767px) {
+  #team {
+    background-position: bottom center;
+    background-size: 100%;
+  }
+  #team .row {
+    margin-bottom: 8em;
+  }
 }
 #twitter {
   padding-top: 3em;
@@ -736,6 +837,23 @@ footer .social-logos ul li {
   font-size: 70%;
   line-height: 1.4em;
 }
+@media (max-width: 767px) {
+  footer ul,
+  footer li,
+  footer p {
+    text-align: left;
+  }
+  footer .logo {
+    margin-bottom: 3em;
+  }
+  footer .legals,
+  footer .social-logos {
+    margin-top: 2em;
+  }
+  footer .colophon {
+    margin-top: 1em;
+  }
+}
 #contact {
   background-color: #fdd147;
   padding-top: 3em;
@@ -775,7 +893,6 @@ footer .social-logos ul li {
 }
 .wpcf7-list-item-label {
   background-color: transparent;
-  border: 2px solid transparent;
   color: #262626;
   font-family: "Apercu Bold";
   font-weight: bold;
@@ -921,6 +1038,24 @@ _:-o-prefocus .styled-select,
 }
 .mail-phone h5 {
   margin-top: 0;
+}
+@media (max-width: 767px) {
+  #contact .text-right,
+  #contact input,
+  #contact select,
+  #contact select option,
+  select.wpcf7-form-control-wrap,
+  select.wpcf7-select,
+  select.wpcf7-form-control.wpcf7-select option {
+    text-align: center;
+  }
+  #contact h3,
+  #contact .contact-title h3 {
+    font-size: 15px;
+  }
+  #contact h5.text-right {
+    margin-top: 1em;
+  }
 }
 #spacer {
   height: 59px;
@@ -1160,6 +1295,12 @@ ul.post-more li.more-text.next a {
 }
 .content-wrap {
   display: none;
+  margin-top: 59px;
+}
+@media (max-width: 767px) {
+  .content-wrap {
+    margin-top: 44px;
+  }
 }
 #carousel-intro .item {
   min-height: calc(100vh - 59px);
@@ -1172,12 +1313,14 @@ ul.post-more li.more-text.next a {
 }
 .carousel-caption {
   display: block;
+  bottom: initial;
+  clear: both;
   float: left;
   text-shadow: none;
   color: #262626;
   position: relative;
   padding: 0;
-  margin: 1em auto 0 auto;
+  margin: 2em auto 0 auto;
   width: 100%;
   left: 0%;
 }
@@ -1223,6 +1366,12 @@ ul.post-more li.more-text.next a {
 .carousel-control:hover .glyphicon:visited {
   filter: alpha(opacity=0);
   opacity: 0;
+}
+@media (max-width: 767px) {
+  .right.carousel-control,
+  .left.carousel-control {
+    display: none;
+  }
 }
 .carousel-inner {
   height: auto;
@@ -1275,9 +1424,20 @@ ul.post-more li.more-text.next a {
   background-repeat: no-repeat;
   background-position: center;
 }
-ol.carousel-indicators {
+.carousel-indicators {
   position: absolute;
   border: 5px;
+  bottom: 8%;
+}
+@media screen and (min-width: 768px) {
+  .carousel-indicators {
+    bottom: 8%;
+  }
+}
+@media (max-height: 710px) and (min-width: 768px) {
+  .carousel-indicators {
+    bottom: 3%;
+  }
 }
 .carousel-indicators li,
 .carousel-indicators li.active {
@@ -1362,78 +1522,6 @@ ol.carousel-indicators {
   animation: rotating 3s linear infinite;
   overflow: hidden;
 }
-.carousel-caption {
-  display: initial;
-  bottom: initial;
-  clear: both;
-}
-@media (max-width: 767px) {
-  body {
-    font-size: 15px;
-  }
-  p {
-    line-height: 25px;
-    font-family: "Georgia", "Times New Roman", serif;
-  }
-  h1,
-  h1 p {
-    font-size: 37px;
-    line-height: 40.7px;
-  }
-  h2,
-  h2 p {
-    font-size: 30px;
-    line-height: 42px;
-  }
-  h3,
-  h3 p {
-    font-size: 26px;
-    line-height: 40px;
-  }
-  h4,
-  h4 p {
-    font-size: 20px;
-    line-height: 27px;
-  }
-  h5,
-  h5 p {
-    font-size: 15px;
-    line-height: 22px;
-  }
-  h6 {
-    font-size: 15px;
-  }
-  .navbar-text,
-  .navbar-text a,
-  .navbar-text li,
-  .navbar-text li a {
-    font-size: 12px;
-  }
-  .carousel-caption {
-    display: block;
-    bottom: initial;
-    clear: both;
-    margin-top: 1em;
-  }
-  .navbar {
-    min-height: initial;
-  }
-  .navbar-text {
-    margin-top: 8px;
-    margin-right: 10px;
-  }
-  #nav-login,
-  #nav-ad-formats {
-    display: none;
-    visibility: hidden;
-  }
-  #player .video-wrapper .video {
-    max-width: 100px;
-  }
-  iframe#player1 {
-    max-width: 100%;
-  }
-}
 @media (min-width: 768px) {
   .navmenu {
     width: 250px;
@@ -1503,7 +1591,7 @@ button.close:hover {
     width: 75%;
   }
 }
-@media (max-height: 750px) and (min-width: 768px) {
+@media (max-height: 710px) and (min-width: 768px) {
   body {
     font-size: 15px;
   }

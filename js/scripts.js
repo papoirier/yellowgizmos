@@ -89,8 +89,12 @@ jQuery(document).ready(function($) {
         var carouseContainerHeight = $("#carousel-inside > .item > .container").css("min-height", (h*0.8)-navbarHeight);
         var carouseInsideHeight = $("#carousel-inside > .item > .container").height();
         console.log("carousel height: "+carouseInsideHeight);
-
-        var carouseInsideAlign = $("#carousel-inside > .item > .container").css("padding-top", (h/2 - carouseInsideHeight*0.6));
+        var carouseInsideAlign;
+        if (h <= 710) {
+            carouseInsideAlign = $("#carousel-inside > .item > .container").css("padding-top", (h/2 - carouseInsideHeight*0.6));
+        } else {
+            carouseInsideAlign = $("#carousel-inside > .item > .container").css("padding-top", (h/2 - carouseInsideHeight*0.5));
+        };
 
 
         // twitter styling
@@ -109,10 +113,14 @@ jQuery(document).ready(function($) {
     $('#carousel-advertisers > .carousel-inner > .item:first').addClass('active');
     $('#carousel-readers > .carousel-inner > .item:first').addClass('active col-md-offset-1-5');
     $('#carousel-dedicated > .carousel-inner > .item:first').addClass('active');
-    
 
-    // center elements vertically
-    //var carouseInsideAlign = $("#carousel-inside > .item > .container").css("padding-top", (h/2 - carouseInsideHeight/2));
+    // MOBILE CAROUSELS SETUP --------------------------------------------
+    $("#carousel-intro, #carousel-publishers, #carousel-advertisers, #carousel-readers").swiperight(function() {  
+        $(this).carousel('prev');  
+    });  
+    $("#carousel-intro, #carousel-publishers, #carousel-advertisers, #carousel-readers").swipeleft(function() {  
+        $(this).carousel('next');  
+    }); 
 
     // ------------------------------------------------------------
 

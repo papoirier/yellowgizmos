@@ -29,33 +29,48 @@ html {
 /* Dash Navbar Left = dnl
 / -------------------------------------------------- */
 @black:       rgb(38,38,38);
-@navheight:   59px;
+@navbar-height: 59px;
+@navbar-height-mobile: 44px;
 .dash-navbar-left {
-  position: absolute;
-  background-color: @black;
-  width: 250px;
-  top: @navheight;
-  bottom: 0;
-  overflow-y: auto;
-  z-index: 999;
-  padding-top: 5px;
-  -webkit-transition: left 300ms;
-  -o-transition: left 300ms;
-  transition: left 300ms;
-}
-@media (max-width: 767px) {
-  .dash-navbar-left.dnl-visible {
-    left: -250px;
-  }
-  .dash-navbar-left.dnl-visible.dnl-show {
-    left: 0;
-  }
+    position: absolute;
+    background-color: @black;
+    width: 250px;
+    top: @navbar-height;
+    bottom: 0;
+    overflow-y: auto;
+    z-index: 999;
+    //padding-top: 5px;
+    -webkit-transition: left 300ms;
+    -o-transition: left 300ms;
+    transition: left 300ms;
 }
 .dash-navbar-left.dnl-hidden {
   left: -250px;
 }
 .dash-navbar-left.dnl-hidden.dnl-show {
   left: 0;
+}
+@media (max-width: 767px) {
+    .dash-navbar-left.dnl-visible {
+        left: -100%;
+    }
+    .dash-navbar-left.dnl-hidden {
+      left: -100% ;
+    }
+    .dash-navbar-left.dnl-visible.dnl-show {
+        left: 0;
+    }
+    .dash-navbar-left {
+        width: 100%;
+        top: @navbar-height-mobile;
+        bottom: 0;
+        overflow-y: auto;
+        z-index: 999;
+        padding-top: 5px;
+        -webkit-transition: left 300ms;
+        -o-transition: left 300ms;
+        transition: left 300ms;
+    }
 }
 .dash-navbar-left .dnl-nav-title {
   text-transform: uppercase;

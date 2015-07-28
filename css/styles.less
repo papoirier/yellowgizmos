@@ -26,6 +26,8 @@
 
 @carousel-top: 33%;
 @navbar-height: 59px;
+@navbar-height-mobile: 44px;
+
 
 // background colors for the carousel
 .yellow {
@@ -226,6 +228,97 @@ a {
 a:hover {
 	text-decoration: none;
 }
+
+// mobile type
+@btn-height: 42px;
+@media (max-width: 767px) {
+	@font-size-base: 14px;
+	@font-size-h1: floor((@font-size-base * 2.4));
+	@font-size-h2: floor((@font-size-base * 2)); 
+	@font-size-h3: ceil((@font-size-base * 1.66667)); 
+	@font-size-h4: ceil((@font-size-base * 1.2)); 
+	@font-size-h5: @font-size-base;
+	@font-size-h6: ceil((@font-size-base * 1)); 
+	@font-size-nav: @font-size-base - 2;
+
+	body {
+		font-size: @font-size-base;
+	}
+	p {
+		font-size: @font-size-base;
+		line-height: @font-size-base*1.4;
+	}
+	h1,
+	h1 p {
+		font-size: @font-size-h1;
+		line-height: @font-size-h1*1.1;
+	}
+	#rethinking h1,
+	#rethinking h1 p {
+		font-size: @font-size-h3;
+		line-height: @font-size-h3*1.3;
+	}
+	h2,
+	h2 p {
+		font-size: @font-size-h2;
+		line-height: @font-size-h2*1.2;
+	}
+	h3,
+	h3 p {
+		font-size: @font-size-h3;
+		line-height: @font-size-h3*1.3;
+	}
+	h4,
+	h4 p {
+		font-size: @font-size-h4;
+		line-height: @font-size-h4*1.4;
+	}
+	h5,
+	h5 p {
+		font-size: @font-size-h5;
+		line-height: @font-size-h5*1.4;
+	}
+	h6,
+	h6 p {
+		font-size: @font-size-h6;
+		line-height: @font-size-h6*1.4;
+	}
+	.navbar-text,
+	.navbar-text a,
+	.navbar-text li,
+	.navbar-text li a, {
+		font-size: @font-size-nav;
+	}
+	.carousel-caption {
+		display: block;
+		bottom: initial;
+		clear: both;
+		margin-top: 1em;
+	}
+	.navbar {
+		min-height: initial;
+	}
+	.navbar-text {
+		margin-top: 8px;
+		margin-right: 10px;
+	}
+	#nav-login,
+	#nav-ad-formats {
+		display: none;
+		visibility: hidden;
+	}
+	// video
+	#player .video-wrapper .video {
+		max-width: 100px;
+	}
+	iframe#player1 {
+		max-width: 100%;
+	}
+}
+
+
+
+
 ul {
 	text-decoration: none;
 	list-style-type: none;
@@ -256,6 +349,11 @@ h3 a:hover,
 h4 a:hover,
 h5 a:hover {
 	color: @black-alpha;
+}
+@media (max-width: 767px) {
+	body {
+		text-align: center;
+	}
 }
 // NAVBAR // ----------------------------------
 
@@ -345,14 +443,14 @@ h5 a:hover {
 }
 @media (max-width: 767px) {
 	#nav-icon3 {
-		width: 20px;
+		width: 18px;
 	}
 	#nav-icon3 span {
 		height: 2px;
 	}
 	@icon-1: 0px;
-	@icon-2: 6px;
-	@icon-3: 12px;
+	@icon-2: 5px;
+	@icon-3: 10px;
 	#nav-icon3 span:nth-child(1) {
 		top: @icon-1;
 	}
@@ -369,14 +467,14 @@ h5 a:hover {
 	  left: 50%;
 	}
 	.navbar-brand {
-		padding: 11px 0px 0px 15px;
+		padding: 12px 0px 0px 10px;
 	}
 	.navbar-brand img {
-		width: 90px;
+		width: 80px;
 	}
 	.dnl-btn-toggle {
 		border: none;
-		margin: 15px 0 0 20px;
+		margin: 15px 0 0 14px;
 	}
 }
 .dnl-btn-toggle .icon-bar {
@@ -439,10 +537,27 @@ h5 a:hover {
 	font-family: @font-family-sans-serif;
 }
 
-.menu-content {
-	min-width: 200px;
-	margin: 0 auto auto 30px;
-	height: 100%;
+@media (min-width: 768px) { 
+	.menu-content {
+		position: fixed;
+		height: 100%;
+		min-width: 200px;
+		margin: 0 auto auto 30px;
+	}
+	.made-in-nyc {
+		position: absolute;
+		bottom: 100px;
+	}
+}
+@media (max-width: 767px) {
+	.menu-content {
+		text-align: left;
+		margin: 0 auto auto 14px;
+	}
+	.made-in-nyc {
+		position: absolute;
+		bottom: 20px;
+	}
 }
 .social-logos {
 	width: auto;
@@ -456,21 +571,6 @@ h5 a:hover {
 	margin-right: 0.5em;
 	float: left;
 	display: inline-block;
-}
-@media (min-width: 768px) { 
-	.menu-content {
-		position: fixed;
-	}
-	.made-in-nyc {
-		position: absolute;
-		bottom: 100px;
-	}
-}
-@media (max-width: 767px) { 
-	.made-in-nyc {
-		position: relative;
-		bottom: 0px;
-	}
 }
 
 .menu-content ul {
@@ -533,7 +633,7 @@ ul.navbar-yieldmo li {
 
 // ABOUT // ------------------------------------
 .shape-spacer {
-	height: 10vh;
+	height: 12vh;
 }
 #about h3,
 #about h3 p {
@@ -564,23 +664,31 @@ ul.navbar-yieldmo li {
 #about-intro h1 p {
 	margin: 0;
 }
+.rethinking-img {
+	margin: 0 auto 2em auto;
+}
 .rethinking-img img {
 	max-width: 210px;
-	margin: 0 auto 2em auto;
-
+}
+@media (max-width: 767px) {
+	.rethinking-img {
+		margin: 2em auto 2em auto;
+	}
+	.rethinking-img img {
+		width: 40%;
+	}
 }
 .status {
 	color: white;
 }
 
+// PUBLISHERS, ADVERTISERS, READERS // --------
 #publishers .container,
 #advertisers .container,
 #readers .container {
-	padding-top: 50px;
-	padding-bottom: 50px;
+	padding-top: 4em;
+	padding-bottom: 4em;
 }
-
-// PUBLISHERS, ADVERTISERS, READERS // --------
 #publishers h3,
 #publishers h3 p,
 #advertisers h3,
@@ -589,16 +697,22 @@ ul.navbar-yieldmo li {
 #readers h3 p {
 	margin: 0;
 }
-.col-md-offset-1-5 {
-	margin-left: 12.5%;
+.shape-spacer {
+	//background-color: red;
 }
+@media (min-width: 768px) {
+	.col-md-offset-1-5 {
+		margin-left: 12.5%;
+	}	
+}
+
 
 // DEDICATED // --------------------------------
 
 #dedicated {
 	background-color: #FFF;
 	clear: both;
-	padding-top: 7em;
+	padding-top: 4em;
 }
 #dedicated h3 {
 	margin:0;
@@ -638,8 +752,7 @@ ul.navbar-yieldmo li {
 }
 #dedicated-details {
 	background-color: @yellow;
-	padding: 2em 0;
-	margin-top: 2em;
+	padding: 2em 0 4em 0;
 }
 
 
@@ -675,6 +788,15 @@ ul.navbar-yieldmo li {
 #team .row {
 	padding-top: 4em;
 	padding-bottom: 4em;
+}
+@media (max-width: 767px) {
+	#team {
+		background-position: bottom center;
+		background-size: 100%;
+	}
+	#team .row {
+		margin-bottom: 8em;
+	}
 }
 
 // TWITTER // ----------------------------------
@@ -844,6 +966,23 @@ footer .social-logos ul li {
 	font-size: 70%;
 	line-height: 1.4em;
 }
+@media (max-width: 767px) {
+	footer ul,
+	footer li,
+	footer p {
+		text-align: left;
+	}
+	footer .logo {
+		margin-bottom: 3em;
+	}
+	footer .legals,
+	footer .social-logos {
+		margin-top: 2em;
+	}
+	footer .colophon {
+		margin-top: 1em;
+	}
+}
 
 // CONTACT // -------------------------------
 #contact {
@@ -887,7 +1026,7 @@ footer .social-logos ul li {
 }
 .wpcf7-list-item-label {
 	background-color: transparent;
-	border: 2px solid transparent;
+	//border: 2px solid transparent;
 	color: @black;
 	font-family: "Apercu Bold";
 	font-weight: bold;
@@ -989,7 +1128,6 @@ footer .social-logos ul li {
 .wpcf7-form-control option {
 	margin-left: 2em;
 }
-//////
 
 // select button
 .styled-select.hear {
@@ -1043,10 +1181,10 @@ select::-ms-expand {
  }
 // hack to fall back in opera
 _:-o-prefocus, .selector {
-  .styled-select { background: none; }
-  }
-
-
+	.styled-select { 
+		background: none; 
+	}
+}
 // mail and phone
 .text-mail-phone h5 {
 	margin-bottom: 2em;
@@ -1056,6 +1194,24 @@ _:-o-prefocus, .selector {
 }
 .mail-phone h5 {
 	margin-top: 0;
+}
+@media (max-width: 767px) {
+	#contact .text-right,
+	#contact input,
+	#contact select,
+	#contact select option,
+	select.wpcf7-form-control-wrap,
+	select.wpcf7-select,
+	select.wpcf7-form-control.wpcf7-select option {
+		text-align: center;
+	}
+	#contact h3,
+	#contact .contact-title h3 {
+		font-size: @font-size-h5;
+	}
+	#contact h5.text-right {
+		margin-top: 1em;
+	}
 }
 
 // *********** // ------------------------------
@@ -1315,9 +1471,14 @@ ul.post-more li.more-text.next a {
     width: 64px;
     margin-top: 300px;
 }
-
 .content-wrap {
     display: none;
+    margin-top: @navbar-height;
+}
+@media (max-width: 767px) {
+	.content-wrap {
+	    margin-top: @navbar-height-mobile;
+	}
 }
 
 
@@ -1343,12 +1504,14 @@ ul.post-more li.more-text.next a {
 .carousel-caption {
 	//background-color: red;
 	display: block;
+	bottom: initial;
+	clear: both;
     float: left;
 	text-shadow: none;
 	color: @black;
 	position: relative;
     padding: 0;
-    margin: 1em auto 0 auto;
+    margin: 2em auto 0 auto;
     width: 100%;
     left: 0%;
 }
@@ -1398,7 +1561,12 @@ ul.post-more li.more-text.next a {
   filter: alpha(opacity=0);
   opacity: 0;
 }
-
+@media (max-width: 767px) {
+	.right.carousel-control, 
+	.left.carousel-control {
+    	display: none;
+	}
+}
 .carousel-inner {
 	height: auto;
 	display: block;
@@ -1460,11 +1628,23 @@ ul.post-more li.more-text.next a {
 }
 
 @dot: 6px;
-ol.carousel-indicators {
+.carousel-indicators {
 	position: absolute;
 	border: 5px;
+	bottom: 8%;
 }
-.carousel-indicators li, .carousel-indicators li.active {
+@media screen and (min-width: 768px) {
+	.carousel-indicators {
+	    bottom: 8%;
+	}
+}
+@media (max-height: 710px) and (min-width: 768px) {
+	.carousel-indicators {
+	    bottom: 3%;
+	}
+}
+.carousel-indicators li, 
+.carousel-indicators li.active {
 	border: none !important;
 	background-color: @black;
 	width: @dot;
@@ -1548,90 +1728,8 @@ ol.carousel-indicators {
   animation: rotating 3s linear infinite;
   overflow: hidden;
 }
-.carousel-caption {
-	display: initial;
-	bottom: initial;
-	clear: both;
-}
 
-@btn-height: 42px;
-@media (max-width: 767px) {
-	@font-size-base: 15px;
-	@font-size-h1: floor((@font-size-base * 2.5));
-	@font-size-h2: floor((@font-size-base * 2)); 
-	@font-size-h3: ceil((@font-size-base * 1.66667)); 
-	@font-size-h4: ceil((@font-size-base * 1.3)); 
-	@font-size-h5: @font-size-base;
-	@font-size-h6: ceil((@font-size-base * 1)); 
-	@font-size-nav: 12px;
 
-	body {
-		font-size: @font-size-base;
-	}
-	p {
-		line-height: 25px;
-		font-family: @font-family-serif;
-	}
-	h1,
-	h1 p {
-		font-size: @font-size-h1;
-		line-height: @font-size-h1*1.1;
-	}
-	h2,
-	h2 p {
-		font-size: @font-size-h2;
-		line-height: 42px;
-	}
-	h3,
-	h3 p {
-		font-size: @font-size-h3;
-		line-height: 40px;
-	}
-	h4,
-	h4 p {
-		font-size: @font-size-h4;
-		line-height: 27px;
-	}
-	h5,
-	h5 p {
-		font-size: @font-size-h5;
-		line-height: 22px;
-	}
-	h6 {
-		font-size: @font-size-h6;
-	}
-	.navbar-text,
-	.navbar-text a,
-	.navbar-text li,
-	.navbar-text li a, {
-		font-size: @font-size-nav;
-	}
-	.carousel-caption {
-		display: block;
-		bottom: initial;
-		clear: both;
-		margin-top: 1em;
-	}
-	.navbar {
-		min-height: initial;
-	}
-	.navbar-text {
-		margin-top: 8px;
-		margin-right: 10px;
-	}
-	#nav-login,
-	#nav-ad-formats {
-		display: none;
-		visibility: hidden;
-	}
-	// video
-	#player .video-wrapper .video {
-		max-width: 100px;
-	}
-	iframe#player1 {
-		max-width: 100%;
-	}
-}
 @media (min-width: 768px) {
 	.navmenu {
 		width: 250px;
@@ -1702,7 +1800,7 @@ button.close:hover {
 		width: 75%;
 	}
 }
-@media (max-height: 750px) and (min-width: 768px) {
+@media (max-height: 710px) and (min-width: 768px) {
 
 	@font-size-base: 15px;
 	@font-size-h1: floor((@font-size-base * 3));

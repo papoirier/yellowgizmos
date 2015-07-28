@@ -34,73 +34,68 @@ jQuery(document).ready(function($) {
 
 			// DIV HEIGHTS // ------------------------------------------
 			var h = $(window).height();
+			console.log("window height: "+h);
 
-			var spacer = $("#spacer").height();
-			var shapeSpacer = $(".shape-spacer").height();
 			var navbarHeight = 59;
-			
-			// var carouselHeight = $("#carousel-inside > .item").css("min-height", h-navbarHeight);
-			// var carousel = $("#carousel-inside > .item").height();
-			
-			// var carouseContainerHeight = $("#carousel-inside > .item > .container").css("min-height", (h*0.8)-navbarHeight);
-			// var carouseInsideHeight = $("#carousel-inside > .item > .container").height();
+			// var topSpacer = $("#spacer").height();
+			// console.log("top spacer:"+topSpacer);
 
-			// center elements vertically
-			
-			//var carouseInsideAlign = $("#carousel-inside > .item > .container").css("padding-top", (h/2 - carouseInsideHeight/2));
-
+			var shapeSpacerHeight = $(".shape-spacer").css({"height":h*0.12});
+			var shapeSpacer = $(".shape-spacer").height();
+			//console.log("shape spacer:"+shapeSpacer);
 
 			var rethinkingHeight = $("#rethinking").css({"height":h + "px"});
 			var rethinking = $("#rethinking").height();
 			
-			// if (h < 650) {
-			// 	$('#carousel-inside > .item > .container > .row > .col-md-12 > img').css({"width":"75%"});
-			// };
 
 			var sha = $("#shape").height();
+			//console.log("shape:"+sha);
 			
 			var pub = $("#publishers").offset().top;
 			var adv = $("#advertisers").offset().top;
 			var rea = $("#readers").offset().top;
-			//var ded = $("#dedicated").offset().top;
 
 			var pubHeight = $("#publishers").height();
 			var advHeight = $("#advertisers").height();
 			var reaHeight = $("#readers").height();
-			//var dedHeight = $("#dedicated").height(); 
 
 			$(window).scroll(function(){
 			    var y = $(window).scrollTop();		
-				if (y < pub + pubHeight + spacer) {
-			    	$("#shape").css({"position":"absolute", "top": adv - sha});
+				if (y < adv - shapeSpacer) {
+			    	$("#shape").css({"position":"absolute", "top": adv - sha - shapeSpacer - navbarHeight});
 			    };
-			    if (y >= pub + pubHeight - h && y <= rea) {
+			    if (y >= pub + pubHeight - h && y <= rea + reaHeight - h) {
 			    	$("#shape").css({"position":"fixed", "top": h - sha});
 			    };			    
-			    if (y > rea + reaHeight + spacer - h) {
-			    	$("#shape").css({"position":"absolute", "top": rea + reaHeight - sha});
+			    if (y > rea + reaHeight - h) {
+			    	$("#shape").css({"position":"absolute", "top": rea + reaHeight - sha - navbarHeight});
 			    };
 
+			    var yellow = (y < (adv - sha/2));
+			    var pinkTop = (y > (adv - sha/2));
+			    var pinkBottom = (y < (rea - sha/2));
+			    var blue = (y >= (rea - sha/2));
+
 			    // yellow
-			    if( (y < adv-sha+ shapeSpacer && flagYellow == true) || 
-			    	((y < adv-sha+ shapeSpacer && flagPink == false)) ) {
+			    if( (yellow && flagYellow == true) || 
+			    	(yellow && flagPink == false) ) {
 			    	animateYellow();
 			    	flagYellow = false;
 			    	flagPink = true;
 			    	flagBlue = true;
 			    }
 			    // pink
-			    if( (y >= adv-sha + shapeSpacer && y < rea-sha && flagPink == true) || 
-			    	(y >= adv-sha + shapeSpacer && y < rea-sha && flagBlue == false) || 
-			    	(y >= adv-sha + shapeSpacer && y < rea-sha && flagYellow == false) ){
+			    if( (pinkTop && pinkBottom && flagPink == true) || 
+			    	(pinkTop && pinkBottom && flagBlue == false) || 
+			    	(pinkTop && pinkBottom && flagYellow == false) ){
 			    	animatePink();
 			    	flagYellow = true;
 			    	flagPink = false;
 			    	flagBlue = true;
 			    }
 			    // blue
-			    if( (y >= rea-sha && flagBlue == true) || 
-			    	(y >= rea-sha && flagPink == false)) {
+			    if( (blue && flagBlue == true) || 
+			    	(blue && flagPink == false)) {
 			    	animateBlue();
 			    	flagYellow = true;
 			    	flagPink = true;

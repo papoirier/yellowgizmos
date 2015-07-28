@@ -58,5 +58,3 @@
         </div>
     </div> 
 </div> <!-- /.dash-navbar-left -->
-
-<div id="spacer"></div>

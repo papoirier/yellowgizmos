@@ -144,6 +144,16 @@ function fixed_img_caption_shortcode($attr, $content = null) {
 
 
 // SCRIPTS -----------------------------------------------------
+add_action( 'wp_enqueue_scripts', 'mobile_script' );
+function mobile_script() {
+  wp_enqueue_script( 
+    'mobile', 
+    get_stylesheet_directory_uri() . '/js/jquery.mobile.custom.min.js', 
+    array('jquery'), 
+    '', 
+    true 
+  );
+}
 add_action( 'wp_enqueue_scripts', 'bootstrap_script' );
 function bootstrap_script() {
 	wp_enqueue_script( 
@@ -195,24 +205,4 @@ function sticky_svg() {
       true 
     );
   }
-}
-//add_action( 'wp_enqueue_scripts', 'modernizr' );
-function modernizr() {
-  wp_enqueue_script( 
-    'modernizr', 
-    'http://modernizr.com/downloads/modernizr-latest.js', 
-    array('jquery'), 
-    '', 
-    true 
-  );
-}
-// add_action( 'wp_enqueue_scripts', 'ajax' );
-function ajax() {
-  wp_enqueue_script( 
-    'ajax', 
-    get_stylesheet_directory_uri() . '/js/ajax.js', 
-    array('jquery'), 
-    '', 
-    true 
-  );
 }

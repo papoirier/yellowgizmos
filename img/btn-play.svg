@@ -6,7 +6,7 @@
 <g id="Layer_2">
 </g>
 <g id="Layer_1">
-	<circle fill-rule="evenodd" clip-rule="evenodd" fill="#00A7FF" cx="50" cy="50" r="50"/>
+	<circle fill-rule="evenodd" clip-rule="evenodd" fill="#00A7FF" cx="50" cy="49.5" r="50"/>
 	<g enable-background="new    ">
 		<g>
 			<g>
@@ -27,18 +27,13 @@
 			</g>
 		</g>
 	</g>
-	<g enable-background="new    ">
-		<g>
-			<g>
-				<defs>
-					<rect id="SVGID_2107_" x="-1345" y="70" width="1440" height="1024"/>
-				</defs>
-				<clipPath id="SVGID_6_">
-					<use xlink:href="#SVGID_2107_"  overflow="visible"/>
-				</clipPath>
-			</g>
-		</g>
+	<g>
+		<path fill="#FFFFFF" d="M19.892,50.53v8.22h-3.9V37.751h7.92c4.29,0,6.57,2.55,6.57,6.39s-2.28,6.39-6.57,6.39H19.892z
+			 M23.762,46.931c1.83,0,2.76-0.93,2.76-2.79s-0.93-2.79-2.76-2.79h-3.87v5.58H23.762z"/>
+		<path fill="#FFFFFF" d="M35.551,37.751h3.9V55.15h8.91v3.6h-12.81V37.751z"/>
+		<path fill="#FFFFFF" d="M66.031,58.75l-1.53-4.95h-6.66l-1.53,4.95h-4.2l7.11-20.999h3.9L70.23,58.75H66.031z M61.171,42.91
+			l-2.22,7.29h4.44L61.171,42.91z"/>
+		<path fill="#FFFFFF" d="M70.021,37.751h4.2l3.81,8.159l3.81-8.159h4.2l-6.06,12.06v8.939h-3.9v-8.939L70.021,37.751z"/>
 	</g>
-	<text transform="matrix(1 0 0 1 13.3516 59.25)" fill="#FFFFFF" font-family="'Apercu-Bold'" font-size="30" letter-spacing="1">PLAY</text>
 </g>
 </svg>
