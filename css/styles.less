@@ -69,6 +69,12 @@
     width: 100%;
     position: absolute;   
 }
+@media (max-width: 767px) {
+	#shape {
+		display: none;
+		visibility: hidden;
+	}
+}
 svg {
     width: 100%;
     display: block;
@@ -690,11 +696,33 @@ ul.navbar-yieldmo li {
 }
 
 // PUBLISHERS, ADVERTISERS, READERS // --------
+#publishers,
+#advertisers,
+#readers {
+	margin-top: 2em;
+	margin-bottom: 2em;
+}
 #publishers .container,
 #advertisers .container,
 #readers .container {
-	padding-top: 4em;
-	padding-bottom: 4em;
+	padding-top: 2em;
+	padding-bottom: 2em;
+}
+@media (max-width: 767px) {
+	#publishers .container.bottom {
+		background-color: @yellow;
+	}
+	#advertisers .container.bottom {
+		background-color: @pink;
+	}
+	#readers .container.bottom {
+		background-color: @blue;
+	}
+	#about .carousel-inner .item {
+		min-height: 280px;
+		//float: left;
+		margin-bottom: 2em;
+	}
 }
 #publishers h3,
 #publishers h3 p,
@@ -726,6 +754,7 @@ ul.navbar-yieldmo li {
 }
 #dedicated-phone {
 	margin-top: 3em;
+	margin-bottom: 3em;
 	background-image: url('../img/dots-bg.png');
 	background-repeat: repeat-x;
 	background-position: center;
@@ -784,7 +813,7 @@ ul.navbar-yieldmo li {
 
 // AD FORMAT LAB // ----------------------------
 #ad-format-lab {
-	padding: 6em 0;
+	padding: 4em 0;
 }
 #ad-format-lab h3,
 #ad-format-lab h3 p,
@@ -801,6 +830,30 @@ ul.navbar-yieldmo li {
 #load-more.done {
 	opacity: 0.3;
 	cursor: default;
+}
+@media (min-width: 768px) {
+	#ad-format-lab .container.afl-mobile {
+		display: none;
+		visibility: hidden;
+	}
+	#ad-format-lab .container.afl-full {
+		display: block;
+		visibility: visible;
+	}
+
+}
+@media (max-width: 767px) {
+	#ad-format-lab .container.afl-mobile {
+		display: block;
+		visibility: visible;
+	}
+	#ad-format-lab .container.afl-full {
+		display: none;
+		visibility: hidden;
+	}
+	.container.afl-mobile .polka {
+		margin-bottom: 4em;
+	}
 }
 
 // TEAM // -------------------------------------
@@ -1048,6 +1101,7 @@ footer .social-logos ul li {
 }
 
 // CONTACT // -------------------------------
+
 #contact {
 	background-color: @yellow;
 	padding-top: 3em;
@@ -1102,7 +1156,33 @@ footer .social-logos ul li {
 	display: inline-block;
 	margin-top: -@btn-input;
 	cursor: pointer;
-	//pointer-events: none;
+}
+.wpcf7-list-item-label.active{
+	background-color: transparent;
+	border: 2px solid @black;
+	// color: @black;
+	// font-family: "Apercu Bold";
+	// font-weight: bold;
+	// text-transform: uppercase;
+	// font-size: 13px;
+	// line-height: 14px;
+	// padding: 12px 0px 11px 0px;
+	// width: @btn-input*2;
+	// text-align: center;
+}
+@media (max-width: 767px) {
+	.wpcf7-list-item-label {
+		font-size: 12px;
+		padding: 10px 0px 9px 0px;
+		width: @btn-input*1.6;
+		border: 2px solid transparent;
+	}
+	.wpcf7-list-item-label.active {
+		border: 2px solid @black;
+		font-size: 12px;
+		padding: 10px 0px 9px 0px;
+		width: @btn-input*1.6;
+	}
 }
 .wpcf7-form p input.wpcf7-submit{
 	background-color: transparent;
@@ -1118,18 +1198,16 @@ footer .social-logos ul li {
 	text-align: center;
 	margin-top: 0.5em;
 }
-.wpcf7-list-item-label.active{
-	background-color: transparent;
-	border: 2px solid @black;
-	color: @black;
-	font-family: "Apercu Bold";
-	font-weight: bold;
-	text-transform: uppercase;
-	font-size: 13px;
-	line-height: 14px;
-	padding: 12px 0px 11px 0px;
-	width: @btn-input*2;
-	text-align: center;
+@media (max-width: 767px) {
+	@ajax-loader-width: 16px;
+	img.ajax-loader {
+		clear: both;
+		margin-left: @ajax-loader-width !important;
+		//float: left;
+	}
+	.wpcf7-form p input.wpcf7-submit {
+		margin-left: @ajax-loader-width*2;
+	}
 }
 .wpcf7-list-item.first {
 	margin-left: 0;
@@ -1152,10 +1230,6 @@ footer .social-logos ul li {
 	font-style: italic;
 	margin-top: 6px;
 }
-// .wpcf7-form-control-wrap input:focus {
-// 	font-family: "Apercu Regular";
-// 	font-style: normal;
-// }
 .wpcf7-form-control-wrap ::-webkit-input-placeholder {
 	color: @black;
 	border-bottom: 1px;
@@ -1224,6 +1298,11 @@ footer .social-logos ul li {
     -webkit-appearance: none; // hide default down arrow in webkit
 
 }
+@media (max-width: 767px) {
+	.styled-select select { 
+		font-size: 12px;
+	}
+}
 select:focus { 
 	outline: none; 
 }
@@ -1274,6 +1353,13 @@ _:-o-prefocus, .selector {
 	}
 	#contact h5.text-right {
 		margin-top: 1em;
+	}
+	.row.mail-phone img {
+		display: none;
+		visibility: hidden;
+	}
+	.text-mail-phone {
+		margin-top: 2em;
 	}
 }
 
@@ -1761,6 +1847,7 @@ ul.post-more li.more-text.next a {
 	max-width:100%;
 }
 @media (max-width: 767px) {
+
 	#dedicated-details {
 		padding-bottom: 0;
 	}

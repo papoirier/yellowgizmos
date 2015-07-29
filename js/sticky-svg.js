@@ -45,11 +45,7 @@ jQuery(document).ready(function($) {
 
 			var shapeSpacerHeight = $(".shape-spacer").css({"height":h*0.12});
 			var shapeSpacer = $(".shape-spacer").height();
-			//console.log("shape spacer:"+shapeSpacer);
-
-			var rethinkingHeight = $("#rethinking").css({"height":h + "px"});
-			var rethinking = $("#rethinking").height();
-			
+			//console.log("shape spacer:"+shapeSpacer);			
 
 			var sha = $("#shape").height();
 			//console.log("shape:"+sha);

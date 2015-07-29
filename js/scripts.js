@@ -91,7 +91,7 @@ jQuery(document).ready(function($) {
         $("iframe#twitter-widget-0").contents().find('div.footer').remove();
         $("iframe#twitter-widget-0").contents().find('img.u-photo').remove();
 
-        var $font = "Apercu";
+        var $font = "'Apercu Regular','Apercu', Helvetica, Georgia";
         var $fontweight = "normal";
         $("iframe#twitter-widget-0").contents().find('head').append('<style>.html, body, h1, h2, h3, blockquote, p, ol, ul, li, img, iframe, button, .tweet-box-button{font-family:'+$font+' !important;font-weight:'+$fontweight+' !important;} .p-author, .e-entry-content, p.e-entry-title{text-align:center !important;} li.tweet{padding-left:0 !important;} p.e-entry-title{font-size:18px !important; line-height:1.2em !important; margin-bottom: 36px !important; min-height:70px !important;} .e-entry-content{min-height:70px !important;} a.permalink{float:none; text-align:center !important;} .header{text-align:center !important;} .p-author{margin-top:-36px; padding-top:36px; margin-bottom:24px;} .p-author a, .p-name{ color: #0B84BB !important;} .header{padding:0 !important;} }</style>');
     });
@@ -137,6 +137,8 @@ jQuery(document).ready(function($) {
 
         $(".modal-dialog").css("margin-top", h/2 - 506/2);
         
+        var rethinkingHeight = $("#rethinking").css({"height":h + "px"});
+        var rethinking = $("#rethinking").height();
         var aboutIntroHeight = $("#about-intro").height();
         $("#about-intro").css("padding-top", h/2 - aboutIntroHeight*0.65 );
 
