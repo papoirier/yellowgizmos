@@ -77,53 +77,15 @@ jQuery(document).ready(function($) {
 
     // MOBILE CAROUSELS SETUP --------------------------------------------
     
-    $("#carousel-intro, #carousel-publishers, #carousel-advertisers, #carousel-readers").swiperight(function() {  
+    $("#carousel-intro, #carousel-publishers, #carousel-advertisers, #carousel-readers, #carousel-dedicated").swiperight(function() {  
         $(this).carousel('prev');  
     });  
-    $("#carousel-intro, #carousel-publishers, #carousel-advertisers, #carousel-readers").swipeleft(function() {  
+    $("#carousel-intro, #carousel-publishers, #carousel-advertisers, #carousel-readers, #carousel-dedicated").swipeleft(function() {  
         $(this).carousel('next');  
     }); 
 
     
     $(window).load(function() {
-
-        var navbarHeight;
-        var h = $(window).height();
-        var w = $(window).width();
-        if (w <= 767) {
-            navbarHeight = 44;
-        } else {
-            navbarHeight = 59;
-        }
-
-        // BLOG // --------------------------------------------------------------
-        $(function() {
-            if (w < 767 && ($("body").hasClass("blog-home"))) {
-                // add elements
-                $("#blog-tabs").addClass("dropdown-menu").wrap("<div class='btn-group'>").before("<button type=\"button\" class=\"btn dropdown-toggle\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">ALL<span class=\"caret\"></span></button>");
-                // strip classes
-                $("#blog-tabs > li").removeClass();
-                // update button text
-                $(".dropdown-menu li a").click(function(){
-                    $(this).parents(".btn-group").find('.btn').text($(this).text());
-                    $(this).parents(".btn-group").find('.btn').val($(this).text());
-                    $(".dropdown-toggle").append("<span class=\"caret\"></span>"); // add back the caret
-                });
-            };
-        });
-                
-        var carouselHeight = $("#carousel-inside > .item").css("min-height", h-navbarHeight);
-        var carousel = $("#carousel-inside > .item").height();
-        
-        var carouseContainerHeight = $("#carousel-inside > .item > .container").css("min-height", (h*0.8)-navbarHeight);
-        var carouseInsideHeight = $("#carousel-inside > .item > .container").height();
-        console.log("carousel height: "+carouseInsideHeight);
-        var carouseInsideAlign;
-        if (h <= 710) {
-            carouseInsideAlign = $("#carousel-inside > .item > .container").css("padding-top", (h/2 - carouseInsideHeight*0.6));
-        } else {
-            carouseInsideAlign = $("#carousel-inside > .item > .container").css("padding-top", (h/2 - carouseInsideHeight*0.5));
-        };
 
         // twitter styling
         $("iframe#twitter-widget-0").contents().find('div.footer').remove();
@@ -137,21 +99,59 @@ jQuery(document).ready(function($) {
     // ------------------------------------------------------------
 
     $(window).on("load resize", function(){
+
+        var navbarHeight;
+        var h = $(window).height();
+        var w = $(window).width();
+        if (w <= 767) {
+            navbarHeight = 44;
+        } else {
+            navbarHeight = 59;
+        }
+
+        // BLOG PAGE // --------------------------------------------------------------
+        $(function() {
+            // add dropdown menu
+            if (w < 767 && ($("body").hasClass("blog-home"))) {
+                // add elements
+                $("#blog-tabs").addClass("dropdown-menu").wrap("<div class='btn-group'>").before("<button type=\"button\" class=\"btn dropdown-toggle\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">ALL<span class=\"caret\"></span></button>");
+                // strip classes
+                $("#blog-tabs > li").removeClass();
+                // update button text
+                $(".dropdown-menu li a").click(function(){
+                    $(this).parents(".btn-group").find('.btn').text($(this).text());
+                    $(this).parents(".btn-group").find('.btn').val($(this).text());
+                    $(".dropdown-toggle").append("<span class=\"caret\"></span>"); // add back the caret
+                });
+            };
+        });
+
         // about pages carousels
-        var $width = $(window).width();
-        var $height = $(window).height();
-        if ($width <= 767) {
+        if (w <= 767) {
             $("#carousel-example-generic > .carousel-inner").find(".row").contents().unwrap();
             $("#carousel-example-generic > .carousel-inner").find(".container").contents().unwrap();
         } 
-        if ( ($width >= 768) && (!$("#carousel-example-generic > div.carousel-inner > div").hasClass("container")) ) {
+        if ( (w >= 768) && (!$("#carousel-example-generic > div.carousel-inner > div").hasClass("container")) ) {
             $("#carousel-example-generic > div.carousel-inner").wrapInner("<div class='row'>").wrapInner("<div class='container'>");
         } 
 
-        $(".modal-dialog").css("margin-top", $height/2 - 506/2);
+        $(".modal-dialog").css("margin-top", h/2 - 506/2);
         
         var aboutIntroHeight = $("#about-intro").height();
-        $("#about-intro").css("padding-top", $height/2 - aboutIntroHeight*0.65 );
+        $("#about-intro").css("padding-top", h/2 - aboutIntroHeight*0.65 );
+
+        var carouselHeight = $("#carousel-inside > .item").css("min-height", h-navbarHeight);
+        var carousel = $("#carousel-inside > .item").height();
+        
+        var carouseContainerHeight = $("#carousel-inside > .item > .container").css("min-height", (h*0.8)-navbarHeight);
+        var carouseInsideHeight = $("#carousel-inside > .item > .container").height();
+        console.log("carousel height: "+carouseInsideHeight);
+        var carouseInsideAlign;
+        if (h <= 900) {
+            carouseInsideAlign = $("#carousel-inside > .item > .container").css("padding-top", (h/2 - carouseInsideHeight*0.58));
+        } else {
+            carouseInsideAlign = $("#carousel-inside > .item > .container").css("padding-top", (h/2 - carouseInsideHeight*0.53));
+        };
 
     });
 

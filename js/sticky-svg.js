@@ -2,6 +2,9 @@ jQuery(document).ready(function($) {
 
 	$(window).load(function() {
 
+		var h = $(window).height();
+		var w = $(window).width();
+
 		function animateShape() {
 			// ANIMATIONS & COLORS // ----------------------------------
 			var animationToPublishers = $("#animation-to-publishers"),
@@ -33,7 +36,7 @@ jQuery(document).ready(function($) {
 			}
 
 			// DIV HEIGHTS // ------------------------------------------
-			var h = $(window).height();
+			//var h = $(window).height();
 			console.log("window height: "+h);
 
 			var navbarHeight = 59;
@@ -137,11 +140,14 @@ jQuery(document).ready(function($) {
             status.text(data.seconds + 's played');
         }
     }); 
-
 	
 		$(window).resize(function() {
-			animateShape();
+			if (w >= 768) {
+				animateShape();
+			};
+			
 		});
+
 		$(window).trigger('resize');
 	});
 	

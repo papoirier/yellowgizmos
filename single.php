@@ -75,7 +75,7 @@
         </div>
     </div>
 </div>
-<hr>
+<hr class="below-single-share">
 <div class="container">
 	<div class="row single-previous-next">
     	<div class="col-md-6 col-md-offset-3">
@@ -88,7 +88,7 @@
         </div>
     </div>
 </div>
-<hr>
+<hr class="below-single-previous-next">
 
 
 <?php endwhile; endif; ?> 

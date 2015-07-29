@@ -385,7 +385,7 @@ h5 a:hover {
     left: 50%;
   }
   .navbar-brand {
-    padding: 12px 0px 0px 10px;
+    padding: 15px 0px 0px 10px;
   }
   .navbar-brand img {
     width: 80px;
@@ -396,7 +396,7 @@ h5 a:hover {
   }
   .dnl-btn-toggle {
     border: none;
-    margin: 15px 0 0 14px;
+    margin: 18px 0 0 14px;
   }
 }
 .dnl-btn-toggle .icon-bar {
@@ -488,6 +488,10 @@ h5 a:hover {
   margin-right: 0.5em;
   float: left;
   display: inline-block;
+}
+.menu-content .text-white {
+  font-family: "Apercu Bold";
+  font-weight: bold;
 }
 .menu-content ul {
   margin-top: 1.5em;
@@ -634,6 +638,12 @@ ul.navbar-yieldmo li {
   background-color: transparent;
   box-shadow: none;
 }
+@media (max-width: 767px) {
+  #dedicated-phone button.btn-default {
+    font-size: 12px;
+    padding: 10px 12px 8px 12px;
+  }
+}
 .phone-carousel {
   margin: 3em 0;
   position: relative;
@@ -641,10 +651,21 @@ ul.navbar-yieldmo li {
 .phone-contour {
   display: block;
   position: absolute;
-  width: 276px;
-  height: 492px;
+  max-width: 276px;
+  max-height: 491.9976px;
   left: calc(50% - 138px);
   top: 80px;
+}
+@media (max-width: 374px) {
+  .phone-carousel {
+    width: 320px;
+  }
+  .phone-contour {
+    max-width: 248px;
+    max-height: 442.0848px;
+    left: calc(50% - 124px);
+    top: 72px;
+  }
 }
 #dedicated-details {
   background-color: #fdd147;
@@ -671,22 +692,19 @@ ul.navbar-yieldmo li {
 }
 #team {
   background-color: #f27f8a;
-  background-image: url('../img/yieldmo-team.png');
-  background-repeat: no-repeat;
-  background-position: bottom right;
-  background-size: 60%;
 }
 #team .row {
   padding-top: 4em;
-  padding-bottom: 4em;
+}
+#team {
+  overflow: hidden;
 }
 @media (max-width: 767px) {
-  #team {
-    background-position: bottom center;
-    background-size: 100%;
-  }
-  #team .row {
-    margin-bottom: 8em;
+  .team-img img {
+    display: block;
+    width: 200%;
+    margin-right: auto;
+    margin-left: -50%;
   }
 }
 #twitter {
@@ -718,12 +736,13 @@ iframe#twitter-widget-0 {
   background-color: #262626;
 }
 @media (max-width: 767px) {
+  #sticky,
+  .blog-single #sticky {
+    padding-bottom: 4em;
+  }
   .blog-home #sticky {
     display: none;
     visibility: hidden;
-  }
-  .blog-single #sticky {
-    padding-bottom: 3em;
   }
   .blog-single h5,
   .blog-single p,
@@ -1241,6 +1260,51 @@ _:-o-prefocus .styled-select,
   #blog-posts {
     margin-top: 2em;
   }
+  .nav-tabs {
+    margin: 37px auto 0 auto;
+    border: 2px solid #262626;
+    border-radius: 2px;
+  }
+  .nav-tabs li {
+    width: 100%;
+    border: none;
+  }
+  .btn-group.open .dropdown-menu {
+    box-shadow: none;
+  }
+  .nav-tabs li.active a {
+    border: none;
+  }
+  .single-previous-next,
+  hr.below-single-previous-next,
+  hr.below-single-share {
+    display: none;
+    visibility: hidden;
+  }
+  .single-share .pull-left {
+    float: none !important;
+  }
+  .single-social-logos {
+    width: 100%;
+    float: left;
+    margin-bottom: 4em;
+  }
+  .single-social-logos ul {
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .single-social-logos li {
+    float: left;
+    margin: 0 0.25em;
+  }
+  .single-social-logos img {
+    margin-left: 0;
+  }
+  .single-share .pull-left h4 {
+    margin-top: 0;
+    font-size: 15px;
+  }
 }
 @media (min-width: 768px) {
   hr.below-categories {
@@ -1359,9 +1423,11 @@ li.more-img img {
   letter-spacing: 1px;
   margin-top: 1em;
 }
-.single-social-logos img {
-  margin-left: 0.5em;
-  float: right;
+@media (min-width: 768px) {
+  .single-social-logos img {
+    margin-left: 0.5em;
+    float: right;
+  }
 }
 ul.post-more li.more-text.prev {
   background: url("../img/post-previous.svg") no-repeat left top;
@@ -1392,9 +1458,6 @@ ul.post-more li.more-text.next a {
     margin-top: 44px;
   }
 }
-#carousel-intro .item {
-  min-height: calc(100vh - 59px);
-}
 #carousel-inside .item .container {
   overflow: auto;
 }
@@ -1418,6 +1481,11 @@ ul.post-more li.more-text.next a {
   margin: 0;
 }
 @media (max-width: 767px) {
+  .carousel-caption {
+    margin: 1em auto 0 auto;
+  }
+}
+@media (max-height: 900px) {
   .carousel-caption {
     margin: 1em auto 0 auto;
   }
@@ -1476,12 +1544,28 @@ ul.post-more li.more-text.next a {
   padding-top: 2em;
 }
 #carousel-dedicated .carousel-inner > .item .carousel-img {
-  height: 100px;
   margin-bottom: 1em;
 }
 #carousel-dedicated .carousel-inner > .item > img {
   min-width: initial;
   max-width: 100%;
+}
+@media (max-width: 767px) {
+  #dedicated-details {
+    padding-bottom: 0;
+  }
+  #carousel-dedicated h5 {
+    margin: 2em auto;
+  }
+  #carousel-dedicated p {
+    margin-bottom: 3em;
+  }
+  #carousel-dedicated .carousel-inner p.btn {
+    margin-bottom: 7em;
+  }
+  #carousel-dedicated .carousel-indicators {
+    bottom: 4%;
+  }
 }
 .carousel-control .glyphicon-chevron-left {
   margin-left: -40%;
@@ -1517,16 +1601,13 @@ ul.post-more li.more-text.next a {
 .carousel-indicators {
   position: absolute;
   border: 5px;
-  bottom: 8%;
 }
-@media screen and (min-width: 768px) {
+@media screen and (max-height: 900px) {
   .carousel-indicators {
-    bottom: 8%;
+    bottom: 2%;
   }
-}
-@media (max-height: 710px) and (min-width: 768px) {
-  .carousel-indicators {
-    bottom: 3%;
+  #carousel-inside .item .container .row .col-md-12 img {
+    max-height: 60vh;
   }
 }
 .carousel-indicators li,
@@ -1716,8 +1797,5 @@ button.close:hover {
   }
   h6 {
     font-size: 15px;
-  }
-  #carousel-inside .item .container .row .col-md-12 img {
-    max-height: 60vh;
   }
 }
