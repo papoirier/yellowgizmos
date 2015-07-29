@@ -98,7 +98,7 @@ jQuery(document).ready(function($) {
 
         // BLOG // --------------------------------------------------------------
         $(function() {
-            if (w < 767 && ($("body").hasClass("blog"))) {
+            if (w < 767 && ($("body").hasClass("blog-home"))) {
                 // add elements
                 $("#blog-tabs").addClass("dropdown-menu").wrap("<div class='btn-group'>").before("<button type=\"button\" class=\"btn dropdown-toggle\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">ALL<span class=\"caret\"></span></button>");
                 // strip classes
