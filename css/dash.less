@@ -29,6 +29,7 @@ html {
 /* Dash Navbar Left = dnl
 / -------------------------------------------------- */
 @black:       rgb(38,38,38);
+@black-alpha:           rgba(38,38,38, 0.25);
 @navbar-height: 59px;
 @navbar-height-mobile: 44px;
 .dash-navbar-left {
@@ -55,7 +56,7 @@ html {
         left: -100%;
     }
     .dash-navbar-left.dnl-hidden {
-      left: -100% ;
+        left: -100% ;
     }
     .dash-navbar-left.dnl-visible.dnl-show {
         left: 0;
@@ -63,13 +64,6 @@ html {
     .dash-navbar-left {
         width: 100%;
         top: @navbar-height-mobile;
-        bottom: 0;
-        overflow-y: auto;
-        z-index: 999;
-        padding-top: 5px;
-        -webkit-transition: left 300ms;
-        -o-transition: left 300ms;
-        transition: left 300ms;
     }
 }
 .dash-navbar-left .dnl-nav-title {

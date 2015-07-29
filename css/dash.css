@@ -56,13 +56,6 @@ html {
   .dash-navbar-left {
     width: 100%;
     top: 44px;
-    bottom: 0;
-    overflow-y: auto;
-    z-index: 999;
-    padding-top: 5px;
-    -webkit-transition: left 300ms;
-    -o-transition: left 300ms;
-    transition: left 300ms;
   }
 }
 .dash-navbar-left .dnl-nav-title {

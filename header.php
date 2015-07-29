@@ -25,5 +25,14 @@
 		<![endif]-->
 		<?php wp_head(); ?>
 	</head>
+	<?php if ( is_home() ) { ?>
+    	<body class="blog-home">
+    <?php } ?>
+    <?php if ( is_single() ) { ?>
+    	<body class="blog-single">
+    <?php } else { ?>
+        <body>
+    <?php } ?>
+	
 	<?php include_once "navigation.php"; ?>
-	<div class="content-wrap dnl-hidden content-opacity" data-effect="dnl-overlay">
+		<div class="content-wrap dnl-hidden content-opacity" data-effect="dnl-overlay">

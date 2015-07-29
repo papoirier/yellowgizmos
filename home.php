@@ -13,7 +13,7 @@
             </div>
         </div>
     </div>
-    <hr>
+    <hr class="below-search">
     <div class="container">
 		<div class="row" id="blog-categories">
 	    	<div class="col-md-8 col-md-offset-2">
@@ -27,7 +27,7 @@
             </div>
         </div>
     </div>			
-
+    <hr class="below-categories">
 	<div class="tab-content">
 		<div role="tabpanel" class="tab-pane fade in active" id="all">
             <?php

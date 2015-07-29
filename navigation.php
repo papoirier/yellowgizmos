@@ -35,7 +35,7 @@
             <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>">Home</a></li>
             <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>#about">About</a></li>
             <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>#team">Team</a></li>
-            <li><a href="<?php echo get_page_link(6); ?>">Blog</a></li>
+            <li><a href="<?php echo esc_url( home_url( '/blog/' ) );; ?>">Blog</a></li>
             <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>#contact">Contact</a></li>
         </ul>
         <?php } ?>

@@ -10,7 +10,7 @@ jQuery(document).ready(function($) {
 					dnlBtnCollapse     = $(".dnl-btn-collapse"),
 					contentWrap        = $(".content-wrap"),
 					contentWrapEffect  = contentWrap.data("effect"),
-					windowHeight       = $(window).height() - 61,
+					windowHeight       = $(window).height() - 44,
 					windowWidth        = $(window).width() < 767;
 
 		// Functions
@@ -88,9 +88,9 @@ jQuery(document).ready(function($) {
 				hamburger();
 			}
 		});
-		$( '.menu-content a' ).click(function(e) {
+		$( '.menu-content a' ).click(function() {
 			if ( $( '.content-wrap' ).hasClass( 'dnl-overlay' ) ) {
-				e.preventDefault();
+				//e.preventDefault();
 				dnlHide();
 				hamburger();
 			}

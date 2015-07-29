@@ -390,6 +390,10 @@ h5 a:hover {
   .navbar-brand img {
     width: 80px;
   }
+  body.blog-single .navbar-brand img,
+  body.blog-home .navbar-brand img {
+    width: 130px;
+  }
   .dnl-btn-toggle {
     border: none;
     margin: 15px 0 0 14px;
@@ -713,6 +717,26 @@ iframe#twitter-widget-0 {
 #sticky {
   background-color: #262626;
 }
+@media (max-width: 767px) {
+  .blog-home #sticky {
+    display: none;
+    visibility: hidden;
+  }
+  .blog-single #sticky {
+    padding-bottom: 3em;
+  }
+  .blog-single h5,
+  .blog-single p,
+  .blog-single ul li {
+    text-align: left;
+  }
+  .post-category .post-cat-img {
+    margin-bottom: 1em;
+  }
+  .post-category li h5 {
+    margin: 0;
+  }
+}
 #sticky h3,
 #sticky h4,
 #sticky h5,
@@ -744,6 +768,19 @@ iframe#twitter-widget-0 {
   display: block;
   max-width: 100%;
   min-height: auto;
+}
+@media (max-width: 767px) {
+  .img-sticky-bg {
+    background-size: 50%;
+    background-position: top center;
+    padding-top: 4em;
+  }
+  .img-sticky-bg img {
+    margin-top: 0;
+    width: 50vw;
+    height: 50vw;
+    margin-left: 12%;
+  }
 }
 #sticky .btn {
   margin-top: 1em;
@@ -1157,6 +1194,59 @@ _:-o-prefocus .styled-select,
   width: 100%;
   font-size: 26px;
   border: none;
+}
+.btn-group.open .dropdown-toggle {
+  box-shadow: none;
+}
+@media (max-width: 767px) {
+  #blog-search {
+    margin-top: 1em;
+    text-align: left;
+  }
+  #blog-search img {
+    width: 20px;
+  }
+  #blog-search form input {
+    font-size: 15px;
+  }
+  .btn-group {
+    display: block;
+    margin-top: 1em;
+  }
+  .btn-group button {
+    width: 100%;
+    text-align: left;
+    text-transform: uppercase;
+  }
+  button .caret {
+    float: right;
+    margin-top: 6px;
+    margin-right: 0;
+  }
+  button.btn.dropdown-toggle {
+    background-color: transparent;
+    border-radius: 2px;
+    border: 2px solid #262626;
+    color: #262626;
+    font-family: "Apercu Bold";
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 12px;
+    padding: 10px 18px 8px 18px;
+  }
+  hr.below-search {
+    display: none;
+    visibility: hidden;
+  }
+  #blog-posts {
+    margin-top: 2em;
+  }
+}
+@media (min-width: 768px) {
+  hr.below-categories {
+    display: none;
+    visibility: hidden;
+  }
 }
 #blog-search form input::-webkit-input-placeholder {
   color: #262626;

@@ -9,11 +9,6 @@ jQuery(document).ready(function($) {
         $('#loading').hide();
         $('.content-wrap').fadeIn();
     };
-    
-    // // hamburger menu
-    // $('#nav-icon3').click(function(){
-    //     $(this).toggleClass('open');
-    // });
 
     // tabs
     $('#myTabs a').click(function (e) {
@@ -71,6 +66,24 @@ jQuery(document).ready(function($) {
     $(".hear option:first").html('How did you hear about us?*');
     $(".state option:first").html('State (US and Canada only)*');
 
+
+    // ABOUT // ------------------------------------------------------------
+
+    // about pages carousels
+    $('#carousel-publishers > .carousel-inner > .item:first').addClass('active');
+    $('#carousel-advertisers > .carousel-inner > .item:first').addClass('active');
+    $('#carousel-readers > .carousel-inner > .item:first').addClass('active col-md-offset-1-5');
+    $('#carousel-dedicated > .carousel-inner > .item:first').addClass('active');
+
+    // MOBILE CAROUSELS SETUP --------------------------------------------
+    
+    $("#carousel-intro, #carousel-publishers, #carousel-advertisers, #carousel-readers").swiperight(function() {  
+        $(this).carousel('prev');  
+    });  
+    $("#carousel-intro, #carousel-publishers, #carousel-advertisers, #carousel-readers").swipeleft(function() {  
+        $(this).carousel('next');  
+    }); 
+
     
     $(window).load(function() {
 
@@ -82,6 +95,22 @@ jQuery(document).ready(function($) {
         } else {
             navbarHeight = 59;
         }
+
+        // BLOG // --------------------------------------------------------------
+        $(function() {
+            if (w < 767 && ($("body").hasClass("blog"))) {
+                // add elements
+                $("#blog-tabs").addClass("dropdown-menu").wrap("<div class='btn-group'>").before("<button type=\"button\" class=\"btn dropdown-toggle\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">ALL<span class=\"caret\"></span></button>");
+                // strip classes
+                $("#blog-tabs > li").removeClass();
+                // update button text
+                $(".dropdown-menu li a").click(function(){
+                    $(this).parents(".btn-group").find('.btn').text($(this).text());
+                    $(this).parents(".btn-group").find('.btn').val($(this).text());
+                    $(".dropdown-toggle").append("<span class=\"caret\"></span>"); // add back the caret
+                });
+            };
+        });
                 
         var carouselHeight = $("#carousel-inside > .item").css("min-height", h-navbarHeight);
         var carousel = $("#carousel-inside > .item").height();
@@ -96,7 +125,6 @@ jQuery(document).ready(function($) {
             carouseInsideAlign = $("#carousel-inside > .item > .container").css("padding-top", (h/2 - carouseInsideHeight*0.5));
         };
 
-
         // twitter styling
         $("iframe#twitter-widget-0").contents().find('div.footer').remove();
         $("iframe#twitter-widget-0").contents().find('img.u-photo').remove();
@@ -105,22 +133,6 @@ jQuery(document).ready(function($) {
         var $fontweight = "normal";
         $("iframe#twitter-widget-0").contents().find('head').append('<style>.html, body, h1, h2, h3, blockquote, p, ol, ul, li, img, iframe, button, .tweet-box-button{font-family:'+$font+' !important;font-weight:'+$fontweight+' !important;} .p-author, .e-entry-content, p.e-entry-title{text-align:center !important;} li.tweet{padding-left:0 !important;} p.e-entry-title{font-size:18px !important; line-height:1.2em !important; margin-bottom: 36px !important; min-height:70px !important;} .e-entry-content{min-height:70px !important;} a.permalink{float:none; text-align:center !important;} .header{text-align:center !important;} .p-author{margin-top:-36px; padding-top:36px; margin-bottom:24px;} .p-author a, .p-name{ color: #0B84BB !important;} .header{padding:0 !important;} }</style>');
     });
-
-    // ABOUT // ------------------------------------------------------------
-
-    // about pages carousels
-    $('#carousel-publishers > .carousel-inner > .item:first').addClass('active');
-    $('#carousel-advertisers > .carousel-inner > .item:first').addClass('active');
-    $('#carousel-readers > .carousel-inner > .item:first').addClass('active col-md-offset-1-5');
-    $('#carousel-dedicated > .carousel-inner > .item:first').addClass('active');
-
-    // MOBILE CAROUSELS SETUP --------------------------------------------
-    $("#carousel-intro, #carousel-publishers, #carousel-advertisers, #carousel-readers").swiperight(function() {  
-        $(this).carousel('prev');  
-    });  
-    $("#carousel-intro, #carousel-publishers, #carousel-advertisers, #carousel-readers").swipeleft(function() {  
-        $(this).carousel('next');  
-    }); 
 
     // ------------------------------------------------------------
 
@@ -142,40 +154,6 @@ jQuery(document).ready(function($) {
         $("#about-intro").css("padding-top", $height/2 - aboutIntroHeight*0.65 );
 
     });
-
-    // VIMEO // -------------------------------------------------------
-
-    $(function() {
-    var iframe = $('#player1')[0];
-    var player = $f(iframe);
-    var status = $('.status');
-
-    // When the player is ready, add listeners for pause, finish, and playProgress
-    player.addEvent('ready', function() {
-        status.text('ready');
-        
-        player.addEvent('pause', onPause);
-        player.addEvent('finish', onFinish);
-        player.addEvent('playProgress', onPlayProgress);
-    });
-
-    // Call the API when a button is pressed
-    $('#my-modal-1').bind('click', function() {
-        player.api('pause');
-    });
-
-    function onPause(id) {
-        status.text('paused');
-    }
-
-    function onFinish(id) {
-        status.text('finished');
-    }
-
-    function onPlayProgress(data, id) {
-        status.text(data.seconds + 's played');
-    }
-}); 
 
     // SMOOTH SCROLLING // --------------------------------------------
 
