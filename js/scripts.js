@@ -152,6 +152,22 @@ jQuery(document).ready(function($) {
                 });
             };
         });
+        // FAQ PAGE // --------------------------------------------------------------
+        $(function() {
+            // add dropdown menu
+            if (w < 767) {
+                // add elements
+                $("#tabs-faq").addClass("dropdown-menu").wrap("<div class='btn-group'>").before("<button type=\"button\" class=\"btn dropdown-toggle\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">GENERAL<span class=\"caret\"></span></button>");
+                // strip classes
+                $("#tabs-faq > li").removeClass();
+                // update button text
+                $(".dropdown-menu li a").click(function(){
+                    $(this).parents(".btn-group").find('.btn').text($(this).text());
+                    $(this).parents(".btn-group").find('.btn').val($(this).text());
+                    $(".dropdown-toggle").append("<span class=\"caret\"></span>"); // add back the caret
+                });
+            }
+         });
 
         // about pages carousels
         if (w <= 767) {
