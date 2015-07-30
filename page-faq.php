@@ -30,7 +30,7 @@
         </div>
     </div>
 
-    <div class="container">
+    <div class="container faq">
 		<div id="myTabContent" class="tab-content">
 			<div role="tabpanel" class="tab-pane fade active in" id="faq-general" aria-labelledby="faq-general-tab">
 				<div id="general">

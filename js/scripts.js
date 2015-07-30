@@ -9,7 +9,7 @@ jQuery(document).ready(function($) {
         var h = $(window).height();
         var w = $(window).width();
 
-    var navbarHeight;
+        var navbarHeight;
         
         if (w <= 767) {
             navbarHeight = 44;
@@ -29,7 +29,57 @@ jQuery(document).ready(function($) {
         } else {
             carouseInsideAlign = $("#carousel-inside > .item > .container").css("padding-top", (h/2 - carouseInsideHeight*0.53));
         };
+
+
+        function btnTextUpdate() {
+            $(".dropdown-menu > li").click(function(){
+                $(this).parents(".btn-group").find('.btn').text($(this).text());
+                $(this).parents(".btn-group").find('.btn').val($(this).text());
+                $(".dropdown-toggle").append("<span class=\"caret\"></span>"); // add back the caret
+            });
+        }
+
+        // BLOG PAGE // --------------------------------------------------------------
+        $(function() {
+            // add dropdown menu
+            if (w < 767 && ($("body").hasClass("blog-home"))) {
+                // add elements
+                $("#blog-tabs").addClass("dropdown-menu").wrap("<div class='btn-group'>").before("<button type=\"button\" class=\"btn dropdown-toggle\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">ALL<span class=\"caret\"></span></button>");
+                // strip class
+                $("#blog-tabs > li").click(function(){
+                    $("#blog-tabs > li").removeClass("active");
+                });
+                btnTextUpdate();
+            };
+        });
+        // FAQ PAGE // --------------------------------------------------------------
+        $(function() {
+            // add dropdown menu
+            if (w < 767) {
+                // add elements
+                $("#tabs-faq").addClass("dropdown-menu").wrap("<div class='btn-group'>").before("<button type=\"button\" class=\"btn dropdown-toggle\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">GENERAL<span class=\"caret\"></span></button>");
+                // strip class
+                $(".dropdown-menu > li").click(function(){
+                    $(".dropdown-menu > li").removeClass("active");
+                });
+                btnTextUpdate();
+            }
+         });
+
+        // twitter styling
+        $("iframe#twitter-widget-0").contents().find('div.footer').remove();
+        $("iframe#twitter-widget-0").contents().find('img.u-photo').remove();
+
+        var $font = "'Apercu Regular','Apercu', Helvetica, Georgia";
+        var $fontweight = "normal";
+        $("iframe#twitter-widget-0").contents().find('head').append('<style>.html, body, h1, h2, h3, blockquote, p, ol, ul, li, img, iframe, button, .tweet-box-button{font-family:'+$font+' !important;font-weight:'+$fontweight+' !important;} .p-author, .e-entry-content, p.e-entry-title{text-align:center !important;} li.tweet{padding-left:0 !important;} p.e-entry-title{font-size:18px !important; line-height:1.2em !important; margin-bottom: 36px !important; min-height:70px !important;} .e-entry-content{min-height:70px !important;} a.permalink{float:none; text-align:center !important;} .header{text-align:center !important;} .p-author{margin-top:-36px; padding-top:36px; margin-bottom:24px;} .p-author a, .p-name{ color: #0B84BB !important;} .header{padding:0 !important;} }</style>');
+    
+
+
     });
+
+
+
     function show() {
         $('#loading').hide();
         $('.content-wrap').fadeIn();
@@ -109,18 +159,6 @@ jQuery(document).ready(function($) {
         $(this).carousel('next');  
     }); 
 
-    
-    $(window).load(function() {
-
-        // twitter styling
-        $("iframe#twitter-widget-0").contents().find('div.footer').remove();
-        $("iframe#twitter-widget-0").contents().find('img.u-photo').remove();
-
-        var $font = "'Apercu Regular','Apercu', Helvetica, Georgia";
-        var $fontweight = "normal";
-        $("iframe#twitter-widget-0").contents().find('head').append('<style>.html, body, h1, h2, h3, blockquote, p, ol, ul, li, img, iframe, button, .tweet-box-button{font-family:'+$font+' !important;font-weight:'+$fontweight+' !important;} .p-author, .e-entry-content, p.e-entry-title{text-align:center !important;} li.tweet{padding-left:0 !important;} p.e-entry-title{font-size:18px !important; line-height:1.2em !important; margin-bottom: 36px !important; min-height:70px !important;} .e-entry-content{min-height:70px !important;} a.permalink{float:none; text-align:center !important;} .header{text-align:center !important;} .p-author{margin-top:-36px; padding-top:36px; margin-bottom:24px;} .p-author a, .p-name{ color: #0B84BB !important;} .header{padding:0 !important;} }</style>');
-    });
-
     // ------------------------------------------------------------
 
     $(window).on("load resize", function(){
@@ -136,38 +174,7 @@ jQuery(document).ready(function($) {
             navbarHeight = 59;
         }
 
-        // BLOG PAGE // --------------------------------------------------------------
-        $(function() {
-            // add dropdown menu
-            if (w < 767 && ($("body").hasClass("blog-home"))) {
-                // add elements
-                $("#blog-tabs").addClass("dropdown-menu").wrap("<div class='btn-group'>").before("<button type=\"button\" class=\"btn dropdown-toggle\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">ALL<span class=\"caret\"></span></button>");
-                // strip classes
-                $("#blog-tabs > li").removeClass();
-                // update button text
-                $(".dropdown-menu li a").click(function(){
-                    $(this).parents(".btn-group").find('.btn').text($(this).text());
-                    $(this).parents(".btn-group").find('.btn').val($(this).text());
-                    $(".dropdown-toggle").append("<span class=\"caret\"></span>"); // add back the caret
-                });
-            };
-        });
-        // FAQ PAGE // --------------------------------------------------------------
-        $(function() {
-            // add dropdown menu
-            if (w < 767) {
-                // add elements
-                $("#tabs-faq").addClass("dropdown-menu").wrap("<div class='btn-group'>").before("<button type=\"button\" class=\"btn dropdown-toggle\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">GENERAL<span class=\"caret\"></span></button>");
-                // strip classes
-                $("#tabs-faq > li").removeClass();
-                // update button text
-                $(".dropdown-menu li a").click(function(){
-                    $(this).parents(".btn-group").find('.btn').text($(this).text());
-                    $(this).parents(".btn-group").find('.btn').val($(this).text());
-                    $(".dropdown-toggle").append("<span class=\"caret\"></span>"); // add back the caret
-                });
-            }
-         });
+        
 
         // about pages carousels
         if (w <= 767) {
