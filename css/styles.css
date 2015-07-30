@@ -1,3 +1,6 @@
+html {
+  background-color: #ededed;
+}
 .yellow {
   background-color: #fdd147;
 }
@@ -25,7 +28,7 @@
   background-color: #faa938;
 }
 .white {
-  background-color: #FFF;
+  background-color: #ededed;
   color: #262626;
 }
 .center-block p {
@@ -607,13 +610,24 @@ ul.navbar-yieldmo li {
   margin-top: 2em;
   margin-bottom: 2em;
 }
+#readers {
+  margin-bottom: 0;
+}
 #publishers .container,
 #advertisers .container,
 #readers .container {
   padding-top: 2em;
-  padding-bottom: 2em;
+  padding-bottom: 0;
 }
 @media (max-width: 767px) {
+  .shape-spacer {
+    display: none;
+    visibility: hidden;
+  }
+  #about .shape {
+    margin: 0;
+    margin-top: -5em;
+  }
   #publishers .container.bottom {
     background-color: #fdd147;
   }
@@ -642,7 +656,7 @@ ul.navbar-yieldmo li {
   }
 }
 #dedicated {
-  background-color: #FFF;
+  background-color: #ededed;
   clear: both;
   padding-top: 4em;
 }
@@ -667,6 +681,9 @@ ul.navbar-yieldmo li {
   box-shadow: none;
 }
 @media (max-width: 767px) {
+  #dedicated {
+    padding-top: 4em;
+  }
   #dedicated-phone button.btn-default {
     font-size: 12px;
     padding: 10px 12px 8px 12px;
@@ -759,7 +776,13 @@ ul.navbar-yieldmo li {
   }
 }
 #twitter {
+  background-color: #ededed;
   padding-top: 3em;
+}
+@media (max-width: 767px) {
+  #twitter {
+    padding-top: 2em;
+  }
 }
 iframe#twitter-widget-0 {
   height: auto !important;
@@ -1064,6 +1087,7 @@ footer .social-logos ul li {
 }
 .wpcf7-form-control-wrap input {
   border-bottom: 1px solid #262626;
+  border-radius: 0px;
   background-color: transparent;
   color: #262626;
   font-family: "Apercu Italic";

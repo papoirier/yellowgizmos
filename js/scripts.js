@@ -1,9 +1,34 @@
 jQuery(document).ready(function($) {
 
+    
+
     $('.navbar').fadeIn();
 
     $(window).load(function() {
         show();
+        var h = $(window).height();
+        var w = $(window).width();
+
+    var navbarHeight;
+        
+        if (w <= 767) {
+            navbarHeight = 44;
+        } else {
+            navbarHeight = 59;
+        }
+
+        var carouselHeight = $("#carousel-inside > .item").css("min-height", h-navbarHeight);
+        var carousel = $("#carousel-inside > .item").height();
+        
+        var carouseContainerHeight = $("#carousel-inside > .item > .container").css("min-height", (h*0.8)-navbarHeight);
+        var carouseInsideHeight = $("#carousel-inside > .item > .container").height();
+        console.log("carousel height: "+carouseInsideHeight);
+        var carouseInsideAlign;
+        if (h <= 900) {
+            carouseInsideAlign = $("#carousel-inside > .item > .container").css("padding-top", (h/2 - carouseInsideHeight*0.58));
+        } else {
+            carouseInsideAlign = $("#carousel-inside > .item > .container").css("padding-top", (h/2 - carouseInsideHeight*0.53));
+        };
     });
     function show() {
         $('#loading').hide();
@@ -100,9 +125,11 @@ jQuery(document).ready(function($) {
 
     $(window).on("load resize", function(){
 
+        h = $(window).height();
+        w = $(window).width();
+
         var navbarHeight;
-        var h = $(window).height();
-        var w = $(window).width();
+        
         if (w <= 767) {
             navbarHeight = 44;
         } else {
@@ -141,19 +168,6 @@ jQuery(document).ready(function($) {
         var rethinking = $("#rethinking").height();
         var aboutIntroHeight = $("#about-intro").height();
         $("#about-intro").css("padding-top", h/2 - aboutIntroHeight*0.65 );
-
-        var carouselHeight = $("#carousel-inside > .item").css("min-height", h-navbarHeight);
-        var carousel = $("#carousel-inside > .item").height();
-        
-        var carouseContainerHeight = $("#carousel-inside > .item > .container").css("min-height", (h*0.8)-navbarHeight);
-        var carouseInsideHeight = $("#carousel-inside > .item > .container").height();
-        console.log("carousel height: "+carouseInsideHeight);
-        var carouseInsideAlign;
-        if (h <= 900) {
-            carouseInsideAlign = $("#carousel-inside > .item > .container").css("padding-top", (h/2 - carouseInsideHeight*0.58));
-        } else {
-            carouseInsideAlign = $("#carousel-inside > .item > .container").css("padding-top", (h/2 - carouseInsideHeight*0.53));
-        };
 
     });
 
