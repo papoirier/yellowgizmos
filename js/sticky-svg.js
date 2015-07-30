@@ -61,7 +61,7 @@ jQuery(document).ready(function($) {
 			$(window).scroll(function(){
 			    var y = $(window).scrollTop();		
 				if (y < adv - shapeSpacer) {
-			    	$("#shape").css({"position":"absolute", "top": adv - sha - shapeSpacer - navbarHeight});
+			    	$("#shape").css({"position":"absolute", "top": adv - sha - shapeSpacer - navbarHeight*2});
 			    };
 			    if (y >= pub + pubHeight - h && y <= rea + reaHeight - h) {
 			    	$("#shape").css({"position":"fixed", "top": h - sha});

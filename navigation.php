@@ -13,8 +13,8 @@
             <a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="home"><img src="<?php echo get_stylesheet_directory_uri() ?>/img/logo-navbar.svg" title="logo" alt="Yieldmo logo" class="img-responsive"></a>
         <?php } ?>
         <ul class="navbar-yieldmo navbar-text navbar-right text-right">
-            <li id="nav-contact"><a href="#contact">Contact</a></li>
             <li id="nav-ad-formats"><a href="http://adformatlab.yieldmo.com">Ad Formats</a></li>
+            <li id="nav-contact"><a href="#contact">Contact</a></li>
             <li id="nav-login" class="btn btn-default"><a href="#login">Log in</a></li>
         </ul>
     </div>      

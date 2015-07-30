@@ -59,9 +59,14 @@
             <div class="col-md-4">
                 <?php $category = get_the_category(); ?>
                 <img src="<?php echo get_stylesheet_directory_uri() ?>/img/cat/<?php echo $category[0]->category_nicename ;?>.svg" alt="arrow" title="Continue reading arrow" class="">
-                <h5 class="text-yellow"><?php echo get_cat_name($latest_blog_posts); ?></h5>
+                <h5 class="text-yellow"><?php foreach((get_the_category()) as $category) { echo $category->cat_name . ' '; }?></h5>
                 <h5><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h5>
                 <p><?php the_excerpt(); ?></p>
+                <?php $continue = "Continue reading";?>
+                <ul class="post-more">
+                    <li class="more-img"><a href="<?php the_permalink(); ?>"><img src="<?php echo get_stylesheet_directory_uri() ?>/img/btn-continue.svg" alt="arrow" title="Continue reading arrow"></a></li>
+                    <li class="more-text"><a href="<?php the_permalink(); ?>" title="<?php echo $continue; ?>"><?php echo $continue; ?></a></li>
+                </ul>
             </div>
 
              <?php $counter++;
