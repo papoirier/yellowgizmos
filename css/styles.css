@@ -406,7 +406,7 @@ h5 a:hover {
     padding: 16px 0px 0px 8px;
   }
   .navbar-brand img {
-    width: 70px;
+    width: 75px;
   }
   body.blog-single .navbar-brand img,
   body.blog-home .navbar-brand img {
@@ -667,7 +667,7 @@ ul.navbar-yieldmo li {
     background-color: #f27f8a;
   }
   #about .carousel-inner .item {
-    min-height: 280px;
+    min-height: 310px;
     margin-bottom: 2em;
   }
 }
@@ -1225,6 +1225,11 @@ footer .social-logos ul li {
   background: transparent;
   border: none;
   -webkit-appearance: none;
+}
+select {
+  -moz-appearance: none;
+  text-indent: 0.01px;
+  text-overflow: '';
 }
 @media (max-width: 767px) {
   .styled-select select {
@@ -1892,21 +1897,22 @@ ul.post-more li.more-text.next a {
 }
 .carousel-indicators li,
 .carousel-indicators li.active {
-  border: none !important;
+  border: 1px solid #262626;
   background-color: #262626;
-  width: 6px;
-  height: 6px;
-  max-width: 6px;
-  max-height: 6px;
+  width: 7px;
+  height: 7px;
+  max-width: 7px;
+  max-height: 7px;
   margin: 5px !important;
 }
 .carousel-indicators .active {
   opacity: 1;
-  width: 6px;
-  height: 6px;
+  width: 7px;
+  height: 7px;
 }
 .carousel-indicators li {
   background-color: #ededed;
+  border: 1px solid #ededed;
 }
 #carousel-publishers .carousel-control,
 #carousel-advertisers .carousel-control,

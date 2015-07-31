@@ -2,25 +2,32 @@
 
 <?php 
 /*
+ * yg.papoirier.org
+ *
+ * home             ->   5
+ *
  * carousel         -> 197
- *
- * blog 			->   5
- *
- * rethinking 		->  15
- * publishers 		->  17
- * advertisers 		->  18
- * readers 			->  19
- *
- * dedicated ads 	->  91 / 101
- * ad format lab 	->  41
  * 
- * team 			->  57
+ * smart & pretty   ->  15
+ * publishers       ->  17
+ * advertisers      ->  18
+ * readers          ->  19
+ *
+ * dedicated ads    -> 101
+ * ad format lab    ->  41
+ * 
+ * team (got chops) ->  57
  *  
- * about 			->  62
- * careers 			->  64
- *
- * contact 			->  67
+ * about            ->  62
+ * blog             ->   6
+ * contact          ->  67
  * 
+ * -------- PAGES ---------
+ * 
+ * careers          -> 141
+ * terms            -> 126
+ * faq              -> 125
+ *
  */
 ?>
 

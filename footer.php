@@ -1,15 +1,32 @@
 <?php 
-/* FOOTER -------------------------------
+/* FOOTER ------------------------------- 
+ * yg.papoirier.org
  *
- * Careers 			-> 175
- * Ad Format Lab 	-> 177
- * Terms 			-> 178
+ * home             ->   5
  *
- * Contact 			->  93
- * FAQ 				-> 182
- * About 			-> 408
+ * carousel         -> 197
+ * 
+ * smart & pretty   ->  15
+ * publishers       ->  17
+ * advertisers      ->  18
+ * readers          ->  19
  *
- */ 
+ * dedicated ads    -> 101
+ * ad format lab    ->  41
+ * 
+ * team (got chops) ->  57
+ *  
+ * about            ->  62
+ * blog             ->   6
+ * contact          ->  67
+ * 
+ * -------- PAGES ---------
+ * 
+ * careers          -> 141
+ * terms            -> 126
+ * faq              -> 125
+ *
+ */
 ?>
 	<footer>
 		<div class="container">
@@ -35,14 +52,6 @@
 		        </div>
 		        <div class="col-md-3 legals">
 		        	<ul>
-		        		<?php 
-		        		/* About 	->  62
-		        		 * Blog 	->   5
-		        		 * Careers 	->  64 // 141
-		        		 * FAQ 		-> 118 // 125
-		        		 * Terms 	-> 119 // 126
-		        		 */
-		        		?>
 		        		<li><a href="<?php echo get_page_link(141); ?>">Careers</a></li>
 		        		<li><a href="<?php echo get_page_link(125); ?>">FAQ</a></li>
 		        		<li><a href="<?php echo get_page_link(126); ?>">Terms &amp; Privacy</a></li>
