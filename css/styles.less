@@ -245,9 +245,9 @@ a:hover {
 @btn-height: 42px;
 @media (max-width: 767px) {
 	@font-size-base: 14px;
-	@font-size-h1: floor((@font-size-base * 2.4));
-	@font-size-h2: floor((@font-size-base * 2)); 
-	@font-size-h3: ceil((@font-size-base * 1.66667)); 
+	@font-size-h1: floor((@font-size-base * 2.3));
+	@font-size-h2: floor((@font-size-base * 1.9)); 
+	@font-size-h3: ceil((@font-size-base * 1.56667)); 
 	@font-size-h4: ceil((@font-size-base * 1.2)); 
 	@font-size-h5: @font-size-base;
 	@font-size-h6: ceil((@font-size-base * 1)); 
@@ -754,7 +754,7 @@ ul.navbar-yieldmo li {
 		display: block;
 		visibility: visible;
 		margin: 0;
-		margin-top: -5em;
+		margin-top: -200px;
 	}
 	#publishers .container.bottom {
 		background-color: @yellow;
@@ -899,7 +899,7 @@ ul.navbar-yieldmo li {
 		visibility: hidden;
 	}
 	.container.afl-mobile .polka {
-		margin-bottom: 4em;
+		margin-bottom: 1em;
 	}
 }
 
@@ -967,6 +967,16 @@ iframe#twitter-widget-0 {
 // NEWS // -------------------------------------
 #sticky {
 	background-color: @black;
+}
+@media (max-width: 991px) {
+	#sticky,
+	.blog-single #sticky {
+		padding-bottom: 4em;
+		text-align: center;
+	}
+	#sticky .col-md-5.col-md-offset-1 {
+
+	}
 }
 @media (max-width: 767px) {
 	#sticky,
@@ -1336,6 +1346,7 @@ footer .social-logos ul li {
 .wpcf7-form-control-wrap textarea {
 	background-color: #FFF;
 	max-height: 150px;
+	border-radius: 0;
 }
 .form-message {
 	//margin-top: 1em;
@@ -1429,7 +1440,7 @@ _:-o-prefocus, .selector {
 .mail-phone h5 {
 	margin-top: 0;
 }
-@media (max-width: 767px) {
+@media (max-width: 991px) {
 	#contact .text-right,
 	#contact input,
 	#contact select,
@@ -1439,6 +1450,8 @@ _:-o-prefocus, .selector {
 	select.wpcf7-form-control.wpcf7-select option {
 		text-align: center;
 	}
+}
+@media (max-width: 767px) {
 	#contact h3,
 	#contact .contact-title h3 {
 		font-size: @font-size-h5;
@@ -1782,7 +1795,7 @@ ul.post-category {
 	margin-top: 1em;
 }
 ul.post-more {
-	margin-top: 2em;
+	margin-top: 1em;
 	height: 40px;
 }
 ul.post-more:hover {
@@ -1911,20 +1924,43 @@ ul.post-more li.more-text.next a {
 
 // CAROUSEL // ---------------------------------
 @carousel-intro-height: calc(~'100vh - 59px');
-#carousel-intro .item {
-	//padding-top: @navbar-height/4;
-	//min-height: @carousel-intro-height;
-}
 #carousel-inside .item .container {
-	//padding-top: calc(~'10vh');
-}
-#carousel-inside .item .container {
-  //resize: vertical;
   overflow: auto;
 }
 #carousel-inside img {
-	//max-height: 50vh;
+	display: block;
 	margin: 0 auto;
+}
+// carousel images
+@media (min-width: 768px) {
+	#carousel-inside img.img-mobile,
+	#about img.img-mobile {
+		display: none;
+		visibility: hidden;
+	}
+}
+@media (max-width: 767px) {
+	#carousel-inside img.img-desktop,
+	#about img.img-desktop {
+		display: none;
+		visibility: hidden;
+	}
+}
+@media (max-height: 568px) {
+	#carousel-inside img.img-mobile,
+	#about img.img-mobile {
+		width: 35vh;
+		display: block;
+		margin: auto auto;
+	}
+	h1, 
+	h1 p {
+		font-size: 26px;
+		line-height: 28px;
+	}
+	.carousel-indicators {
+	    bottom: 0;
+	}
 }
 .carousel-caption {
 	//background-color: red;
@@ -2083,7 +2119,7 @@ ul.post-more li.more-text.next a {
 	.carousel-indicators {
 	    bottom: 2%;
 	}
-	#carousel-inside .item .container .row .col-md-12 img {
+	#carousel-inside img.img-desktop {
 		max-height: 60vh;
 	}
 }
@@ -2104,7 +2140,7 @@ ul.post-more li.more-text.next a {
 	height: @dot;
 }
 .carousel-indicators li {
-	background-color: @black-alpha;
+	background-color: @white;
 }
 #carousel-publishers .carousel-control,
 #carousel-advertisers .carousel-control,

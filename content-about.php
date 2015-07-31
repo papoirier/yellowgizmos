@@ -1,5 +1,3 @@
-<?php //while ($my_query->have_posts()) : $my_query->the_post(); ?>
-
 <?php while ($my_query->have_posts()) : $my_query->the_post(); ?>
 <?php $mypages = get_pages( array( 'child_of' => $post->ID, 'sort_column' => 'menu_order', 'order' => 'ASC' ) ); ?>
 
@@ -12,7 +10,11 @@
     </div>
     <div class="row">
     	<div class="col-md-12">
-    		<div class="thumb"><?php the_post_thumbnail('large', array( 'class' => 'img-responsive' )); ?></div>
+    		<div class="thumb"><?php the_post_thumbnail('large', array( 'class' => 'img-desktop img-responsive' )); ?></div>
+            <?php 
+            if (get_post_meta(get_the_ID(), 'Second Featured Image', true)) { ?>
+                <img class="img-mobile img-responsive" src="<?php echo get_post_meta(get_the_ID(), 'Second Featured Image', true); ?>">
+            <?php } ?>
         </div>
     </div>
 </div>

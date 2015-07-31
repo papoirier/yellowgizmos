@@ -1,10 +1,31 @@
 jQuery(document).ready(function($) {
 
+    var w = $(window).width();
+
+    if (w <= 767) {
+        $(function() {
+            $('#carousel-intro.carousel').carousel({
+              interval: false
+            });
+        });
+    } else {
+        $(function() {
+            $('#carousel-intro.carousel').carousel({
+              interval: 4000,
+              pause: "hover"
+            });
+        });
+    }
+
+    
     
 
     $('.navbar').fadeIn();
 
     $(window).load(function() {
+
+
+        
         show();
         var h = $(window).height();
         var w = $(window).width();
@@ -30,6 +51,7 @@ jQuery(document).ready(function($) {
             carouseInsideAlign = $("#carousel-inside > .item > .container").css("padding-top", (h/2 - carouseInsideHeight*0.53));
         };
 
+        
 
         function btnTextUpdate() {
             $(".dropdown-menu > li").click(function(){
@@ -77,8 +99,6 @@ jQuery(document).ready(function($) {
 
 
     });
-
-
 
     function show() {
         $('#loading').hide();

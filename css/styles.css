@@ -196,23 +196,23 @@ a:hover {
   }
   h1,
   h1 p {
-    font-size: 33px;
-    line-height: 36.3px;
+    font-size: 32px;
+    line-height: 35.2px;
   }
   #rethinking h1,
   #rethinking h1 p {
-    font-size: 24px;
-    line-height: 31.2px;
+    font-size: 22px;
+    line-height: 28.6px;
   }
   h2,
   h2 p {
-    font-size: 28px;
-    line-height: 33.6px;
+    font-size: 26px;
+    line-height: 31.2px;
   }
   h3,
   h3 p {
-    font-size: 24px;
-    line-height: 31.2px;
+    font-size: 22px;
+    line-height: 28.6px;
   }
   h4,
   h4 p {
@@ -658,7 +658,7 @@ ul.navbar-yieldmo li {
     display: block;
     visibility: visible;
     margin: 0;
-    margin-top: -5em;
+    margin-top: -200px;
   }
   #publishers .container.bottom {
     background-color: #fdd147;
@@ -784,7 +784,7 @@ ul.navbar-yieldmo li {
     visibility: hidden;
   }
   .container.afl-mobile .polka {
-    margin-bottom: 4em;
+    margin-bottom: 1em;
   }
 }
 #team {
@@ -837,6 +837,13 @@ iframe#twitter-widget-0 {
 }
 #sticky {
   background-color: #262626;
+}
+@media (max-width: 991px) {
+  #sticky,
+  .blog-single #sticky {
+    padding-bottom: 4em;
+    text-align: center;
+  }
 }
 @media (max-width: 767px) {
   #sticky,
@@ -1172,6 +1179,7 @@ footer .social-logos ul li {
 .wpcf7-form-control-wrap textarea {
   background-color: #FFF;
   max-height: 150px;
+  border-radius: 0;
 }
 .form-message {
   margin-bottom: 1em;
@@ -1253,7 +1261,7 @@ _:-o-prefocus .styled-select,
 .mail-phone h5 {
   margin-top: 0;
 }
-@media (max-width: 767px) {
+@media (max-width: 991px) {
   #contact .text-right,
   #contact input,
   #contact select,
@@ -1263,6 +1271,8 @@ _:-o-prefocus .styled-select,
   select.wpcf7-form-control.wpcf7-select option {
     text-align: center;
   }
+}
+@media (max-width: 767px) {
   #contact h3,
   #contact .contact-title h3 {
     font-size: 15px;
@@ -1586,7 +1596,7 @@ li.cat-item a {
   margin-top: 1em;
 }
 ul.post-more {
-  margin-top: 2em;
+  margin-top: 1em;
   height: 40px;
 }
 ul.post-more:hover {
@@ -1701,7 +1711,38 @@ ul.post-more li.more-text.next a {
   overflow: auto;
 }
 #carousel-inside img {
+  display: block;
   margin: 0 auto;
+}
+@media (min-width: 768px) {
+  #carousel-inside img.img-mobile,
+  #about img.img-mobile {
+    display: none;
+    visibility: hidden;
+  }
+}
+@media (max-width: 767px) {
+  #carousel-inside img.img-desktop,
+  #about img.img-desktop {
+    display: none;
+    visibility: hidden;
+  }
+}
+@media (max-height: 568px) {
+  #carousel-inside img.img-mobile,
+  #about img.img-mobile {
+    width: 35vh;
+    display: block;
+    margin: auto auto;
+  }
+  h1,
+  h1 p {
+    font-size: 26px;
+    line-height: 28px;
+  }
+  .carousel-indicators {
+    bottom: 0;
+  }
 }
 .carousel-caption {
   display: block;
@@ -1845,7 +1886,7 @@ ul.post-more li.more-text.next a {
   .carousel-indicators {
     bottom: 2%;
   }
-  #carousel-inside .item .container .row .col-md-12 img {
+  #carousel-inside img.img-desktop {
     max-height: 60vh;
   }
 }
@@ -1865,7 +1906,7 @@ ul.post-more li.more-text.next a {
   height: 6px;
 }
 .carousel-indicators li {
-  background-color: rgba(38, 38, 38, 0.25);
+  background-color: #ededed;
 }
 #carousel-publishers .carousel-control,
 #carousel-advertisers .carousel-control,

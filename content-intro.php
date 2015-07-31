@@ -2,7 +2,7 @@
 <?php while ($my_query->have_posts()) : $my_query->the_post(); ?>
 <?php $mypages = get_pages( array( 'child_of' => $post->ID, 'sort_column' => 'menu_order', 'order' => 'ASC' ) ); ?>
 	<section id="intro"> 
-<div id="carousel-<?php echo print_the_slug(); ?>" class="carousel slide" data-ride="carousel" data-interval="false">
+<div id="carousel-<?php echo print_the_slug(); ?>" class="carousel slide" data-ride="carousel">
 
 	<ol class="carousel-indicators">
 		<?php
@@ -54,7 +54,11 @@
 						  	    	<div class="col-md-12">
 
 							            <?php $url = wp_get_attachment_url( get_post_thumbnail_id($page->ID, 'large') ); ?>
-							        	<img src="<?php echo $url; ?>" class="img-responsive">
+							        	<img class="img-desktop" src="<?php echo $url; ?>" class="img-responsive">
+							        	<?php 
+							        	if (get_post_meta($page->ID, 'Second Featured Image', true)) { ?>
+							        		<img class="img-mobile img-responsive" src="<?php echo get_post_meta($page->ID, 'Second Featured Image', true); ?>">
+							        	<?php } ?>
 							        	<div class="carousel-caption">
 							        		<h1><?php echo $page->post_title; ?></h1>
 							        		<h4><?php echo get_secondary_title($page->ID); ?></h4`>

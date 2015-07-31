@@ -142,7 +142,6 @@ function fixed_img_caption_shortcode($attr, $content = null) {
      . do_shortcode( $content ) . '<p class="wp-caption-text">' . $caption . '</p></div>';
 }
 
-
 // SCRIPTS -----------------------------------------------------
 add_action( 'wp_enqueue_scripts', 'mobile_script' );
 function mobile_script() {
