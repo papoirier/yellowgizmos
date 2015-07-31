@@ -28,11 +28,14 @@ jQuery(document).ready(function($) {
         });
 
         // height of the navbar
+        // removing unused image
         var navbarHeight;
         if (w <= 767) {
             navbarHeight = 44;
+            $("#carousel-inside .img-desktop").remove();
         } else {
             navbarHeight = 59;
+            $("#carousel-inside .img-mobile").remove();
         }
 
         // carousel alignment
@@ -56,33 +59,7 @@ jQuery(document).ready(function($) {
         @purple:    rgb(162, 92, 186);
         @orange:    rgb(250, 169, 56);
         */
-        // indicator border color
-        if ($("#carousel-inside > .item").hasClass("green.active")) {
-            $(".carousel-indicators > li").css("border-color", "rgb(48,173,99)");
-        };
-        if ($("#carousel-inside > .item").hasClass("blue.active")) {
-            $(".carousel-indicators > li").css("border-color", "rgb(23,134,185)");
-            //$(".carousel-indicators > li.active").css("border-color", "transparent");
-        };
-        if ($("#carousel-inside > .item").hasClass("white.active")) {
-            $(".carousel-indicators > li").css("border-color", "rgb(255,255,255)");
-            //$(".carousel-indicators > li.active").css("border-color", "transparent");
-        };
-        if ($("#carousel-inside > .item").hasClass("yellow.active")) {
-            $(".carousel-indicators > li").css("border-color", "rgb(253,209,71)");
-            //$(".carousel-indicators > li.active").css("border-color", "transparent");
-        };
-        if ($("#carousel-inside > .item").hasClass("pink.active")) {
-            $(".carousel-indicators > li").css("border-color", "rgb(242,127,138)");
-            //$(".carousel-indicators > li.active").css("border-color", "transparent");
-        };
-        if ($("#carousel-inside > .item").hasClass("purple.active")) {
-            $(".carousel-indicators > li").css("border-color", "rgb(162, 92, 186)");
-        };
-        if ($("#carousel-inside > .item").hasClass("orange.active")) {
-            $(".carousel-indicators > li").css("border-color", "rgb(250, 169, 56)");
-        };
-        $(".carousel-indicators > li.active").css("border-color", "transparent");
+        
 
         // update text of button (faq, blog)
         function btnTextUpdate() {
@@ -126,7 +103,7 @@ jQuery(document).ready(function($) {
 
         var $font = "'Apercu Regular','Apercu', Helvetica, Georgia";
         var $fontweight = "normal";
-        $("iframe#twitter-widget-0").contents().find('head').append('<style>.html, body, h1, h2, h3, blockquote, p, ol, ul, li, img, iframe, button, .tweet-box-button{font-family:'+$font+' !important;font-weight:'+$fontweight+' !important;} .p-author, .e-entry-content, p.e-entry-title{text-align:center !important;} li.tweet{padding-left:0 !important;} p.e-entry-title{font-size:18px !important; line-height:1.2em !important; margin-bottom: 36px !important; min-height:70px !important;} .e-entry-content{min-height:70px !important;} a.permalink{float:none; text-align:center !important;} .header{text-align:center !important;} .p-author{margin-top:-36px; padding-top:36px; margin-bottom:24px;} .p-author a, .p-name{ color: #0B84BB !important;} .header{padding:0 !important;} }</style>');
+        $("iframe#twitter-widget-0").contents().find('head').append('<style>.html, body, h1, h2, h3, blockquote, p, ol, ul, li, img, iframe, button, .tweet-box-button{font-family:'+$font+' !important;font-weight:'+$fontweight+' !important;} .p-author, .e-entry-content, p.e-entry-title{text-align:center !important;} li.tweet{padding-left:0 !important;} p.e-entry-title{font-size:18px !important; line-height:1.2em !important; margin-bottom: 20px !important; min-height:90px !important;} .e-entry-content{min-height:70px !important;} a.permalink{float:none; text-align:center !important;} .header{text-align:center !important;} .p-author{margin-top:-36px; padding-top:36px; margin-bottom:24px;} .p-author a, .p-name{ color: #0B84BB !important;} .header{padding:0 !important;} .twtr-avatar { display: none !important; } }</style>');
     
     });
 

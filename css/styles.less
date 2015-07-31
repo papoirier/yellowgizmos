@@ -28,6 +28,10 @@
 @navbar-height: 59px;
 @navbar-height-mobile: 44px;
 
+@iphone-browser: 216px;
+@iphone-5-height: 568px;
+@iphone-6-height: 667px;
+
 
 // background colors for the carousel
 .yellow {
@@ -86,11 +90,17 @@ svg {
     margin: 0;
     z-index: 1000 !important;
 }
-#about,
-.polka {
-	// background: url("../img/polka-dot.svg");
- //    background-repeat: repeat; 
- //    background-attachment: fixed;
+body.four-o-four {
+	background-color: @pink;
+	text-align: center;
+}
+body.four-o-four .container {
+	padding-top: @navbar-height;
+}
+body.four-o-four img,
+body.four-o-four h3,
+body.four-o-four h5, {
+	padding-bottom: 2em;
 }
 .btn-default {
 	background-color: transparent;
@@ -267,8 +277,8 @@ a:hover {
 	}
 	#rethinking h1,
 	#rethinking h1 p {
-		font-size: @font-size-h3;
-		line-height: @font-size-h3*1.3;
+		font-size: @font-size-h2;
+		line-height: @font-size-h2*1.2;
 	}
 	h2,
 	h2 p {
@@ -735,7 +745,6 @@ ul.navbar-yieldmo li {
 	padding-bottom: 0;
 }
 #readers .container.bottom, {
-	background-color: @blue;
 	padding-top: 2em;
 	padding-bottom: 4em;
 }
@@ -762,12 +771,23 @@ ul.navbar-yieldmo li {
 	#advertisers .container.bottom {
 		background-color: @pink;
 	}
+	#readers .container.bottom, {
+		background-color: @blue;
+	}
+}
+@media (max-width: 767px) and (max-height: @iphone-5-height){
 	#about .carousel-inner .item {
 		min-height: 310px;
-		//float: left;
 		margin-bottom: 2em;
 	}
 }
+@media (max-width: 767px) and (max-height: @iphone-6-height){
+	#about .carousel-inner .item {
+		min-height: 270px;
+		margin-bottom: 2em;
+	}
+}
+
 #publishers h3,
 #publishers h3 p,
 #advertisers h3,
@@ -794,7 +814,11 @@ ul.navbar-yieldmo li {
 	padding-top: 4em;
 }
 #dedicated h3 {
-	margin:0;
+	margin-top: 0;
+	margin-bottom:2em;
+}
+#dedicated h3:first-child {
+	margin: 0;
 }
 #dedicated-phone {
 	margin-top: 3em;
@@ -938,8 +962,7 @@ ul.navbar-yieldmo li {
 	}
 }
 iframe#twitter-widget-0 {
-	//margin-top: 36px !important;
-	height: auto !important;
+	//height: auto !important;
 	overflow-y: visible;
 	display: block;
 }
@@ -1951,7 +1974,7 @@ ul.post-more li.more-text.next a {
 		visibility: hidden;
 	}
 }
-@media (max-height: 568px) {
+@media (max-height: @iphone-5-height) {
 	#carousel-inside img.img-mobile,
 	#about img.img-mobile {
 		width: 35vh;
@@ -2130,7 +2153,7 @@ ul.post-more li.more-text.next a {
 }
 .carousel-indicators li, 
 .carousel-indicators li.active {
-	border: 1px solid @black;
+	border: none;
 	background-color: @black;
 	width: @dot;
 	height: @dot;
@@ -2144,8 +2167,8 @@ ul.post-more li.more-text.next a {
 	height: @dot;
 }
 .carousel-indicators li {
-	background-color: @white;
-	border: 1px solid @white;
+	background-color:#FFF;
+	//border: 1px solid @white;
 }
 
 #carousel-publishers .carousel-control,
@@ -2317,7 +2340,7 @@ button.close:hover {
 	h3,
 	h3 p {
 		font-size: @font-size-h3;
-		line-height: 40px;
+		line-height: 32px;
 	}
 	h4,
 	h4 p {

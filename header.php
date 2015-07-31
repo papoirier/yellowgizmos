@@ -30,6 +30,9 @@
     <?php } ?>
     <?php if ( is_single() ) { ?>
     	<body class="blog-single">
+    <?php } ?>
+	<?php if ( is_404() ) { ?>
+	<body class="four-o-four">
     <?php } else { ?>
         <body>
     <?php } ?>
