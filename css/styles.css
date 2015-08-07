@@ -1404,6 +1404,29 @@ _:-o-prefocus .styled-select,
     margin-bottom: 1em;
   }
 }
+.job-description {
+  margin-bottom: 4em;
+}
+.job-description ul {
+  margin-left: 1.2em;
+}
+.job-description ul li {
+  list-style-type: disc;
+  margin-top: 0.4em;
+  font-family: "Georgia", "Times New Roman", serif;
+  font-weight: normal;
+}
+.job-contact {
+  margin-top: 3em;
+  margin-bottom: 4em;
+}
+.job-contact img {
+  margin-bottom: 2em;
+}
+.job-contact h5 {
+  margin: 0;
+  line-height: 1.7em;
+}
 #terms {
   background-color: #30ad63;
 }
