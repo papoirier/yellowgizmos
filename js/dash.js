@@ -1,17 +1,16 @@
 jQuery(document).ready(function($) {
-  "use strict";
 
   // Navbar left
   // -------------------------------------------------
   	
   	// Variables
-		  var dnl                = $(".dash-navbar-left"),
-					dnlBtnToggle       = $(".dnl-btn-toggle"),
-					dnlBtnCollapse     = $(".dnl-btn-collapse"),
-					contentWrap        = $(".content-wrap"),
-					contentWrapEffect  = contentWrap.data("effect"),
-					windowHeight       = $(window).height() - 44,
-					windowWidth        = $(window).width() < 767;
+		var dnl                = $(".dash-navbar-left"),
+			dnlBtnToggle       = $(".dnl-btn-toggle"),
+			dnlBtnCollapse     = $(".dnl-btn-collapse"),
+			contentWrap        = $(".content-wrap"),
+			contentWrapEffect  = contentWrap.data("effect"),
+			windowHeight       = $(window).height() - 44,
+			windowWidth        = $(window).width() < 767;
 
 		// Functions
 			function cwShowOverflow() {

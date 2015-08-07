@@ -2,7 +2,7 @@
 
 <?php 
 /*
- * yg.papoirier.org
+ * Template Name: Home Page
  *
  * home             ->   5
  *
@@ -24,7 +24,7 @@
  * 
  * -------- PAGES ---------
  * 
- * careers          -> 141
+ * careers          -> 175
  * terms            -> 126
  * faq              -> 125
  *

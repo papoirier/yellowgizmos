@@ -6,15 +6,17 @@ get_header(); ?>
 <div id="four-o-four">
 	<div class="container">
 		<div class="row">
-	    	<div class="col-md-6 col-md-offset-3">
-	    		<img src="<?php echo get_stylesheet_directory_uri() ?>/img/devo.jpg" class="img-circle img-responsive img-block">
+	    	<div class="col-md-4 col-md-offset-4">
+	    		<img src="<?php echo get_stylesheet_directory_uri() ?>/img/404.png" class="img-responsive img-block">
 	        </div>
 	    </div>
 		<div class="row">
-	    	<div class="col-md-8 col-md-offset-2">
-	    		<h1>Ain’t nuthin’ but a 404 thang</h1>
-	    		<h3>Looks like the site you’re after isn’t here. Don’t worry, Tucker says everything will be alright.</h3>
-	    		<h5><a href="https://yieldmo.com">Back 2 yieldmo.com</a></h5>
+	    	<div class="col-md-6 col-md-offset-3">
+	    		<h1>Oh my gawd!</h1>
+	    		<h3>The website you’re looking for  seems to&nbsp;be&nbsp;missing.</h3>
+	    		<ul class="post-more">
+	    			<li class="more-text prev-404"><a href="https://yieldmo.com">Back to yieldmo.com</a><li>
+	    		</ul>
 	        </div>
 	    </div>
 	</div>

@@ -1,6 +1,6 @@
 <?php $continue = "Continue reading";?>
-<div class="container" id="blog-posts">
-		        <div class="row">
+<div class="container">
+		        <div class="row" id="blog-posts">
 			    	<div class="col-md-6 col-md-offset-3">
 			    		<ul class="post-category">
 			    			<?php $category = get_the_category(); ?>
@@ -10,7 +10,7 @@
 						<h3 class="post-title"><a href="<?php echo get_permalink(); ?>"><?php the_title(); ?></a></h3>
 						<p class="post-excerpt"><?php the_excerpt(); ?></p>
 						<ul class="post-more">
-							<li class="more-img"><a href="<?php the_permalink(); ?>"><img src="<?php echo get_stylesheet_directory_uri() ?>/img/btn-continue.svg" alt="arrow" title="Continue reading arrow"></a></li>
+							<li class="more-img"><a href="<?php the_permalink(); ?>"><img src="<?php echo get_stylesheet_directory_uri() ?>/img/post-arrow.svg" alt="arrow" title="Continue reading arrow"></a></li>
 							<li class="more-text"><a href="<?php the_permalink(); ?>" title="<?php echo $continue; ?>"><?php echo $continue; ?></a></li>
 						</ul>
 					</div>

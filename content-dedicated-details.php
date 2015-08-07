@@ -9,10 +9,10 @@ foreach( $mypages as $page ) {
             <div class="carousel-img"><img src="<?php echo $url; ?>" title="<?php echo $content; ?>" alt="<?php echo $page->post_title; ?>'s photo"></div>
             <h5><?php echo $page->post_title; ?></h5>
             <p><?php echo $page->post_content; ?></p>
-            <p class="btn btn-default"><a href="<?php echo get_page_link($page->ID); ?>">Learn more</a></p>
+            <?php if (get_post_meta($page->ID, "blog-link", true)) { ?>
+            	<p class="btn btn-default"><a href="<?php echo get_post_meta($page->ID, "blog-link", true); ?>">Learn more</a></p>
+            <?php } ?>
         </div>
     
 
 <?php } ?>
-
-<!-- /div --> <!-- /.row -->

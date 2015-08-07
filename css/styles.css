@@ -55,11 +55,20 @@ svg {
   z-index: 1000 !important;
 }
 body.four-o-four {
-  background-color: #f27f8a;
-  text-align: center;
+  background-color: #fdd147;
 }
 body.four-o-four .container {
   padding-top: 59px;
+}
+#four-o-four {
+  text-align: center;
+}
+#four-o-four img {
+  margin: auto auto;
+}
+body.four-o-four h1,
+body.four-o-four ul.post-more li a {
+  color: #FFF;
 }
 body.four-o-four img,
 body.four-o-four h3,
@@ -957,6 +966,11 @@ iframe#twitter-widget-0 {
   border-color: #ededed;
   color: #ededed;
 }
+@media (min-width: 768px) {
+  #sticky .container {
+    padding-bottom: 3em;
+  }
+}
 #old-news {
   margin-top: 3em;
 }
@@ -1591,6 +1605,24 @@ _:-o-prefocus .styled-select,
     visibility: hidden;
   }
 }
+blockquote {
+  padding: 0;
+  border: none;
+}
+blockquote,
+blockquote p {
+  font-family: "Apercu Bold";
+  font-weight: bold;
+  font-size: 26px;
+  line-height: 1.4em;
+  margin-top: 0.7em;
+}
+@media (max-width: 767px) {
+  blockquote,
+  blockquote p {
+    font-size: 18px;
+  }
+}
 #blog-search form input::-webkit-input-placeholder {
   color: #262626;
 }
@@ -1711,7 +1743,11 @@ li.more-img img {
 ul.post-more li.more-text.prev {
   background: url("../img/post-previous.svg") no-repeat left top;
 }
-ul.post-more li.more-text.prev a {
+ul.post-more li.more-text.prev-404 {
+  background: url("../img/btn-404.svg") no-repeat left top;
+}
+ul.post-more li.more-text.prev a,
+ul.post-more li.more-text.prev-404 a {
   margin-top: 10px;
   margin-left: 50px;
 }
@@ -1719,8 +1755,11 @@ ul.post-more li.more-text.next {
   background: url("../img/post-next.svg") no-repeat right top;
 }
 ul.post-more li.more-text.next a {
-  margin-top: 10px;
+  margin-top: 12px;
   margin-right: 50px;
+}
+body.four-o-four ul.post-more {
+  margin-bottom: 6em;
 }
 #loading {
   background: url('http://cdn.nirmaltv.com/images/generatorphp-thumb.gif');

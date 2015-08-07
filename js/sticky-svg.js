@@ -37,11 +37,9 @@ jQuery(document).ready(function($) {
 
 			// DIV HEIGHTS // ------------------------------------------
 			//var h = $(window).height();
-			console.log("window height: "+h);
+			//console.log("window height: "+h);
 
 			var navbarHeight = 59;
-			// var topSpacer = $("#spacer").height();
-			// console.log("top spacer:"+topSpacer);
 
 			var shapeSpacerHeight = $(".shape-spacer").css({"height":h*0.12});
 			var shapeSpacer = $(".shape-spacer").height();

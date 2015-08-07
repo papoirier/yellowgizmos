@@ -91,15 +91,24 @@ svg {
     z-index: 1000 !important;
 }
 body.four-o-four {
-	background-color: @pink;
-	text-align: center;
+	background-color: @yellow;
 }
 body.four-o-four .container {
 	padding-top: @navbar-height;
 }
+#four-o-four {
+	text-align: center;
+}
+#four-o-four img {
+	margin: auto auto;
+}
+body.four-o-four h1, 
+body.four-o-four ul.post-more li a {
+	color: #FFF;
+}
 body.four-o-four img,
 body.four-o-four h3,
-body.four-o-four h5, {
+body.four-o-four h5 {
 	padding-bottom: 2em;
 }
 .btn-default {
@@ -997,9 +1006,6 @@ iframe#twitter-widget-0 {
 		padding-bottom: 4em;
 		text-align: center;
 	}
-	#sticky .col-md-5.col-md-offset-1 {
-
-	}
 }
 @media (max-width: 767px) {
 	#sticky,
@@ -1086,6 +1092,11 @@ iframe#twitter-widget-0 {
 	background-color: transparent;
 	border-color: @white;
 	color: @white;
+}
+@media (min-width: 768px) {
+	#sticky .container {
+		padding-bottom: 3em;
+	}
 }
 #old-news {
 	margin-top: 3em;
@@ -1786,7 +1797,24 @@ _:-o-prefocus, .selector {
 		visibility: hidden;
 	}
 }
-
+blockquote {
+	padding: 0;
+	border: none;
+}
+blockquote,
+blockquote p {
+	font-family: "Apercu Bold";
+	font-weight: bold;
+	font-size: @font-size-h4;
+	line-height: 1.4em;
+	margin-top: 0.7em;
+}
+@media (max-width: 767px) {
+	blockquote,
+	blockquote p {
+		font-size: @font-size-h5*1.2;
+	}
+}
 #blog-search form input::-webkit-input-placeholder {
    color: @black;
 }
@@ -1916,7 +1944,11 @@ li.more-img img {
 ul.post-more li.more-text.prev {
 	background: url("../img/post-previous.svg") no-repeat left top;
 }
-ul.post-more li.more-text.prev a {
+ul.post-more li.more-text.prev-404 {
+	background: url("../img/btn-404.svg") no-repeat left top;
+}
+ul.post-more li.more-text.prev a,
+ul.post-more li.more-text.prev-404 a {
 	margin-top: 10px;
 	margin-left: 50px;
 }
@@ -1924,8 +1956,11 @@ ul.post-more li.more-text.next {
 	background: url("../img/post-next.svg") no-repeat right top;
 }
 ul.post-more li.more-text.next a {
-	margin-top: 10px;
+	margin-top: 12px;
 	margin-right: 50px;
+}
+body.four-o-four ul.post-more {
+	margin-bottom: 6em;
 }
 
 

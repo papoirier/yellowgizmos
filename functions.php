@@ -163,7 +163,7 @@ function bootstrap_script() {
 		true 
 	);
 }
-add_action( 'wp_enqueue_scripts', 'dash_script' );
+//add_action( 'wp_enqueue_scripts', 'dash_script' );
 function dash_script() {
   wp_enqueue_script( 
     'dash', 
