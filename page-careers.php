@@ -16,7 +16,7 @@
 	    </div>
 	</div>
 </div>
-<div class="container">
+<div class="container current-jobs">
 	<div class="row">
 		<div class="col-md-12">
 			<h3 class="center-block"><?php the_excerpt(); ?></h3>
@@ -25,7 +25,7 @@
     <div class="jobs">
 	    <div class="row">
 				<?php 
-				$mypages = get_pages( array( 'child_of' => $post->ID, 'sort_column' => 'post_date', 'sort_order' => 'desc' ) );
+				$mypages = get_pages( array( 'child_of' => $post->ID, 'sort_column' => 'post_date', 'sort_order' => 'desc', 'parent' => $post->ID ) );
 
 				foreach( $mypages as $page ) {		
 					$content = $page->post_content;

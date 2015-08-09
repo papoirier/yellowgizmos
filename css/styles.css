@@ -1403,6 +1403,26 @@ _:-o-prefocus .styled-select,
     margin-top: 0;
     margin-bottom: 1em;
   }
+  .current-jobs h3,
+  .current-jobs h3 p {
+    text-align: left;
+  }
+}
+.job-posting {
+  margin: 3em auto;
+}
+.job-title h3,
+.job-title h3 p,
+.about-yieldmo h4,
+.about-yieldmo h4 p {
+  margin: 0;
+}
+.about-yieldmo h4,
+.about-yieldmo h4 p {
+  margin-bottom: 1em;
+}
+.job-title hr {
+  margin-top: 2em;
 }
 .job-description {
   margin-bottom: 4em;
@@ -1417,15 +1437,31 @@ _:-o-prefocus .styled-select,
   font-weight: normal;
 }
 .job-contact {
-  margin-top: 3em;
+  margin-top: 4em;
   margin-bottom: 4em;
 }
 .job-contact img {
-  margin-bottom: 2em;
+  margin-bottom: 1em;
 }
 .job-contact h5 {
   margin: 0;
   line-height: 1.7em;
+}
+@media (max-width: 767px) {
+  .job-posting {
+    text-align: left;
+  }
+  .job-title .col-md-12,
+  .job-description .col-md-6 {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .job-description h4 {
+    margin-top: 2em;
+  }
+  .job-description {
+    margin-bottom: 3em;
+  }
 }
 #terms {
   background-color: #30ad63;
