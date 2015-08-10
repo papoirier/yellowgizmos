@@ -54,27 +54,6 @@ svg {
   margin: 0;
   z-index: 1000 !important;
 }
-body.four-o-four {
-  background-color: #fdd147;
-}
-body.four-o-four .container {
-  padding-top: 59px;
-}
-#four-o-four {
-  text-align: center;
-}
-#four-o-four img {
-  margin: auto auto;
-}
-body.four-o-four h1,
-body.four-o-four ul.post-more li a {
-  color: #FFF;
-}
-body.four-o-four img,
-body.four-o-four h3,
-body.four-o-four h5 {
-  padding-bottom: 2em;
-}
 .btn-default {
   background-color: transparent;
   border-radius: 2px;
@@ -322,6 +301,27 @@ h5 a:hover {
   body {
     text-align: center;
   }
+}
+body.four-o-four {
+  background-color: #fdd147;
+}
+body.four-o-four .container {
+  padding-top: 59px;
+}
+#four-o-four {
+  text-align: center;
+}
+#four-o-four img {
+  margin: auto auto;
+}
+body.four-o-four h1,
+body.four-o-four ul.post-more li a {
+  color: #FFF;
+}
+body.four-o-four img,
+body.four-o-four h3,
+body.four-o-four h5 {
+  padding-bottom: 2em;
 }
 #nav-icon3 {
   width: 26px;

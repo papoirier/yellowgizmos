@@ -186,13 +186,6 @@ jQuery(document).ready(function($) {
         h = $(window).height();
         w = $(window).width();
 
-        // var navbarHeight;
-        // if (w <= 767) {
-        //     navbarHeight = 44;
-        // } else {
-        //     navbarHeight = 59;
-        // }
-
         // about pages carousels
         if (w <= 767) {
             $("#carousel-example-generic > .carousel-inner").find(".row").contents().unwrap();
@@ -238,7 +231,6 @@ jQuery(document).ready(function($) {
             windowHeight       = $(window).height() - 44,
             windowWidth        = $(window).width() < 767;
 
-        // Functions
             function cwShowOverflow() {
                 if ( windowWidth ) {
                         contentWrap.css({
@@ -338,6 +330,4 @@ jQuery(document).ready(function($) {
             $( '.content-wrap' ).click( function() {
                 dnlHide();
             });
-
-
 });
