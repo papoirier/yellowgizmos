@@ -7,8 +7,12 @@
 					<h5><a href="<?php echo get_permalink( 64 ); ?>" title="" class="btn btn-default btn-afl">Careers</a></h5>
         	</div>
         	<div class="col-md-8 team-img">
-	        	<?php //$url = wp_get_attachment_url( get_post_thumbnail_id($query->ID, 'thumbnail') ); ?>
-                <?php the_post_thumbnail( 'large' ); ?>
+        		<?php the_post_thumbnail( 'large', array( 'class' => 'img-desktop' ) ); ?>
+	        	<?php 
+	        	if (get_post_meta(get_the_ID(), 'Second Featured Image', true)) { ?>
+	        		<img class="img-mobile img-responsive" src="<?php echo get_post_meta(get_the_ID(), 'Second Featured Image', true); ?>">
+	        	<?php } ?>
+                
         	</div>
 	    </div>
 	</div>
